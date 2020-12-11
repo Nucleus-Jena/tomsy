@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1dwwm0u" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.3.5">
+  <bpmn:process id="external_event" name="Teilnahme externe Veranstaltung" isExecutable="true">
+    <bpmn:documentation>&lt;p&gt;Wenn wir als Nucleus-Team auf eine externe Veranstaltung aufmerksam werden, dann entscheiden wir, ob wir daran teilnehmen, wer daran teilnehmen wird und was unsere Zielstellung ist. Im Vorfeld der Veranstaltung bereiten wir die Teilnahme inhaltlich und organisatorisch vor. Nach der Veranstaltung dokumentieren wir wichtige Ergebnisse und starten Follow-Up-Maßnahmen. &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine ersten Schritte:&lt;/strong&gt; &lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Füge Thomas Wartner als Teilnehmer der Maßnahme hinzu, damit er als Projektkoordinator informiert ist. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Wenn du nicht die Verantwortung für diese Maßnahme übernehmen willst, dann weise Thomas Wartner als Verantwortlichen zu.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Beginne mit der Aufgabe "Externe Veranstaltung erfassen".&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+    <bpmn:extensionElements>
+      <camunda:properties>
+        <camunda:property name="label_prefix" value="EV" />
+        <camunda:property name="model_class" value="ExternalEvent" />
+      </camunda:properties>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_1nxs5cf</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1nxs5cf" sourceRef="StartEvent_1" targetRef="save_information_about_external_event" />
+    <bpmn:userTask id="save_information_about_external_event" name="Externe Veranstaltung erfassen">
+      <bpmn:documentation>&lt;p&gt;Wir - das Nucleus-Team - werden auf eine neue Veranstaltung aufmerksam gemacht. Bitte gib hier die wichtigen Infos zu dieser Veranstaltung ein.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Übernimm die Verantwortung für diese Aufgabe und die Aufgabe "Teilnahme entscheiden".&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alternativ weise beiden Aufgaben Projektkoordinator Thomas Wartner als Verantwortlichen zu.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Erfasse die Infos, die du zu der Veranstaltung hast.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Schließe dann die Aufgabe ab.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Tipp:&lt;/strong&gt; Der Titel der Veranstaltung ist auch ein guter Kandidat für den Maßnahmentitel.&lt;/p&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="event_title" label="Titel der externen Veranstaltung" type="string" />
+          <camunda:formField id="event_location" label="Ort der Veranstaltung" type="string" />
+          <camunda:formField id="event_start_date" label="Startdatum der Veranstaltung" type="date" />
+          <camunda:formField id="event_end_date" label="Enddatum der Veranstaltung (bei mehrtägigen Veranstaltungen)" type="date" />
+          <camunda:formField id="event_website" label="Webseite der Veranstaltung" type="string">
+            <camunda:properties>
+              <camunda:property id="validation_regex" value="\A(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?\z" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="event_documents" label=" Weitere Informationen zu der Veranstaltung " type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="10" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1nxs5cf</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0lbh2zk</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="set_target_for_nucleus" name="Inhaltliche Vorbereitung">
+      <bpmn:documentation>&lt;p&gt;Welche Ziele möchten wir als Nucleus-Team mit der Teilnahme an der Veranstaltung erreichen? Was müssen wir dafür inhaltlich vorbereiten? Unsere inhaltliche Vorbereitung für die Veranstaltung findet hier statt.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt; &lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Setze ein realistisches Fälligkeitsdatum. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hole alle Teammitglieder als Teilnehmer in diese Aufgabe, die an der inhaltlichen Vorbereitung beteiligt sind. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Legt gemeinsam die Ziele fest, die sich das Nucleus-Team für die Teilnahme an dieser Veranstaltung setzt. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bereitet alle inhatlichen Beiträge des Nucleus-Teams für diese Veranstaltung vor.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließt diese Aufgabe ab, wenn die inhaltliche Vorbereitung erledigt ist.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="goals" label="Welche Ziele verfolgt das NUCLEUS-Team mit der Teilnahme?" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="own_contribution" label="Welche inhaltlichen Beiträge plant das NUCLEUS-Team?" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="own_contribution_files" label=" Eigene Unterlagen (Präsentationen etc.) " type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="info_decision_explanation" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="info" />
+              <camunda:property id="parameter" value="{attribute: &#34;decision_explanation&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="30" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1lrc62v</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_19g1hgv</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="save_attendence_report" name="Ergebnisse dokumentieren">
+      <bpmn:documentation>&lt;p&gt;Während und nach der Teilnahme an der Veranstaltung sollen die Ergebnisse dokumentiert werden. Für uns besonders wichtig: Welche Follow-Up-Maßnahmen (Erstgespräche, Antragsanbahnungen) können gestartet werden?&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Findet jemanden aus der Delegation, der die Verantwortung für diese Aufgabe übernimmt. Nehmt alle anderen Delegationsmitglieder als Teilnehmer in diese Aufgabe auf.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Setzt ein realistisches Fälligkeitsdatum.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Dokumentiert Eure Ergebnisse aus den Gesprächen bei der Veranstaltung.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ladet alle wichtigen Unterlagen hoch, die Ihr im Rahmen der Veranstaltung erhalten habt (Teilnehmerlisten etc.).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Besonders wichtig: überlegt, welche Folgemaßnahmen als Follow-Ups sinnvoll sind und startet diese.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe diese Aufgabe ab, wenn alle mit der Dokumentation der Ergebnisse zufrieden sind und die Folgemaßnahmen gestartet sind.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="leads" label="Gespräche mit" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_dossiers" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="results" label="Was haben wir auf der Veranstaltung getan und erreicht?" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="follow_up_documents" label="Unterlagen, die im Rahmen der Veranstaltung entstanden sind oder erhalten wurden (bspw. Teilnehmerlisten)?" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="info_goals" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="info" />
+              <camunda:property id="parameter" value="{attribute: &#34;goals&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="50" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0bbpblu</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_17tv64w</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="organize_attendence" name="Organisatorische Vorbereitung">
+      <bpmn:documentation>&lt;p&gt;Für alle Mitglieder der Nucleus-Teams, die an der Veranstaltung teilnehmen, muss die Buchung der Veranstaltung und die zugehörige Dienstreise (Hin-&amp;amp;Rückfahrt, Übernachtung) organisiert werden.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Setze ein realistisches Fälligkeitsdatum.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hole alle Teammitglieder als Teilnehmer in diese Aufgabe, die zu der Veranstaltung fahren sollen.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Entscheidet, wer für diese Aufgabe verantwortlich sein soll.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bucht alle notwendigen Tickets, die für die Teilnahme an der Veranstaltung nötig sind und legt diese in der Ablage für Buchungsunterlagen ab.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe diese Aufgabe ab, wenn die organisatorische Vorbereitung erledigt ist.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="travel_documents" label="Ablage für Buchungsunterlagen, Fahrpläne etc." type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="travel_further_information" label="Weitere organisatorische Informationen" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="40" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_194rbeu</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0z1564v</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="decide_if_nucleus_attends_event" name="Teilnahme entscheiden">
+      <bpmn:documentation>&lt;p&gt;Wir entscheiden, ob das Nucleus-Team an der Veranstaltung teilnehmen soll.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Setze als Fälligkeitsdatum idealerweise das Datum der nächsten Nucleus-Teamsitzung.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Führe eine Entscheidung herbei, ob und welche Mitglieder des Nucleus-Teams an der Veranstaltung teilnehmen.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Wenn möglich, dann dokumentiere eine kurze Begründung für die Entscheidung.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe dann die Aufgabe ab.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="decision_attendence" label="Soll ein Mitglied des NUCLEUS-Teams an der Veranstaltung teilnehmen?" type="boolean">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="decision_explanation" label="Begründung der Entscheidung" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="event_participants" label="Teammitglieder, die die Veranstaltung besuchen " type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_dossiers" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="info_event_website" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="info" />
+              <camunda:property id="parameter" value="{attribute: &#34;event_website&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="20" />
+          <camunda:property name="result_key" value="attendence" />
+          <camunda:property name="result_value" value="decision_attendence" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0lbh2zk</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0ut48ml</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0cwidac">
+      <bpmn:incoming>SequenceFlow_0ut48ml</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1oa7jql</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_10ex383</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_1oa7jql" name="Ja" sourceRef="ExclusiveGateway_0cwidac" targetRef="ExclusiveGateway_03ima83">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{attendence}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:endEvent id="EndEvent_05cm47e">
+      <bpmn:incoming>SequenceFlow_10ex383</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_10ex383" name="Nein" sourceRef="ExclusiveGateway_0cwidac" targetRef="EndEvent_05cm47e">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{!attendence}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_0ut48ml" sourceRef="decide_if_nucleus_attends_event" targetRef="ExclusiveGateway_0cwidac" />
+    <bpmn:parallelGateway id="ExclusiveGateway_03ima83">
+      <bpmn:incoming>SequenceFlow_1oa7jql</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_194rbeu</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1lrc62v</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_194rbeu" sourceRef="ExclusiveGateway_03ima83" targetRef="organize_attendence" />
+    <bpmn:sequenceFlow id="SequenceFlow_1lrc62v" sourceRef="ExclusiveGateway_03ima83" targetRef="set_target_for_nucleus" />
+    <bpmn:parallelGateway id="ExclusiveGateway_0a0blzp">
+      <bpmn:incoming>SequenceFlow_0z1564v</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_19g1hgv</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0bbpblu</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0z1564v" sourceRef="organize_attendence" targetRef="ExclusiveGateway_0a0blzp" />
+    <bpmn:sequenceFlow id="SequenceFlow_19g1hgv" sourceRef="set_target_for_nucleus" targetRef="ExclusiveGateway_0a0blzp" />
+    <bpmn:sequenceFlow id="SequenceFlow_17tv64w" sourceRef="save_attendence_report" targetRef="EndEvent_0dlk8yf" />
+    <bpmn:endEvent id="EndEvent_0dlk8yf">
+      <bpmn:incoming>SequenceFlow_17tv64w</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0lbh2zk" sourceRef="save_information_about_external_event" targetRef="decide_if_nucleus_attends_event" />
+    <bpmn:sequenceFlow id="SequenceFlow_0bbpblu" sourceRef="ExclusiveGateway_0a0blzp" targetRef="save_attendence_report" />
+    <bpmn:textAnnotation id="TextAnnotation_1qbos3a">
+      <bpmn:text>Gespräche (ref: person), Teilnahmeresultate (textfield), Teilnahmeunterlagen (doc)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1oo4ead" sourceRef="save_attendence_report" targetRef="TextAnnotation_1qbos3a" />
+    <bpmn:textAnnotation id="TextAnnotation_0couxv5">
+      <bpmn:text>Veranstaltung (Ref: external_event)
+Unterlagen Veranstaltung (documents)  
+Ansprechpartner (Ref.: person)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_04y51sf" sourceRef="save_information_about_external_event" targetRef="TextAnnotation_0couxv5" />
+    <bpmn:textAnnotation id="TextAnnotation_0gytxmf">
+      <bpmn:text>Automatischer Teilnehmer: Thomas W.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_02fdo8c" sourceRef="StartEvent_1" targetRef="TextAnnotation_0gytxmf" />
+    <bpmn:textAnnotation id="TextAnnotation_1att3oj">
+      <bpmn:text>Entscheidung über Teilnahme (bool), Begründung für die Entscheidug (text)
+SIB (Veranstaltung)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1107ewf" sourceRef="decide_if_nucleus_attends_event" targetRef="TextAnnotation_1att3oj" />
+    <bpmn:textAnnotation id="TextAnnotation_0eaeyyf">
+      <bpmn:text>Teilnehmer (ref: person)
+Buchungsunterlagen (doc)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0ifts1k" sourceRef="organize_attendence" targetRef="TextAnnotation_0eaeyyf" />
+    <bpmn:textAnnotation id="TextAnnotation_1wv3njl">
+      <bpmn:text>Zielstellung (textfield), Eigene Beiträge (doc)
+Automatischer Verantwortlicher: Thomas W.</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1in8j9w" sourceRef="set_target_for_nucleus" targetRef="TextAnnotation_1wv3njl" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="external_event">
+      <bpmndi:BPMNEdge id="SequenceFlow_0lbh2zk_di" bpmnElement="SequenceFlow_0lbh2zk">
+        <di:waypoint x="347" y="290" />
+        <di:waypoint x="480" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_17tv64w_di" bpmnElement="SequenceFlow_17tv64w">
+        <di:waypoint x="1280" y="320" />
+        <di:waypoint x="1322" y="320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_19g1hgv_di" bpmnElement="SequenceFlow_19g1hgv">
+        <di:waypoint x="980" y="320" />
+        <di:waypoint x="1095" y="320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0z1564v_di" bpmnElement="SequenceFlow_0z1564v">
+        <di:waypoint x="980" y="210" />
+        <di:waypoint x="1120" y="210" />
+        <di:waypoint x="1120" y="295" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1lrc62v_di" bpmnElement="SequenceFlow_1lrc62v">
+        <di:waypoint x="770" y="275" />
+        <di:waypoint x="770" y="320" />
+        <di:waypoint x="880" y="320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_194rbeu_di" bpmnElement="SequenceFlow_194rbeu">
+        <di:waypoint x="795" y="250" />
+        <di:waypoint x="828" y="250" />
+        <di:waypoint x="828" y="210" />
+        <di:waypoint x="880" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ut48ml_di" bpmnElement="SequenceFlow_0ut48ml">
+        <di:waypoint x="580" y="290" />
+        <di:waypoint x="644" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_10ex383_di" bpmnElement="SequenceFlow_10ex383">
+        <di:waypoint x="669" y="315" />
+        <di:waypoint x="669" y="400" />
+        <di:waypoint x="809" y="400" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="673" y="355" width="23" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1oa7jql_di" bpmnElement="SequenceFlow_1oa7jql">
+        <di:waypoint x="669" y="265" />
+        <di:waypoint x="669" y="250" />
+        <di:waypoint x="745" y="250" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="711" y="251" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1nxs5cf_di" bpmnElement="SequenceFlow_1nxs5cf">
+        <di:waypoint x="197" y="290" />
+        <di:waypoint x="247" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="161" y="272" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0hpjrue_di" bpmnElement="save_information_about_external_event">
+        <dc:Bounds x="247" y="250" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_030minr_di" bpmnElement="set_target_for_nucleus">
+        <dc:Bounds x="880" y="280" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0c0dqa4_di" bpmnElement="save_attendence_report">
+        <dc:Bounds x="1180" y="280" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_098vcu8_di" bpmnElement="organize_attendence">
+        <dc:Bounds x="880" y="170" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1rt6o9l_di" bpmnElement="decide_if_nucleus_attends_event">
+        <dc:Bounds x="480" y="250" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0cwidac_di" bpmnElement="ExclusiveGateway_0cwidac" isMarkerVisible="true">
+        <dc:Bounds x="644" y="265" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_05cm47e_di" bpmnElement="EndEvent_05cm47e">
+        <dc:Bounds x="809" y="382" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_18wmjlh_di" bpmnElement="ExclusiveGateway_03ima83">
+        <dc:Bounds x="745" y="225" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_18z3f9l_di" bpmnElement="ExclusiveGateway_0a0blzp">
+        <dc:Bounds x="1095" y="295" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0dlk8yf_di" bpmnElement="EndEvent_0dlk8yf">
+        <dc:Bounds x="1322" y="302" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1qbos3a_di" bpmnElement="TextAnnotation_1qbos3a">
+        <dc:Bounds x="1260" y="140" width="100" height="96" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0couxv5_di" bpmnElement="TextAnnotation_0couxv5">
+        <dc:Bounds x="280" y="100" width="190" height="82" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0gytxmf_di" bpmnElement="TextAnnotation_0gytxmf">
+        <dc:Bounds x="140" y="140" width="100" height="54" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1att3oj_di" bpmnElement="TextAnnotation_1att3oj">
+        <dc:Bounds x="570" y="86" width="100" height="124" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0eaeyyf_di" bpmnElement="TextAnnotation_0eaeyyf">
+        <dc:Bounds x="980" y="90" width="100" height="68" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1wv3njl_di" bpmnElement="TextAnnotation_1wv3njl">
+        <dc:Bounds x="920" y="420" width="100" height="110" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_1oo4ead_di" bpmnElement="Association_1oo4ead">
+        <di:waypoint x="1254" y="280" />
+        <di:waypoint x="1281" y="236" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_04y51sf_di" bpmnElement="Association_04y51sf">
+        <di:waypoint x="318" y="250" />
+        <di:waypoint x="353" y="182" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_02fdo8c_di" bpmnElement="Association_02fdo8c">
+        <di:waypoint x="181" y="272" />
+        <di:waypoint x="188" y="194" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1107ewf_di" bpmnElement="Association_1107ewf">
+        <di:waypoint x="555" y="250" />
+        <di:waypoint x="581" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0ifts1k_di" bpmnElement="Association_0ifts1k">
+        <di:waypoint x="975" y="171" />
+        <di:waypoint x="990" y="158" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1in8j9w_di" bpmnElement="Association_1in8j9w">
+        <di:waypoint x="940" y="360" />
+        <di:waypoint x="956" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0bbpblu_di" bpmnElement="SequenceFlow_0bbpblu">
+        <di:waypoint x="1145" y="320" />
+        <di:waypoint x="1180" y="320" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

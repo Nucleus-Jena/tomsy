@@ -1,0 +1,45 @@
+.v-input.custom-object-control {
+  flex-direction: column;
+
+  & > .v-input__control {
+    & > .v-input__slot > .v-card {
+      flex-grow: 1;
+      background-color: transparent !important;
+
+      & > .custom-object-control__divider {
+        color: rgba(0,0,0,.42);
+        border-color: currentColor !important;
+      }
+    }
+  }
+
+  & > .v-input__append-outer {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+
+  &.error--text:not(.v-input--is-loading) {
+    & > .v-input__control > .v-input__slot > .v-card {
+      border-color: #ff5252;
+    }
+  }
+
+  &.custom-object-control--sidebar {
+    & > .v-input__control {
+      &> .v-input__slot {
+        margin-bottom: 0;
+      }
+
+      & > .v-messages {
+        margin: 0 16px 8px;
+      }
+    }
+
+    &:not(.v-input--has-state) {
+      & > .v-input__control > .v-messages {
+        display: none;
+      }
+    }
+  }
+}

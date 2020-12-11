@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_0r3gq8h" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.3.5">
+  <bpmn:process id="fundraising" name="Antragstellung" isExecutable="true">
+    <bpmn:documentation>&lt;p&gt;In dieser Maßnahme wird gemeinsam mit allen beteiligten Vorhabenspartnern ein Antrag für ein Förderinstrument gestellt.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine ersten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise dieser Maßnahme einen Verantwortlichen zu.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Gibt es eine Zielstelltung, zu der diese Maßnahme zugeordnet werden soll?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Beginne mit der Aufgabe "Fördervorhaben erfassen".&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+    <bpmn:extensionElements>
+      <camunda:properties>
+        <camunda:property name="label_prefix" value="AN" />
+        <camunda:property name="model_class" value="Fundraising" />
+      </camunda:properties>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_0w4dbiu</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:parallelGateway id="ExclusiveGateway_1akvso1">
+      <bpmn:incoming>SequenceFlow_02efpm7</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1fdzvp9</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0jgtaob</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_1fdzvp9" sourceRef="ExclusiveGateway_1akvso1" targetRef="check_if_further_team_members_are_needed" />
+    <bpmn:sequenceFlow id="SequenceFlow_0jgtaob" sourceRef="ExclusiveGateway_1akvso1" targetRef="identify_neccessary_content" />
+    <bpmn:sequenceFlow id="SequenceFlow_1x3ozht" sourceRef="check_if_further_team_members_are_needed" targetRef="ExclusiveGateway_1404x6x" />
+    <bpmn:sequenceFlow id="SequenceFlow_1rzlb3a" sourceRef="identify_neccessary_content" targetRef="discuss_content_with_other_departments" />
+    <bpmn:userTask id="check_if_further_team_members_are_needed" name="Projektteam vervollständigen">
+      <bpmn:documentation>&lt;p&gt;Das vollständige Projektteam für Antragsstellung muss festgelegt werden. Falls noch bestimmte Kompetenzen fehlen, so können passende Mitglieder über passende Maßnahmen wie Matching oder eine gemeinsame Veranstaltung identifiziert werden.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise einem Verantwortlichen die Aufgabe zu.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Erfasse das bisher bekannte Projektteam.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Kläre mit deinen Ansprechpartnern ab, ob noch weitere Kompetenzen und somit Projektmitglieder benötigt werden.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Starte Teammatching-Maßnahmen (z.B. Veranstaltungsplanung), falls noch Mitglieder benötigt werden.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe die Aufgabe erst ab, wenn das Projektteam vollständig ist.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="teammembers" label="Projektteam" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_dossiers" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="ansprechpartner" label="Wer ist Ansprechpartner im Projektteam für Nucleus?" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_one_dossier" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="anm_team" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="30" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1fdzvp9</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1x3ozht</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_05v2n2j" sourceRef="ExclusiveGateway_1404x6x" targetRef="gather_all_content_and_give_it_to_fofoe" />
+    <bpmn:userTask id="identify_neccessary_content" name="Antragsstruktur festlegen">
+      <bpmn:documentation>&lt;p&gt;Ausgehend von den Bedingungen des gewählten Förderinstruments prüfen wir, welche Inhalte für die Antragstellung vorhanden sein müssen. Aus diesen notwendigen Inhalten erstellen wir eine Struktur bzw. Gliederung für den Antrag und legen die Verantwortlichkeiten grob fest.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise einem Verantwortlichen die Aufgabe zu und setze ein realistisches Fälligkeitsdatum.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ermittle anhand des gewählten Förderinstruments, welche Inhalte bereitsgestellt werden müssen.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Erstelle aus den notwendigen Inhalten eine Struktur für das Antragsdokument.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Stimme innerhalb des Projektteams die Verantwortlichkeiten für die Zuarbeiten ab.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Kontaktiere die Personen, die Inhalte für den Antrag bereitstellen sollen und nehme sie in diese Aufgabe auf.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe diese Aufgabe ab, sobald alle Aufgaben erfasst und deligiert sind.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="to_do_tasks" label="Welche Struktur soll der Antrag haben?" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="vorh_inhalte" label="Bereits existierende Inhalte" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="Ausschreibung" label="Informationen zum Förderinstrument" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="info" />
+              <camunda:property id="parameter" value="{attribute: &#34;antragsart&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="40" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0jgtaob</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1rzlb3a</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="discuss_content_with_other_departments" name="Zu liefernde Inhalte bereitstellen">
+      <bpmn:documentation>&lt;p&gt;Hier hinterlegen wir die inhaltlichen Zuarbeiten, die wir für unsere Antragsstruktur benötigen.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise einem Verantwortlichen die Aufgabe zu und setze als Fälligkeitsdatum eine intern abgesprochene Frist.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Füge alle, die für Zuarbeiten verantwortlich sind, als Teilnehmer dieser Aufgabe hinzu.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Stelle sicher, dass alle die die Zuarbeiten Verantwortlichen Ihre Beiträge rechtzeitig einstellen.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe die Aufgabe ab, sobald alle geplanten Inhalte vorhanden sind.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Tipp:&lt;/strong&gt; In dieser Aufgabe muss viel mit anderen Bereichen kommuniziert werden und viel Austausch stattfinden.&lt;/p&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="inhalte" label="Die folgenden Inhalte müssen angefertigt werden." type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="info" />
+              <camunda:property id="parameter" value="{attribute: &#34;to_do_tasks&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="inhalte_fertig" label="Ablage für Zuarbeiten" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="50" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1rzlb3a</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_18xixty</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="gather_all_content_and_give_it_to_fofoe" name="Antragsdokument fertigstellen und an FoFö senden">
+      <bpmn:documentation>&lt;p&gt;Wenn alle Zuarbeiten vorliegen, wir der finale Antrag fertiggestellt. Parallel wird mit der Forschungsförderung die Modalitäten der Einreichung abgestimmt, so dass der Antrag rechtzeitig durch die Forschungsförderung eingereicht werden kann.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise einem Verantwortlichen die Aufgabe zu und setze ein intern abgesprochenes Fälligkeitsdatum.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Stimme mit der Forschungsförderung das Vorgehen für die Einreichung des Antrags ab.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Nimm den Ansprechpartner der Forschungsförderung als Teilnehmer in diese Aufgabe auf.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Erstelle mithilfe der gesammelten Inhalte und der vereinbarten Antrasstruktur das finale Antragsdokument.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hinterlege den finalen, eingereichten Projektantrag.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Setze für die Aufgabe "Förderentscheidung dokumentieren" ein realistisches Fälligkeitsdatum. &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe die Aufgabe ab, wenn der Antrag durch die Forschungsförderung eingereicht wurde.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="show_inhalte1" label="Zuarbeiten" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="info" />
+              <camunda:property id="parameter" value="{attribute: &#34;inhalte_fertig&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="show_inhalte2" label="Bereits vorhandene Inhalte" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="info" />
+              <camunda:property id="parameter" value="{attribute: &#34;vorh_inhalte&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="antrag_fertig" label="Ablage für eingereichten Antrag" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="60" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_05v2n2j</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_16fm51s</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_18xixty" sourceRef="discuss_content_with_other_departments" targetRef="ExclusiveGateway_1404x6x" />
+    <bpmn:sequenceFlow id="SequenceFlow_0w4dbiu" sourceRef="StartEvent_1" targetRef="Task_1sq2ne1" />
+    <bpmn:userTask id="Task_1sq2ne1" name="Fördervorhaben erfassen">
+      <bpmn:documentation>&lt;p&gt;Ausgangspunkt dieser Maßnahmen ist der konkrete Bedarf eines Vorhabens nach Förderung. Zunächst erfassen wir die uns bekannten Informationen zu dem Fördervorhaben, welches im weiteren Verlauf betreut werden soll.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise einem Verantwortlichen die Aufgabe zu und setze ein realistisches Fälligkeitsdatum.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fasse die bereits bekannten Informationen zu dem Fördervorhaben zusammen.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe die Aufgabe ab, sobald die Informationen deiner Meinung nach vollständig sind.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Beschreibung" label="Beschreibung des Fördervorhabens" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="5" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0w4dbiu</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_02ue6jg</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:parallelGateway id="ExclusiveGateway_1404x6x">
+      <bpmn:incoming>SequenceFlow_18xixty</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1x3ozht</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_05v2n2j</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_16fm51s" sourceRef="gather_all_content_and_give_it_to_fofoe" targetRef="Task_1t9uno8" />
+    <bpmn:userTask id="Task_1t9uno8" name="Förderentscheidung dokumentieren">
+      <bpmn:documentation>&lt;p&gt;Wir erfassen die Entscheidung über den gestellten Antrag.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise die Aufgabe Thomas Wartner als Verantwortlichen zu und setze als Fälligkeitsdatum die öffentliche Entscheidungsfrist.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Dokumentiere die Entscheidung über die Förderung an, sobald diese vorliegt.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Gebe zusätzlich erhaltene Informationen an, wie beispielsweise einen Bescheid.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Starte Folgemaßnahmen, wenn sich diese aus der Förderentscheidung ergeben&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe die Aufgabe ab.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Tipp:&lt;/strong&gt; Im Rahmen dieser Aufgabe können Folgemaßnahmen nötig werden. Vor allem, wenn ein positiver Bescheid eingegangen ist.&lt;/p&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="Entscheidung" label="Wurde der Antrag bewilligt?" type="boolean" />
+          <camunda:formField id="bescheid" label="Ablage für Förderentscheidung" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="Anmerkungen" label="Anmerkungen zur Förderentscheidung" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="70" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_16fm51s</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0rqfszz</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_0nlk2jx">
+      <bpmn:incoming>SequenceFlow_0rqfszz</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0rqfszz" sourceRef="Task_1t9uno8" targetRef="EndEvent_0nlk2jx" />
+    <bpmn:userTask id="identify_fitting_and_wanted_aid" name="Geeignetes Förderinstrument ermitteln">
+      <bpmn:documentation>&lt;p&gt;Es müssen passfähige Förderinstrumente für das Vorhaben identifiziert werden. Eventuell wurden bereits in vorangegangenen Gesprächen Ideen für Förderinstrumente gesammelt.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise einem Verantwortlichen die Aufgabe zu und setze ein realistisches Fälligkeitsdatum.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ermittle gemeinsam mit dem Projektteam passende Förderinstrumente.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Entscheidet, für welches Förderinstrument ein Antrag in dieser Maßnahme erarbeitet werden soll.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe die Aufgabe ab, wenn die Entscheidung zu dem Förderinstrument steht.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="antragsart" label="Mögliche Förderinstrumente" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="anm" label="Weitere Informationen zu Förderinstrumenten" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="10" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_02ue6jg</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_02efpm7</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_02efpm7" sourceRef="identify_fitting_and_wanted_aid" targetRef="ExclusiveGateway_1akvso1" />
+    <bpmn:sequenceFlow id="SequenceFlow_02ue6jg" sourceRef="Task_1sq2ne1" targetRef="identify_fitting_and_wanted_aid" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="fundraising">
+      <bpmndi:BPMNEdge id="SequenceFlow_0rqfszz_di" bpmnElement="SequenceFlow_0rqfszz">
+        <di:waypoint x="1865" y="259" />
+        <di:waypoint x="1930" y="259" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_16fm51s_di" bpmnElement="SequenceFlow_16fm51s">
+        <di:waypoint x="1700" y="259" />
+        <di:waypoint x="1765" y="259" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0w4dbiu_di" bpmnElement="SequenceFlow_0w4dbiu">
+        <di:waypoint x="193" y="120" />
+        <di:waypoint x="261" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_18xixty_di" bpmnElement="SequenceFlow_18xixty">
+        <di:waypoint x="1411" y="259" />
+        <di:waypoint x="1485" y="259" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_05v2n2j_di" bpmnElement="SequenceFlow_05v2n2j">
+        <di:waypoint x="1535" y="259" />
+        <di:waypoint x="1600" y="259" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1rzlb3a_di" bpmnElement="SequenceFlow_1rzlb3a">
+        <di:waypoint x="1171" y="259" />
+        <di:waypoint x="1311" y="259" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1x3ozht_di" bpmnElement="SequenceFlow_1x3ozht">
+        <di:waypoint x="1293" y="120" />
+        <di:waypoint x="1510" y="120" />
+        <di:waypoint x="1510" y="234" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0jgtaob_di" bpmnElement="SequenceFlow_0jgtaob">
+        <di:waypoint x="1004" y="145" />
+        <di:waypoint x="1004" y="259" />
+        <di:waypoint x="1071" y="259" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1fdzvp9_di" bpmnElement="SequenceFlow_1fdzvp9">
+        <di:waypoint x="1029" y="120" />
+        <di:waypoint x="1193" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="157" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_0g6bp50_di" bpmnElement="ExclusiveGateway_1akvso1">
+        <dc:Bounds x="979" y="95" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0zbdcia_di" bpmnElement="check_if_further_team_members_are_needed">
+        <dc:Bounds x="1193" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_00nobn3_di" bpmnElement="identify_neccessary_content">
+        <dc:Bounds x="1071" y="219" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0o1i10v_di" bpmnElement="discuss_content_with_other_departments">
+        <dc:Bounds x="1311" y="219" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0ve9mrq_di" bpmnElement="gather_all_content_and_give_it_to_fofoe">
+        <dc:Bounds x="1600" y="219" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0c374db_di" bpmnElement="Task_1sq2ne1">
+        <dc:Bounds x="261" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_17rhusl_di" bpmnElement="ExclusiveGateway_1404x6x">
+        <dc:Bounds x="1485" y="234" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1pf4i7w_di" bpmnElement="Task_1t9uno8">
+        <dc:Bounds x="1765" y="219" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0nlk2jx_di" bpmnElement="EndEvent_0nlk2jx">
+        <dc:Bounds x="1930" y="241" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_14ynqnt_di" bpmnElement="identify_fitting_and_wanted_aid">
+        <dc:Bounds x="530" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_02efpm7_di" bpmnElement="SequenceFlow_02efpm7">
+        <di:waypoint x="630" y="120" />
+        <di:waypoint x="979" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_02ue6jg_di" bpmnElement="SequenceFlow_02ue6jg">
+        <di:waypoint x="361" y="120" />
+        <di:waypoint x="530" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

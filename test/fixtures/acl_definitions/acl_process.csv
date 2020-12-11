@@ -1,0 +1,30 @@
+Beschreibung,ACTION,RESOURCE,Bemerkung,NO_ACCESS_USER,MEMBER_OF_GROUP,CONTRIBUTOR_AND_MEMBER_OF_GROUP,OWNER_AND_MEMBER_OF_GROUP,CONTRIBUTOR,OWNER
+"Maßnahmeinstanz starten (V,C)​",create,process,starten,x,yes,yes,yes,x,x
+Verantwortlichkeit zuweisen (C),update_assignee,process,(assign owner),x,yes,yes,yes,yes,yes
+Verantwortlichkeit zuweisen (C),update_assignee,private_process,,x,x,yes,yes,yes,yes
+Sichtbarkeit Maßnahmeinstanz​,show,process,,x,yes,yes,yes,yes,yes
+Sichtbarkeit Maßnahmeinstanz​,show,private_process,,x,x,yes,yes,yes,yes
+Minimal-Sichtbarkeit ​,,,,,,,,,
+Maßnahmeinstanz abbrechen**** (C)​,cancel,process,,x,x,x,yes,x,yes
+Maßnahmeinstanz abbrechen**** (C)​,cancel,private_process,,x,x,x,yes,x,yes
+Maßnahmeinstanz auf privat / öffentlich stellen** (C)​,update_private_status,process,,x,x,x,yes,x,yes
+Maßnahmeinstanz auf privat / öffentlich stellen** (C)​,update_private_status,private_process,,x,x,x,yes,x,yes
+Titel und Beschreibung ändern (C)​,update,process,,x,yes,yes,yes,yes,yes
+Titel und Beschreibung ändern (C)​,update,private_process,,x,x,yes,yes,yes,yes
+Kommentar hinzufügen (C),update,process,,x,yes,yes,yes,yes,yes
+Kommentar hinzufügen (C),update,private_process,,x,x,yes,yes,yes,yes
+Ziel einer Maßnahme zuordnen / entfernen (C),update,process,,x,yes,yes,yes,yes,yes
+Ziel einer Maßnahme zuordnen / entfernen (C),update,private_process,,x,x,yes,yes,yes,yes
+Folgemaßnahme hinzufügen (C),update,process,,x,yes,yes,yes,yes,yes
+Folgemaßnahme hinzufügen (C),update,private_process,,x,x,yes,yes,yes,yes
+Contributor Maßnahme einladen (C)​,update_contributors,process,,x,x,x,yes,x,yes
+Contributor Maßnahme einladen (C)​,update_contributors,private_process,,x,x,x,yes,x,yes
+Contributor Maßnahme ausladen​,update_contributors,process,,x,x,x,yes,x,yes
+Contributor Maßnahme ausladen​,update_contributors,private_process,,x,x,x,yes,x,yes
+Anzeige Individualseite Maßnahme​,show,process,,x,yes,yes,yes,yes,yes
+Anzeige Individualseite Maßnahme​,show,private_process,,x,x,yes,yes,yes,yes
+,,,,,,,,,
+,,,,,,,,,
+,,,Index Seiten werden noch nicht explizit in ACL geführt (da alle User diese nutzen dürfen),,,,,,
+Anzeige in Ergebnis Volltextsuche​,,,,,,,,,
+Anzeige in Listenseiten​,,,,,,,,,

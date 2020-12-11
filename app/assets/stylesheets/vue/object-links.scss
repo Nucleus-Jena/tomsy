@@ -1,0 +1,12 @@
+.object-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--chip {
+    padding: 2px 6px;
+    border-radius: 10px;
+  }
+}

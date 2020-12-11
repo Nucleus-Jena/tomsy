@@ -1,0 +1,25 @@
+---
+groups_workflow_process_definitions_001:
+  group_id: 6
+  workflow_process_definition_id: 1
+groups_workflow_process_definitions_002:
+  group_id: 6
+  workflow_process_definition_id: 2
+groups_workflow_process_definitions_003:
+  group_id: 6
+  workflow_process_definition_id: 3
+groups_workflow_process_definitions_004:
+  group_id: 6
+  workflow_process_definition_id: 4
+groups_workflow_process_definitions_005:
+  group_id: 7
+  workflow_process_definition_id: 1
+groups_workflow_process_definitions_006:
+  group_id: 7
+  workflow_process_definition_id: 2
+groups_workflow_process_definitions_007:
+  group_id: 8
+  workflow_process_definition_id: 5
+groups_workflow_process_definitions_008:
+  group_id: 8
+  workflow_process_definition_id: 6

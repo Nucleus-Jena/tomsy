@@ -1,0 +1,42 @@
+#Start dependency services by using:
+#$ docker-compose up -d
+
+# This file is only used for development environment (or local tests). For staging/production see:
+# https://gitlab.com/dietech/docker-host/blob/master/nuc-camunda/docker-compose.yml
+# For CI see .gitlab-ci.yml
+
+version: '2'
+services:
+  camunda:
+    image: 'camunda/camunda-bpm-platform:7.10.0'
+    container_name: 'workos_camunda'
+    restart: 'no'
+    volumes:
+      - ./vendor/docker-config/web.xml:/camunda/webapps/engine-rest/WEB-INF/web.xml  
+    ports: 
+      - '8080:8080'
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.1
+    container_name: workos_elasticsearch
+    restart: 'no'
+    environment:
+      - discovery.type=single-node
+      # The following env variables allow us to use an elastic search viewer to access raw data easily
+      # https://hub.docker.com/r/appbaseio/dejavu/
+      # docker run -p 1358:1358 -d appbaseio/dejavu
+      - http.cors.allow-origin=http://localhost:1358,http://127.0.0.1:1358
+      - http.cors.enabled=true
+      - http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type,Content-Length,Authorization
+      - http.cors.allow-credentials=true
+      - cluster.routing.allocation.disk.threshold_enabled=false # Disable watermark check (safeguard which sets write only indexes on low disk space)
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+  
+  tikka:
+    image: logicalspark/docker-tikaserver:1.20
+    container_name: workos_apache_tika
+    restart: 'no'
+    ports:
+      - '9998:9998'

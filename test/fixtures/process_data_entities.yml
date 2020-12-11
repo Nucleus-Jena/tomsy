@@ -1,0 +1,67 @@
+---
+process_data_entities_001:
+  id: 1
+  created_at: 2019-11-07 14:04:04.962662000 Z
+  updated_at: 2019-11-07 14:04:46.700260000 Z
+  type: ExternalRequirement
+  data:
+    formalities: ''
+    detailed_needs: Viele Whiteboards und Marker
+    first_meeting_at: '2019-11-07 14:04:00.000000000 Z'
+process_data_entities_002:
+  id: 2
+  created_at: 2020-02-28 16:11:26.546777000 Z
+  updated_at: 2020-02-28 16:14:03.134918000 Z
+  type: PatentApplication
+  data:
+    reference: GENESE-0233
+process_data_entities_003:
+  id: 3
+  created_at: 2020-02-28 16:12:25.824544000 Z
+  updated_at: 2020-02-28 16:16:36.516913000 Z
+  type: PatentApplication
+  data:
+    reference: GENESE-0037
+process_data_entities_004:
+  id: 4
+  created_at: 2020-02-28 16:17:08.805774000 Z
+  updated_at: 2020-02-28 16:19:57.706558000 Z
+  type: PatentApplication
+  data:
+    reference: JAMES
+process_data_entities_005:
+  id: 5
+  created_at: 2020-02-28 16:17:42.495902000 Z
+  updated_at: 2020-02-28 16:17:42.495902000 Z
+  type: PatentApplication
+  data: {}
+process_data_entities_006:
+  id: 6
+  created_at: 2020-03-03 18:11:07.249779000 Z
+  updated_at: 2020-03-03 18:11:31.608218000 Z
+  type: EventPlanning
+  data:
+    event_type: Workshop
+    working_title: James die Veranstaltung!
+process_data_entities_007:
+  id: 7
+  created_at: 2020-03-03 18:11:43.510234000 Z
+  updated_at: 2020-03-03 18:12:17.463090000 Z
+  type: EventPlanning
+  data:
+    working_title: Findet wohl nicht statt
+process_data_entities_008:
+  id: 8
+  created_at: 2020-03-04 10:50:12.562438000 Z
+  updated_at: 2020-03-04 10:50:38.922483000 Z
+  type: InitialMeetingInvention
+  data:
+    first_meeting_at: 01.04.2020, 11:50 Uhr
+process_data_entities_009:
+  id: 9
+  created_at: 2020-10-13 10:29:02.434747000 Z
+  updated_at: 2020-10-13 10:29:58.702108000 Z
+  type: EventPlanning
+  data:
+    event_type: Geburtstag
+    working_title: Geburtstagsparty 2020

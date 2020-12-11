@@ -1,0 +1,25 @@
+Beschreibung,ACTION,RESOURCE,Bemerkung,NO_ACCESS_USER,MEMBER_OF_GROUP,CONTRIBUTOR_AND_MEMBER_OF_GROUP,OWNER_AND_MEMBER_OF_GROUP,CONTRIBUTOR,OWNER,Contributor Extern (for documentation until implemented),OWNER_OF_PROCESS,CONTRIBUTOR_OF_PROCESS
+Verantwortlichkeit zuweisen  (C),update_assignee,task,,x,yes,yes,yes,yes,yes,no,yes,yes
+Verantwortlichkeit zuweisen  (C),update_assignee,task_of_private_process,,x,x,yes,yes,yes,yes,,yes,yes
+Contributor Aufgabe einladen (C),update_contributors,task,,x,x,x,yes,x,yes,no,yes,x
+Contributor Aufgabe einladen (C),update_contributors,task_of_private_process,,x,x,x,yes,x,yes,,yes,x
+Contributor Aufgabe ausladen,update_contributors,task,,x,x,x,yes,x,yes,no,yes,x
+Sichtbarkeit Aufgabe,read,task,,x,yes,yes,yes,yes,yes,yes,yes,yes
+Sichtbarkeit Aufgabe,read,task_of_private_process,,x,x,yes,yes,yes,yes,,yes,yes
+Daten anzeigen,read,task,,x,yes,yes,yes,yes,yes,yes,yes,yes
+Daten anzeigen,read,task_of_private_process,,x,x,yes,yes,yes,yes,,yes,yes
+Daten ändern (C),data,task,,x,yes,yes,yes,yes,yes,yes,yes,yes
+Daten ändern (C),data,task_of_private_process,,x,x,yes,yes,yes,yes,,yes,yes
+Kommentar hinzufügen (C),update,task,,x,yes,yes,yes,yes,yes,yes,yes,yes
+Kommentar hinzufügen (C),update,task_of_private_process,,x,x,yes,yes,yes,yes,,yes,yes
+Aufgabe markieren***,update_marked,task,,x,yes,yes,yes,yes,yes,no,yes,yes
+Aufgabe markieren***,update_marked,task_of_private_process,,x,x,yes,yes,yes,yes,,yes,yes
+Aufgabe abschließen,complete,task,,x,x,x,yes,x,yes,no,yes,x
+Fälligkeitsdatum ändern  (C),update,task,,x,yes,yes,yes,yes,yes,no,yes,yes
+Fälligkeitsdatum ändern  (C),update,task_of_private_process,,x,x,yes,yes,yes,yes,,yes,yes
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,Index Seiten werden noch nicht explizit in ACL geführt (da alle User diese nutzen dürfen),,,,,,,,,
+Anzeige in Ergebnis Volltextsuche,,,(= read),x,yes,yes,yes,yes,yes,yes,yes,yes
+Anzeige auf Listenseiten,,,(= read),x,yes,yes,yes,yes,yes,yes,yes,yes
+Sichtbarkeit Basisdaten Maßnahme,,,Ist ein Recht an der Maßnahme selbst,x,yes,yes,yes,yes,yes,yes,yes,yes

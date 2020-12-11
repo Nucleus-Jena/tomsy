@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0ohwmcn" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
+  <bpmn:process id="initial_meeting_invention" name="Erstgespräch Erfindung" isExecutable="true" camunda:candidateStarterGroups="srs">
+    <bpmn:documentation>Ziel des Prozesses: Im Vordergrund steht, zu ermitteln, ob die Entdeckung des Erfinderteams tatsächlich eine Erfindung und damit patentierbar ist. 
+
+
+Vorgehen: Um dies zu ermitteln, wird zunächst mit dem Erfinderteam ein Termin zum Erstgespräch vereinbart, in welchem die Erfindung und die Umstände, die über eine Patentierbarkeit entscheiden, geklärt werden sollen. Hierzu gehören der Bezug zu Drittmittelprojekten, die erfinderische Tätigkeit, die gewerbliche Anwendbarkeit und die Neuheit der Entdeckung. Sollte sich herausstellen, dass es sich tatsächlich um eine Erfindung handelt, wird anschließend der Prozess der Inanspruchnahme durch die FSU eingeleitet. Zudem können am Ende des Prozesses auch Vermittlungen zu Nucleus oder dem K1 durchgeführt werden</bpmn:documentation>
+    <bpmn:extensionElements>
+      <camunda:properties>
+        <camunda:property name="label_prefix" value="IMI" />
+        <camunda:property name="model_class" value="InitialMeetingInvention" />
+      </camunda:properties>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_0b5qmhr</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="arrange_first_meeting" name="Gespräch vereinbaren" camunda:candidateGroups="srs" camunda:dueDate="${dateTime().plusDays(3).toDate()}">
+      <bpmn:documentation>Dieser Arbeitsschritt beinhaltet die Einigung zwischen SRS Experte
+und  Erfinderteam auf einen Termin zur Durchführung des Erstgesprächs, welcher in dem System hinterlegt wird.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="10" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="first_meeting_at" label="Erstgespräch am" type="date">
+            <camunda:properties>
+              <camunda:property id="type" value="datetime" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="first_meeting_participants" label="Erstgesprächsteilnehmer" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_dossiers" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0b5qmhr</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1aqyhxq</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_0u2fyyg">
+      <bpmn:incoming>SequenceFlow_1uda9ty</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1uda9ty" sourceRef="ExclusiveGateway_11r52dm" targetRef="EndEvent_0u2fyyg" />
+    <bpmn:userTask id="specifiy_inventors" name="Klärung Erfinder" camunda:candidateGroups="srs">
+      <bpmn:documentation>In diesem Schritt sollen (im Rahmen des Erstgesprächs
+ oder Nachfragen) vom SRS Experten alle Rahmeninformationen über die an der Erfindung
+beteiligten Personen ermittelt werden. Hierzu gehören neben Stammdaten
+auch Informationen über das Arbeitsverhältnis der als Erfinder infrage
+kommenden Personen zum Zeitpunkt der Erfindung, die jeweilige
+Involvierung und die Erfindung und die Beantwortung der Frage, ob eine
+Person oder Organisation als Inhaber und/ oder Anmelder eines möglichen
+Patents auftreten wird.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="30" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="inventors" label="Erfinder" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_dossiers" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_13zk0dw</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0vu50b0</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_13zk0dw" sourceRef="ExclusiveGateway_09wh5xh" targetRef="specifiy_inventors" />
+    <bpmn:sequenceFlow id="SequenceFlow_0vu50b0" sourceRef="specifiy_inventors" targetRef="ExclusiveGateway_11r52dm" />
+    <bpmn:sequenceFlow id="SequenceFlow_0b5qmhr" sourceRef="StartEvent_1" targetRef="arrange_first_meeting" />
+    <bpmn:parallelGateway id="ExclusiveGateway_09wh5xh">
+      <bpmn:incoming>SequenceFlow_1aqyhxq</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_13zk0dw</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_10b1jgl</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1ozr75u</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1w965nu</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1fkxwal</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:parallelGateway id="ExclusiveGateway_11r52dm">
+      <bpmn:incoming>SequenceFlow_0vu50b0</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1p5rt59</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_11zhtkp</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0ef2t7q</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0v9tn4e</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1uda9ty</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_1aqyhxq" sourceRef="arrange_first_meeting" targetRef="ExclusiveGateway_09wh5xh" />
+    <bpmn:userTask id="initial_rating_patentability" name="Erstbeurteilung Patentfähigkeit" camunda:candidateGroups="srs">
+      <bpmn:documentation>In
+ diesem Arbeitsschritt gibt der SRS Experte sein Feedback zu den bisher
+übermittelten Informationen. Hierbei kann noch keine genaue Bewertung
+erfolgen, aber eine vorläufige Einschätzung gegeben werden. In den
+Folgeprozessen können jederzeit Informationen zutage kommen, die eine
+mögliche Patentierbarkeit vereiteln, daher ist diese Ersteinschätzung
+nur als grobe Marschroute zu verstehen. Bei einem Großteil der Anfragen
+im Schutzrechtsservice handelt es sich um Erfindungen, also
+patentierfähige Entdeckungen.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="40" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="is_patentable" label="Patentfähig" type="boolean" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_10b1jgl</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1p5rt59</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="specify_service_invention" name="Klärung Diensterfindung" camunda:candidateGroups="srs">
+      <bpmn:documentation>Dieser
+ Arbeitsschritt ergibt sich meist unmittelbar aus der Klärung der
+Beteiligten bzw. dem Arbeitsverhältnis der Erfinder zum Zeitpunkt der
+Erfindung, es können aber noch andere Aspekte relevant sein, wie die
+Umstände, die zu der Erfindung geführt haben. Dieser Punkt entscheidet
+in weiten Teilen über die weitere Arbeit des Schutzrechtsservice, da der
+ SRS nur für Erfindungen zuständig
+ ist, deren Inhaber die Universität Jena ist, und daher die
+Zusammenarbeit bei einer freien Erfindung entweder endet, oder andere
+Anforderungen hat.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="50" />
+          <camunda:property name="result_key" value="is_service_invention" />
+          <camunda:property name="result_value" value="is_service_invention" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="is_service_invention" label="Diensterfindung" type="boolean">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1ozr75u</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1w0rmfx</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="specifiy_rough_description" name="Grobbeschreibung erstellen" camunda:candidateGroups="srs">
+      <bpmn:documentation>Um
+ zu beurteilen, ob es sich tatsächlich um eine Erfindung handelt, muss
+der SRS Experte zunächst eine Beschreibung der vermeintlichen Erfindung
+erhalten. Diese muss vom Erfinderteam geliefert werden und wird für
+viele spätere Aufgaben wie die Erstellung einer Erfindungsbeschreibung
+oder eine Recherche zu der Neuheit benötigt.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="90" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="rough_description_files" label="Grobbeschreibung" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1w965nu</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_11zhtkp</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_10b1jgl" sourceRef="ExclusiveGateway_09wh5xh" targetRef="initial_rating_patentability" />
+    <bpmn:sequenceFlow id="SequenceFlow_1ozr75u" sourceRef="ExclusiveGateway_09wh5xh" targetRef="specify_service_invention" />
+    <bpmn:sequenceFlow id="SequenceFlow_1w965nu" sourceRef="ExclusiveGateway_09wh5xh" targetRef="specifiy_rough_description" />
+    <bpmn:sequenceFlow id="SequenceFlow_1p5rt59" sourceRef="initial_rating_patentability" targetRef="ExclusiveGateway_11r52dm" />
+    <bpmn:sequenceFlow id="SequenceFlow_11zhtkp" sourceRef="specifiy_rough_description" targetRef="ExclusiveGateway_11r52dm" />
+    <bpmn:userTask id="set_reference_from_genese" name="Erfindungsakte in Genese anlegen">
+      <bpmn:documentation>Sofern es sich bei der untersuchten Entdeckung um eine Diensterfindung handelt, wird eine Akte in Genese angelegt. In dieser Aufgabe wird das dort generierte Aktenzeichen hinterlegt.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="80" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="reference" label="Aktenzeichen Erfindungsakte" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_16h122k</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0v9tn4e</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_00d94np" default="SequenceFlow_1tuwv2c">
+      <bpmn:incoming>SequenceFlow_1w0rmfx</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1tuwv2c</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0aftt6e</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_1w0rmfx" sourceRef="specify_service_invention" targetRef="ExclusiveGateway_00d94np" />
+    <bpmn:userTask id="specify_if_served_by_university" name="Entscheiden, ob die Universität die Erfindung weiter betreuen soll">
+      <bpmn:documentation>Falls es sich im vorliegenden Fall nicht um eine Diensterfindung handelt, können Erfinder und der SRS gemeinsam beschließen, ob der SRS die potentielle Erfindung dennoch betreuen soll. Wenn beide Parteien dem zustimmen, wird im Folgenden ein Vertrag geschlossen. Wenn sich dagegen entschieden wird, endet der Prozess, da der SRS nur für uniinterne Erfindungen zuständig ist.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="is_served_by_university" label="Universität soll Erfindung weiter betreuen" type="boolean">
+            <camunda:validation>
+              <camunda:constraint name="required" />
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
+        <camunda:properties>
+          <camunda:property name="order" value="60" />
+          <camunda:property name="result_key" value="is_served_by_university" />
+          <camunda:property name="result_value" value="is_served_by_university" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1tuwv2c</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1v0rla6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1tuwv2c" sourceRef="ExclusiveGateway_00d94np" targetRef="specify_if_served_by_university" />
+    <bpmn:exclusiveGateway id="ExclusiveGateway_1sbm6zo" default="SequenceFlow_122k6w8">
+      <bpmn:incoming>SequenceFlow_1v0rla6</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0lidjuw</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_122k6w8</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_1v0rla6" sourceRef="specify_if_served_by_university" targetRef="ExclusiveGateway_1sbm6zo" />
+    <bpmn:userTask id="add_contract_between_srs_and_inventor" name="Vertrag zwischen SRS und Erfindern erstellen und hinterlegen">
+      <bpmn:documentation>Wenn im Falle einer freien Erfindung der SRS und die Erfinder sich dazu entscheiden, dass der SRS die Erfindung betreuen soll, wird in dieser Aufgabe ein Vertrag darüber geschlossen und hinterlegt. Anschließend wird der Prozess und das Projekt fortgesetzt, als wenn es sich um eine Diensterfindung handeln würde.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="70" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="srs_inventor_contract_files" label="Vertrag zwischen SRS und Erfindern" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0lidjuw</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0zeophf</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0lidjuw" name="Universität soll Erfindug weiter betreuen" sourceRef="ExclusiveGateway_1sbm6zo" targetRef="add_contract_between_srs_and_inventor">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${is_served_by_university}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_122k6w8" sourceRef="ExclusiveGateway_1sbm6zo" targetRef="EndEvent_1kwmgub" />
+    <bpmn:endEvent id="EndEvent_1kwmgub">
+      <bpmn:incoming>SequenceFlow_122k6w8</bpmn:incoming>
+      <bpmn:terminateEventDefinition />
+    </bpmn:endEvent>
+    <bpmn:userTask id="add_protocol" name="Protokoll hinterlegen" camunda:candidateGroups="srs">
+      <bpmn:documentation>In diesem Schritt soll das Protokoll des Erstgepsrächs hinterlegt werden.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="20" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="protocol_files" label="Protokoll" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1fkxwal</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0ef2t7q</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1fkxwal" sourceRef="ExclusiveGateway_09wh5xh" targetRef="add_protocol" />
+    <bpmn:sequenceFlow id="SequenceFlow_0ef2t7q" sourceRef="add_protocol" targetRef="ExclusiveGateway_11r52dm" />
+    <bpmn:sequenceFlow id="SequenceFlow_0aftt6e" name="ist Diensterfindung" sourceRef="ExclusiveGateway_00d94np" targetRef="ExclusiveGateway_1q6nq4m">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${is_service_invention}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_1q6nq4m">
+      <bpmn:incoming>SequenceFlow_0aftt6e</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0zeophf</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_16h122k</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0zeophf" sourceRef="add_contract_between_srs_and_inventor" targetRef="ExclusiveGateway_1q6nq4m" />
+    <bpmn:sequenceFlow id="SequenceFlow_16h122k" sourceRef="ExclusiveGateway_1q6nq4m" targetRef="set_reference_from_genese" />
+    <bpmn:sequenceFlow id="SequenceFlow_0v9tn4e" sourceRef="set_reference_from_genese" targetRef="ExclusiveGateway_11r52dm" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="initial_meeting_invention">
+      <bpmndi:BPMNEdge id="SequenceFlow_0v9tn4e_di" bpmnElement="SequenceFlow_0v9tn4e">
+        <di:waypoint x="1204" y="581" />
+        <di:waypoint x="1231" y="581" />
+        <di:waypoint x="1231" y="400" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_16h122k_di" bpmnElement="SequenceFlow_16h122k">
+        <di:waypoint x="1074" y="581" />
+        <di:waypoint x="1104" y="581" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0zeophf_di" bpmnElement="SequenceFlow_0zeophf">
+        <di:waypoint x="1049" y="509" />
+        <di:waypoint x="1049" y="556" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0aftt6e_di" bpmnElement="SequenceFlow_0aftt6e">
+        <di:waypoint x="672" y="581" />
+        <di:waypoint x="1024" y="581" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="669" y="589" width="77" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ef2t7q_di" bpmnElement="SequenceFlow_0ef2t7q">
+        <di:waypoint x="589" y="138" />
+        <di:waypoint x="1231" y="138" />
+        <di:waypoint x="1231" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1fkxwal_di" bpmnElement="SequenceFlow_1fkxwal">
+        <di:waypoint x="425" y="350" />
+        <di:waypoint x="425" y="138" />
+        <di:waypoint x="489" y="138" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_122k6w8_di" bpmnElement="SequenceFlow_122k6w8">
+        <di:waypoint x="864" y="444" />
+        <di:waypoint x="864" y="384" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0lidjuw_di" bpmnElement="SequenceFlow_0lidjuw">
+        <di:waypoint x="889" y="469" />
+        <di:waypoint x="999" y="469" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="900" y="425" width="74" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1v0rla6_di" bpmnElement="SequenceFlow_1v0rla6">
+        <di:waypoint x="795" y="469" />
+        <di:waypoint x="839" y="469" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1tuwv2c_di" bpmnElement="SequenceFlow_1tuwv2c">
+        <di:waypoint x="647" y="556" />
+        <di:waypoint x="647" y="469" />
+        <di:waypoint x="695" y="469" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1w0rmfx_di" bpmnElement="SequenceFlow_1w0rmfx">
+        <di:waypoint x="589" y="581" />
+        <di:waypoint x="622" y="581" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_11zhtkp_di" bpmnElement="SequenceFlow_11zhtkp">
+        <di:waypoint x="589" y="778" />
+        <di:waypoint x="1231" y="778" />
+        <di:waypoint x="1231" y="400" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1p5rt59_di" bpmnElement="SequenceFlow_1p5rt59">
+        <di:waypoint x="589" y="313" />
+        <di:waypoint x="1231" y="313" />
+        <di:waypoint x="1231" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1w965nu_di" bpmnElement="SequenceFlow_1w965nu">
+        <di:waypoint x="425" y="400" />
+        <di:waypoint x="425" y="778" />
+        <di:waypoint x="489" y="778" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1ozr75u_di" bpmnElement="SequenceFlow_1ozr75u">
+        <di:waypoint x="425" y="400" />
+        <di:waypoint x="425" y="581" />
+        <di:waypoint x="489" y="581" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_10b1jgl_di" bpmnElement="SequenceFlow_10b1jgl">
+        <di:waypoint x="425" y="350" />
+        <di:waypoint x="425" y="313" />
+        <di:waypoint x="489" y="313" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1aqyhxq_di" bpmnElement="SequenceFlow_1aqyhxq">
+        <di:waypoint x="354" y="375" />
+        <di:waypoint x="400" y="375" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0b5qmhr_di" bpmnElement="SequenceFlow_0b5qmhr">
+        <di:waypoint x="194" y="375" />
+        <di:waypoint x="254" y="375" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0vu50b0_di" bpmnElement="SequenceFlow_0vu50b0">
+        <di:waypoint x="589" y="227" />
+        <di:waypoint x="1231" y="227" />
+        <di:waypoint x="1231" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_13zk0dw_di" bpmnElement="SequenceFlow_13zk0dw">
+        <di:waypoint x="425" y="350" />
+        <di:waypoint x="425" y="227" />
+        <di:waypoint x="489" y="227" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1uda9ty_di" bpmnElement="SequenceFlow_1uda9ty">
+        <di:waypoint x="1256" y="375" />
+        <di:waypoint x="1391" y="375" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="158" y="357" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="206" y="400" width="83" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1xrjw53_di" bpmnElement="arrange_first_meeting">
+        <dc:Bounds x="254" y="335" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0u2fyyg_di" bpmnElement="EndEvent_0u2fyyg">
+        <dc:Bounds x="1391" y="357" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="824" y="400" width="83" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1pdfend_di" bpmnElement="specifiy_inventors">
+        <dc:Bounds x="489" y="187" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_1gnwxqi_di" bpmnElement="ExclusiveGateway_09wh5xh">
+        <dc:Bounds x="400" y="350" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_0fb4giy_di" bpmnElement="ExclusiveGateway_11r52dm">
+        <dc:Bounds x="1206" y="350" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0wqlnbm_di" bpmnElement="initial_rating_patentability">
+        <dc:Bounds x="489" y="273" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0sejwi6_di" bpmnElement="specify_service_invention">
+        <dc:Bounds x="489" y="541" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_02ez3f9_di" bpmnElement="specifiy_rough_description">
+        <dc:Bounds x="489" y="738" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_04vygz8_di" bpmnElement="set_reference_from_genese">
+        <dc:Bounds x="1104" y="541" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_00d94np_di" bpmnElement="ExclusiveGateway_00d94np" isMarkerVisible="true">
+        <dc:Bounds x="622" y="556" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1bpkf9l_di" bpmnElement="specify_if_served_by_university">
+        <dc:Bounds x="695" y="429" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1sbm6zo_di" bpmnElement="ExclusiveGateway_1sbm6zo" isMarkerVisible="true">
+        <dc:Bounds x="839" y="444" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0rejep8_di" bpmnElement="add_contract_between_srs_and_inventor">
+        <dc:Bounds x="999" y="429" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0zamfvm_di" bpmnElement="EndEvent_1kwmgub">
+        <dc:Bounds x="846" y="348" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0wplvks_di" bpmnElement="add_protocol">
+        <dc:Bounds x="489" y="98" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1q6nq4m_di" bpmnElement="ExclusiveGateway_1q6nq4m" isMarkerVisible="true">
+        <dc:Bounds x="1024" y="556" width="50" height="50" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

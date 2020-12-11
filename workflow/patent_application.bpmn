@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0ok359s" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.1.1">
+  <bpmn:process id="patent_application" name="Patentanmeldung" isExecutable="true" camunda:candidateStarterGroups="srs">
+    <bpmn:documentation>Ziel des Prozesses: Die Hauptaufgabe dieses Prozesses ist die Patentanmeldung beim DPMA. 
+
+
+Vorgehen: Zunächst wird eine ausführliche Erfindungsbeschreibung erstellt und eine Recherche zu möglichen Patentansprüchen durchgeführt. Danach wird im zweiten Arbeitspaket der vollständige Antrag gestellt, welcher zusätzlich zu der Erfindungsbeschreibung eine Erfinderliste, eine Zusammenfassung und ausformulierte Patentansprüche benötigt. Die Erfinderliste erhält der Schutzrechtsexperte aus dem Prozess „SRS Erfindungsmeldung“. In den meisten Fällen liegt die Erfinderliste rechtzeitig zur Patentanmeldung vor, es kann aber auch vorkommen, dass die Anmeldung zunächst ohne die Erfinderliste oder auch andere Unterlagen vorgenommen wird. Diese müssen dann innerhalb festgelegter Fristen nachgereicht werden. Der Erteilungsantrag P2007 ist ein Dokument, das als zentraler Punkt der Patentanmeldung fungiert. </bpmn:documentation>
+    <bpmn:extensionElements>
+      <camunda:properties>
+        <camunda:property name="model_class" value="PatentApplication" />
+        <camunda:property name="label_prefix" value="PA" />
+      </camunda:properties>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_1ml2q7v</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="description" name="Beschreibung erstellen">
+      <bpmn:documentation>In dieser Aufgabe soll gemeinsam mit den Erfindern ausgehend von der Kurzbeschreibung aus der Erfindungsmeldung die vollständige Erfindungsbeschreibung erstellt werden, die dann in der Patentanmeldung hinterlegt wird.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="20" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="description_files" label="Beschreibung (Dateianhang)" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1oabeco</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1bvvyb2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="prior_art" name="Stand der Technik ermitteln">
+      <bpmn:documentation>In dieser Aufgabe soll der Stand der Technik, aus welchem die Erfindung ausgegangen ist, recherchiert und hinterlegt werden. Auch können Patente und sonstige Unterlagen hinterlegt werden. Ansatzpunkte hierfür sind Angaben der Erfinder und die Rechercheergebnisse zur Neuheit der Erfindung. Erstellt werden soll ein Textblock, welcher einleitend in die Patentanmeldeschrift eingebracht wird.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="30" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="prior_art_files" label="Stand der Technik (Dateianhang)" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1h1kljh</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0bersln</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="object_of_invention" name="Aufgabe der Erfindung festlegen">
+      <bpmn:documentation>In dieser Aufgabe soll eine Problemstellung formuliert werden, die durch die Erfindung gelöst werden soll. Diese Aufgabe der Erfindung wird als Textblock formuliert und in die Anmeldeschrift übernommen.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="40" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="object_of_invention_files" label="Aufgabe der Erfindung (Dateianhang)" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0cyznaz</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0r3wlhj</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="patent_claim" name="Patentansprüche formulieren">
+      <bpmn:documentation>In dieser Aufgabe werden ausgehend von der Beschreibung, der Aufgabe und der technischen Ausgangssituation der Erfindung die Patentansprüche formuliert, die für die Erfindung angemeldet werden sollen. Hier soll ein Textblock erstellt werden, der direkt in die Patentanmeldung übernommen wird. Die Ansprüche sind mit den Erfindern abzustimmen.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="50" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="patent_claim_files" label="Patentansprüche (Dateianhang)" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1frt5kp</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1oqjtaa</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="create_patent_application" name="Patentanmeldung vornehmen">
+      <bpmn:documentation>In dieser Aufgabe soll die Anmeldeschrift für die Patentanmeldung vorgenommen werden.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="70" />
+        </camunda:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_04ssr8b</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0vvdbhu</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_0dv6qz1">
+      <bpmn:incoming>SequenceFlow_11ltiwq</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1h1kljh" sourceRef="ParallelGateway_0m5qjit" targetRef="prior_art" />
+    <bpmn:sequenceFlow id="SequenceFlow_1oabeco" sourceRef="ParallelGateway_0m5qjit" targetRef="description" />
+    <bpmn:userTask id="publication" name="Patentanmeldeschrift verfassen">
+      <bpmn:documentation>In dieser Aufgabe soll die Anmeldeschrift für die Patentierung angefertigt werden. Hierzu wird eine Vorlage angeboten, in welche die zuvor erstellten Textbausteine eingepflegt werden. Das Dokument muss dann ausgedruckt und an das DPMA gesendet werden.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="60" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="publication_files" label="Patentanmeldeschrift (Dateianhang)" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0m9rls5</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_04ssr8b</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1frt5kp" sourceRef="ParallelGateway_0m5qjit" targetRef="patent_claim" />
+    <bpmn:parallelGateway id="ParallelGateway_0m5qjit">
+      <bpmn:incoming>SequenceFlow_15aex7e</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1h1kljh</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1oabeco</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1frt5kp</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0m9rls5</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0cyznaz</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0m9rls5" sourceRef="ParallelGateway_0m5qjit" targetRef="publication" />
+    <bpmn:sequenceFlow id="SequenceFlow_04ssr8b" sourceRef="publication" targetRef="create_patent_application" />
+    <bpmn:userTask id="set_reference_from_genese" name="Patentakte in Genese anlegen">
+      <bpmn:documentation>Sofern eine Patentanmeldung gestartet wird, wird zuerst eine Akte in Genese angelegt. Das dazugehörige Aktenzeichen wird in dieser Aufgabe hinterlegt und setzt sich aus dem für die Erfindung bereits vorhandenen Aktenzeichen und dem Kürzel der angestrebten Anmeldeform zusammen.</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="10" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="reference" label="Aktenzeichen Patentakte" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1ml2q7v</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_15aex7e</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1ml2q7v" sourceRef="StartEvent_1" targetRef="set_reference_from_genese" />
+    <bpmn:sequenceFlow id="SequenceFlow_15aex7e" sourceRef="set_reference_from_genese" targetRef="ParallelGateway_0m5qjit" />
+    <bpmn:sequenceFlow id="SequenceFlow_1bvvyb2" sourceRef="description" targetRef="ParallelGateway_0uth7i4" />
+    <bpmn:parallelGateway id="ParallelGateway_0uth7i4">
+      <bpmn:incoming>SequenceFlow_1bvvyb2</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0bersln</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0r3wlhj</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1oqjtaa</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_11ltiwq</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0bersln" sourceRef="prior_art" targetRef="ParallelGateway_0uth7i4" />
+    <bpmn:sequenceFlow id="SequenceFlow_0r3wlhj" sourceRef="object_of_invention" targetRef="ParallelGateway_0uth7i4" />
+    <bpmn:sequenceFlow id="SequenceFlow_1oqjtaa" sourceRef="patent_claim" targetRef="ParallelGateway_0uth7i4" />
+    <bpmn:sequenceFlow id="SequenceFlow_11ltiwq" sourceRef="ParallelGateway_0uth7i4" targetRef="EndEvent_0dv6qz1" />
+    <bpmn:sequenceFlow id="SequenceFlow_0vvdbhu" sourceRef="create_patent_application" targetRef="EndEvent_04x4g6h" />
+    <bpmn:endEvent id="EndEvent_04x4g6h">
+      <bpmn:incoming>SequenceFlow_0vvdbhu</bpmn:incoming>
+      <bpmn:terminateEventDefinition />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0cyznaz" sourceRef="ParallelGateway_0m5qjit" targetRef="object_of_invention" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="patent_application">
+      <bpmndi:BPMNEdge id="SequenceFlow_0cyznaz_di" bpmnElement="SequenceFlow_0cyznaz">
+        <di:waypoint x="401" y="386" />
+        <di:waypoint x="401" y="408" />
+        <di:waypoint x="543" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0vvdbhu_di" bpmnElement="SequenceFlow_0vvdbhu">
+        <di:waypoint x="752" y="119" />
+        <di:waypoint x="843" y="119" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_11ltiwq_di" bpmnElement="SequenceFlow_11ltiwq">
+        <di:waypoint x="811" y="361" />
+        <di:waypoint x="843" y="361" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1oqjtaa_di" bpmnElement="SequenceFlow_1oqjtaa">
+        <di:waypoint x="643" y="498" />
+        <di:waypoint x="786" y="498" />
+        <di:waypoint x="786" y="386" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0r3wlhj_di" bpmnElement="SequenceFlow_0r3wlhj">
+        <di:waypoint x="643" y="408" />
+        <di:waypoint x="786" y="408" />
+        <di:waypoint x="786" y="386" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0bersln_di" bpmnElement="SequenceFlow_0bersln">
+        <di:waypoint x="643" y="312" />
+        <di:waypoint x="786" y="312" />
+        <di:waypoint x="786" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1bvvyb2_di" bpmnElement="SequenceFlow_1bvvyb2">
+        <di:waypoint x="643" y="223" />
+        <di:waypoint x="786" y="223" />
+        <di:waypoint x="786" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_15aex7e_di" bpmnElement="SequenceFlow_15aex7e">
+        <di:waypoint x="334" y="361" />
+        <di:waypoint x="376" y="361" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1ml2q7v_di" bpmnElement="SequenceFlow_1ml2q7v">
+        <di:waypoint x="197" y="361" />
+        <di:waypoint x="234" y="361" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_04ssr8b_di" bpmnElement="SequenceFlow_04ssr8b">
+        <di:waypoint x="551" y="119" />
+        <di:waypoint x="652" y="119" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0m9rls5_di" bpmnElement="SequenceFlow_0m9rls5">
+        <di:waypoint x="401" y="336" />
+        <di:waypoint x="401" y="119" />
+        <di:waypoint x="451" y="119" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1frt5kp_di" bpmnElement="SequenceFlow_1frt5kp">
+        <di:waypoint x="401" y="386" />
+        <di:waypoint x="401" y="498" />
+        <di:waypoint x="543" y="498" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1oabeco_di" bpmnElement="SequenceFlow_1oabeco">
+        <di:waypoint x="401" y="336" />
+        <di:waypoint x="401" y="223" />
+        <di:waypoint x="543" y="223" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1h1kljh_di" bpmnElement="SequenceFlow_1h1kljh">
+        <di:waypoint x="401" y="336" />
+        <di:waypoint x="401" y="312" />
+        <di:waypoint x="543" y="312" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="161" y="343" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1hajau0_di" bpmnElement="description">
+        <dc:Bounds x="543" y="183" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0h2xhk9_di" bpmnElement="prior_art">
+        <dc:Bounds x="543" y="272" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0cfwsda_di" bpmnElement="object_of_invention">
+        <dc:Bounds x="543" y="368" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_16l2vpd_di" bpmnElement="patent_claim">
+        <dc:Bounds x="543" y="458" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_04ffmt1_di" bpmnElement="create_patent_application">
+        <dc:Bounds x="652" y="79" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0dv6qz1_di" bpmnElement="EndEvent_0dv6qz1">
+        <dc:Bounds x="843" y="343" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1qwrzva_di" bpmnElement="publication">
+        <dc:Bounds x="451" y="79" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_1v4rj3q_di" bpmnElement="ParallelGateway_0m5qjit">
+        <dc:Bounds x="376" y="336" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0o0m8z9_di" bpmnElement="set_reference_from_genese">
+        <dc:Bounds x="234" y="321" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_1k9naen_di" bpmnElement="ParallelGateway_0uth7i4">
+        <dc:Bounds x="761" y="336" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0ktncpq_di" bpmnElement="EndEvent_04x4g6h">
+        <dc:Bounds x="843" y="101" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

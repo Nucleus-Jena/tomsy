@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require_relative '../test/simplecov_env'
+SimpleCovEnv.configure_profile
+
+module SimpleCov
+  module ResultMerger
+    class << self
+      def resultset_files
+        Dir.glob(File.join(SimpleCov.coverage_path, '*', '.resultset.json'))
+      end
+
+      def resultset_hashes
+        resultset_files.map do |path|
+          JSON.parse(File.read(path))
+        rescue
+          {}
+        end
+      end
+
+      def resultset
+        resultset_hashes.reduce({}, :merge)
+      end
+    end
+  end
+end
+
+merged_result = SimpleCov::ResultMerger.merged_result
+
+File.write('test_coverage.txt', "coverage #{SimpleCov::ResultMerger.merged_result.covered_percent}\n")
+
+merged_result.format!

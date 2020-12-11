@@ -1,0 +1,67 @@
+---
+users_001:
+  id: 1
+  email: admin@example.org
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  remember_created_at: 
+  camunda_identifier: ruid1
+  created_at: 2019-05-09 12:41:47.255979000 Z
+  updated_at: 2020-01-27 14:28:39.990535000 Z
+  firstname: Admin
+  lastname: User
+  camunda_token: km2JreXGYAnDLzQxwgdk
+users_002:
+  id: 133234
+  email: user_with_high_id@example.org
+  encrypted_password: ''
+  remember_created_at: 
+  camunda_identifier: 
+  created_at: 2019-11-04 09:58:43.278082000 Z
+  updated_at: 2019-11-04 09:58:43.278082000 Z
+  firstname: to avoid errors due to camunda test user
+  lastname: which were not deleted previously and may have lowish IDs
+  camunda_token: 
+users_003:
+  id: 133235
+  email: srs_user@example.org
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  remember_created_at: 
+  camunda_identifier: ruid133235
+  created_at: 2020-01-27 14:29:22.623555000 Z
+  updated_at: 2020-03-03 18:12:23.891008000 Z
+  firstname: SRS
+  lastname: User
+  camunda_token: xBXHsCesNv7Ryeb4F6WS
+users_004:
+  id: 133236
+  email: no_access_user@example.org
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  remember_created_at: 2020-01-27 14:29:00.000000000 Z
+  camunda_identifier: ruid133236
+  created_at: 2020-01-27 14:30:04.986332000 Z
+  updated_at: 2020-01-27 14:30:05.017030000 Z
+  firstname: No Access
+  lastname: User
+  camunda_token: s7utDAwPHyjxzk-K9ihf
+users_005:
+  id: 133237
+  email: dsb@uni-jena.example.org
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  remember_created_at: 
+  camunda_identifier: 
+  created_at: 2020-11-02 09:29:56.526262000 Z
+  updated_at: 2020-11-02 09:29:56.526262000 Z
+  firstname: DSB
+  lastname: Nutzer
+  camunda_token: 
+users_006:
+  id: 133238
+  email: dsb-boss@uni-jena.example.org
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  remember_created_at: 
+  camunda_identifier: 
+  created_at: 2020-11-02 09:29:58.899463000 Z
+  updated_at: 2020-11-02 09:29:58.899463000 Z
+  firstname: DSB
+  lastname: Boss
+  camunda_token: 

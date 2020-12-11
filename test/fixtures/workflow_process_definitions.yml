@@ -1,0 +1,713 @@
+---
+workflow_process_definitions_001:
+  id: 1
+  key: event_planning
+  name: Veranstaltungsplanung
+  created_at: 2019-10-29 11:25:00.771732000 Z
+  updated_at: 2020-11-20 14:24:18.739226000 Z
+  label_prefix: VP
+  model:
+    tasks:
+      create_agenda:
+        fields:
+        - id: agenda
+          type: text
+          label:
+          parameter:
+          validations: {}
+        - id: agenda_files
+          type: has_many_files
+          label:
+          parameter:
+          validations: {}
+      acquire_sponsors:
+        fields:
+        - id: event_sponsors
+          type: has_many_dossiers
+          label:
+          parameter:
+            type: person
+          validations: {}
+      define_event_host:
+        fields:
+        - id: event_host
+          type: has_one_dossier
+          label:
+          parameter:
+            type: person
+          validations: {}
+      define_event_type:
+        fields:
+        - id: working_title
+          type: string
+          label:
+          parameter:
+          validations: {}
+        - id: event_type
+          type: string
+          label:
+          parameter:
+          validations: {}
+      define_scheduling:
+        fields:
+        - id: scheduling
+          type: text
+          label:
+          parameter:
+          validations: {}
+        - id: scheduling_files
+          type: has_many_files
+          label:
+          parameter:
+          validations: {}
+      define_other_points:
+        fields:
+        - id: other_points
+          type: text
+          label:
+          parameter:
+          validations: {}
+        - id: other_points_files
+          type: has_many_files
+          label:
+          parameter:
+          validations: {}
+      define_event_organizer:
+        fields:
+        - id: event_organizers
+          type: has_many_dossiers
+          label:
+          parameter:
+            type: person
+          validations: {}
+      create_content_planning:
+        fields:
+        - id: content
+          type: text
+          label:
+          parameter:
+          validations: {}
+        - id: content_files
+          type: has_many_files
+          label:
+          parameter:
+          validations: {}
+      create_spatial_planning:
+        fields:
+        - id: spatial_planning
+          type: text
+          label:
+          parameter:
+          validations: {}
+        - id: spatial_planning_files
+          type: has_many_files
+          label:
+          parameter:
+          validations: {}
+      define_responsibilities:
+        fields:
+        - id: responsibilities
+          type: text
+          label:
+          parameter:
+          validations: {}
+        - id: responsibilities_files
+          type: has_many_files
+          label:
+          parameter:
+          validations: {}
+      create_financial_planning:
+        fields:
+        - id: financial_planning
+          type: text
+          label:
+          parameter:
+          validations: {}
+        - id: financial_planning_files
+          type: has_many_files
+          label:
+          parameter:
+          validations: {}
+      develop_marketing_concept:
+        fields:
+        - id: marketing_concept
+          type: text
+          label:
+          parameter:
+          validations: {}
+        - id: marketing_concept_files
+          type: has_many_files
+          label:
+          parameter:
+          validations: {}
+      initiate_process_of_participant_acquisition: {}
+    model_class: EventPlanning
+  description: "Ziel des Prozesses: Die Aufgabe dieses Prozesses ist es, eine Veranstaltung
+    vorzubereiten, zu planen, durchzuführen und abschließend auszuwerten. \n\nVorgehen:
+    Dieser Prozess beginnt damit, dass ein Bedarf nach einer Veranstaltung besteht.
+    Dieser kann intern durch Projektvorgaben oder extern durch Bedarfe nach Matching
+    entstehen. Im ersten Abschnitt des Prozesses werden die eigenen Aufgaben ermittelt,
+    welche im zweiten Arbeitspaket bearbeitet und abgeschlossen werden. Diese Aufgaben
+    können sehr vielfältig sein und das vorliegende Prozessmodell deckt nicht alle
+    Möglichkeiten ab. Im letzten Arbeitspaket wird die Durchführung und die Nachbereitung
+    der Veranstaltung behandelt. Hierzu gehören Erinnerungsmails, Teilnahmetickets
+    und Evaluationen. Der Prozess endet, wenn die Veranstaltung beendet, Teilnahmetickets
+    erstellt und Feedback eingeholt wurde."
+workflow_process_definitions_002:
+  id: 2
+  key: external_requirements
+  name: Bestimmung Externer Bedarfe
+  created_at: 2019-10-29 11:25:00.883915000 Z
+  updated_at: 2020-11-20 14:24:19.315257000 Z
+  label_prefix: EB
+  model:
+    tasks:
+      define_formalities:
+        fields:
+        - id: formalities
+          type: text
+          label: Formalia
+          parameter:
+          validations: {}
+      arrange_meeting_nuc:
+        fields:
+        - id: first_meeting_participants
+          type: has_many_dossiers
+          label: Teilnehmer Kennenlerngespräch (extern)
+          parameter:
+            type: person
+          validations: {}
+        - id: first_meeting_internal_participants
+          type: has_many_dossiers
+          label: Teilnehmer Kennenlerngespräch (aus dem NUCLEUS-Team)
+          parameter:
+            type: person
+          validations: {}
+        - id: first_meeting_date
+          type: date
+          label: Datum des Kennenlerngesprächs
+          parameter:
+          validations: {}
+        - id: first_meeting_notes
+          type: string
+          label: Gesprächsnotizen
+          parameter:
+          validations: {}
+      define_detailed_needs:
+        fields:
+        - id: detailed_needs
+          type: text
+          label: Identifizierter Bedarf und initiierte Transfermaßnahmen
+          parameter:
+          validations: {}
+      ask_for_sketch_of_idea:
+        fields:
+        - id: sketch_plan_files
+          type: has_many_files
+          label: Unterlagen zur Kooperationsidee
+          parameter:
+          validations: {}
+        - id: inhalte_text
+          type: textfield
+          label: Details zur Kooperationsidee
+          parameter:
+          validations: {}
+      define_further_projects:
+        fields:
+        - id: successor_processes
+          type: has_many_processes
+          label: Empfohlene Nachfolgende Maßnahmen
+          parameter:
+            startable_process_keys:
+            - initial_meeting_invention
+            - patent_application
+          validations: {}
+      chose_or_define_partners:
+        fields:
+        - id: persons
+          type: has_many_dossiers
+          label: Welche (extern) Personen sind an der Kooperation beteiligt?
+          parameter:
+            type: person
+          validations: {}
+        - id: ansprechpartner
+          type: has_many_dossiers
+          label: Wer sind die konkreten Ansprechpartner?
+          parameter:
+            type: person
+          validations: {}
+      invite_other_neccessary_people_to_meeting:
+        fields:
+        - id: first_meeting_participants_other
+          type: has_many_dossiers
+          label: Weitere notwendige Erstgesprächsteilnehmer
+          parameter:
+            type: person
+          validations: {}
+    model_class: ExternalRequirement
+  description: "Gemeinsam wird mit externen Kontakten (aus Wirtschaft, Forschung oder
+    Verwaltung) deren Bedarfe besprochen und die Möglichkeit der Zusammenarbeit mit
+    NUCELUS eruiert. Ziel ist es, konkrete Transfermaßnahmen zu identifizieren und
+    zu initialisieren. \n\nDeine ersten Schritte: Weise dieser Maßnahme einen Verantwortlichen
+    zu. Finde einen passenden Titel für diese Maßnahme. Beginne mit der Planung  eines
+    Kennenlerngesprächs in der Aufgabe \"Kennenlerngespräch durchführen\".\n"
+workflow_process_definitions_003:
+  id: 3
+  key: initial_meeting_invention
+  name: Erstgespräch Erfindung
+  created_at: 2019-10-29 11:25:00.927280000 Z
+  updated_at: 2020-11-20 14:24:19.728849000 Z
+  label_prefix: IMI
+  model:
+    tasks:
+      add_protocol:
+        fields:
+        - id: protocol_files
+          type: has_many_files
+          label: Protokoll
+          parameter:
+          validations: {}
+      specifiy_inventors:
+        fields:
+        - id: inventors
+          type: has_many_dossiers
+          label: Erfinder
+          parameter:
+            type: person
+          validations: {}
+      arrange_first_meeting:
+        fields:
+        - id: first_meeting_at
+          type: datetime
+          label: Erstgespräch am
+          parameter:
+          validations: {}
+        - id: first_meeting_participants
+          type: has_many_dossiers
+          label: Erstgesprächsteilnehmer
+          parameter:
+            type: person
+          validations: {}
+      set_reference_from_genese:
+        fields:
+        - id: reference
+          type: string
+          label: Aktenzeichen Erfindungsakte
+          parameter:
+          validations: {}
+      specify_service_invention:
+        fields:
+        - id: is_service_invention
+          type: boolean
+          label: Diensterfindung
+          parameter:
+          validations:
+            required: true
+        result_key: is_service_invention
+        result_value: is_service_invention
+      specifiy_rough_description:
+        fields:
+        - id: rough_description_files
+          type: has_many_files
+          label: Grobbeschreibung
+          parameter:
+          validations: {}
+      initial_rating_patentability:
+        fields:
+        - id: is_patentable
+          type: boolean
+          label: Patentfähig
+          parameter:
+          validations: {}
+      specify_if_served_by_university:
+        fields:
+        - id: is_served_by_university
+          type: boolean
+          label: Universität soll Erfindung weiter betreuen
+          parameter:
+          validations:
+            required: true
+        result_key: is_served_by_university
+        result_value: is_served_by_university
+      add_contract_between_srs_and_inventor:
+        fields:
+        - id: srs_inventor_contract_files
+          type: has_many_files
+          label: Vertrag zwischen SRS und Erfindern
+          parameter:
+          validations: {}
+    model_class: InitialMeetingInvention
+  description: "Ziel des Prozesses: Im Vordergrund steht, zu ermitteln, ob die Entdeckung
+    des Erfinderteams tatsächlich eine Erfindung und damit patentierbar ist. \n\n\nVorgehen:
+    Um dies zu ermitteln, wird zunächst mit dem Erfinderteam ein Termin zum Erstgespräch
+    vereinbart, in welchem die Erfindung und die Umstände, die über eine Patentierbarkeit
+    entscheiden, geklärt werden sollen. Hierzu gehören der Bezug zu Drittmittelprojekten,
+    die erfinderische Tätigkeit, die gewerbliche Anwendbarkeit und die Neuheit der
+    Entdeckung. Sollte sich herausstellen, dass es sich tatsächlich um eine Erfindung
+    handelt, wird anschließend der Prozess der Inanspruchnahme durch die FSU eingeleitet.
+    Zudem können am Ende des Prozesses auch Vermittlungen zu Nucleus oder dem K1 durchgeführt
+    werden"
+workflow_process_definitions_004:
+  id: 4
+  key: patent_application
+  name: Patentanmeldung
+  created_at: 2019-10-29 11:25:00.987306000 Z
+  updated_at: 2020-11-20 14:24:20.082215000 Z
+  label_prefix: PA
+  model:
+    tasks:
+      prior_art:
+        fields:
+        - id: prior_art_files
+          type: has_many_files
+          label: Stand der Technik (Dateianhang)
+          parameter:
+          validations: {}
+      description:
+        fields:
+        - id: description_files
+          type: has_many_files
+          label: Beschreibung (Dateianhang)
+          parameter:
+          validations: {}
+      publication:
+        fields:
+        - id: publication_files
+          type: has_many_files
+          label: Patentanmeldeschrift (Dateianhang)
+          parameter:
+          validations: {}
+      patent_claim:
+        fields:
+        - id: patent_claim_files
+          type: has_many_files
+          label: Patentansprüche (Dateianhang)
+          parameter:
+          validations: {}
+      object_of_invention:
+        fields:
+        - id: object_of_invention_files
+          type: has_many_files
+          label: Aufgabe der Erfindung (Dateianhang)
+          parameter:
+          validations: {}
+      create_patent_application: {}
+      set_reference_from_genese:
+        fields:
+        - id: reference
+          type: string
+          label: Aktenzeichen Patentakte
+          parameter:
+          validations: {}
+    model_class: PatentApplication
+  description: "Ziel des Prozesses: Die Hauptaufgabe dieses Prozesses ist die Patentanmeldung
+    beim DPMA. \n\n\nVorgehen: Zunächst wird eine ausführliche Erfindungsbeschreibung
+    erstellt und eine Recherche zu möglichen Patentansprüchen durchgeführt. Danach
+    wird im zweiten Arbeitspaket der vollständige Antrag gestellt, welcher zusätzlich
+    zu der Erfindungsbeschreibung eine Erfinderliste, eine Zusammenfassung und ausformulierte
+    Patentansprüche benötigt. Die Erfinderliste erhält der Schutzrechtsexperte aus
+    dem Prozess „SRS Erfindungsmeldung“. In den meisten Fällen liegt die Erfinderliste
+    rechtzeitig zur Patentanmeldung vor, es kann aber auch vorkommen, dass die Anmeldung
+    zunächst ohne die Erfinderliste oder auch andere Unterlagen vorgenommen wird.
+    Diese müssen dann innerhalb festgelegter Fristen nachgereicht werden. Der Erteilungsantrag
+    P2007 ist ein Dokument, das als zentraler Punkt der Patentanmeldung fungiert. "
+workflow_process_definitions_005:
+  id: 5
+  key: process_abuse_report
+  name: DSB Meldung Missbrauch V1
+  created_at: 2020-02-19 12:59:33.254699000 Z
+  updated_at: 2020-11-20 14:24:20.347923000 Z
+  label_prefix: MM
+  model:
+    tasks:
+      delete_ad:
+        fields:
+        - id: info_ad_url
+          type: info
+          label:
+          parameter:
+            attribute: ad_url
+          validations: {}
+      decide_if_abuse:
+        fields:
+        - id: reason_for_decision
+          type: text
+          label: Deine kurze Begründung für die Entscheidung
+          parameter:
+          validations:
+            required: true
+        - id: should_be_deleted
+          type: boolean
+          label: Soll die Anzeige gelöscht werden?
+          parameter:
+          validations: {}
+        result_key: is_abuse
+        result_value: should_be_deleted
+      send_decision_email:
+        fields:
+        - id: info_email_sender1
+          type: info
+          label:
+          parameter:
+            attribute: email_sender
+          validations: {}
+        - id: info_reason_for_decision
+          type: info
+          label:
+          parameter:
+            attribute: reason_for_decision
+          validations: {}
+        - id: info_email_text_static1
+          type: info
+          label: Vorlage Entscheidungs-Email
+          parameter:
+            text: Lieber Nutzer, danke für den Hinweis. Die Anzeige entspricht unseren
+              Spielregeln, daher haben wir sie online gelassen. Viele Grüße
+          validations: {}
+      capture_abuse_report:
+        fields:
+        - id: email_sender
+          type: string
+          label: E-Mail-Adresse Absender
+          parameter:
+          validations:
+            regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+        - id: email_content
+          type: text
+          label: Text der E-Mail
+          parameter:
+          validations: {}
+        - id: ad_url
+          type: string
+          label: Link zur betroffenen Anzeige
+          parameter:
+          validations:
+            regex: "\\A(http|https):\\/\\/[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?\\z"
+        - id: ad_content
+          type: text
+          label: Text der betroffenen Anzeige
+          parameter:
+          validations: {}
+      send_thank_you_email:
+        fields:
+        - id: info_email_sender
+          type: info
+          label:
+          parameter:
+            attribute: email_sender
+          validations: {}
+        - id: info_email_text_static
+          type: info
+          label: Vorlage Dankes-Email
+          parameter:
+            text: Lieber Nutzer, danke für den Hinweis. Wir haben die Anzeige gelöscht.
+              Viele Grüße
+          validations: {}
+    model_class: AbuseReport
+  description: In dieser Maßnahme wird ein Missbrauchhinweis aufgenommen und daraus
+    ableitend wird die betreffende Anzeige gelöscht oder nicht.
+workflow_process_definitions_006:
+  id: 6
+  key: dsb_premium_post
+  name: DSB Premiumanzeige
+  created_at: 2020-02-24 13:55:13.061539000 Z
+  updated_at: 2020-11-20 14:24:18.115366000 Z
+  label_prefix: PP
+  model:
+    tasks:
+      Task_0373fxm: {}
+      Task_05wcqck: {}
+      Task_0u25ig1: {}
+      Task_19s8ck5:
+        fields:
+        - id: angebot
+          type: has_many_files
+          label:
+          parameter:
+          validations: {}
+      Task_1dnq4r5:
+        fields:
+        - id: buchung
+          type: boolean
+          label: Buchung bestätigt
+          parameter:
+          validations: {}
+        result_key: buchung
+        result_value: buchung
+      Task_1eo4mms:
+        fields:
+        - id: verlaengerung
+          type: boolean
+          label: Verlängerung gewünscht
+          parameter:
+          validations: {}
+      Task_1sywewf:
+        fields:
+        - id: zahlungseingang
+          type: boolean
+          label: Zahlung erhalen
+          parameter:
+          validations: {}
+      Task_1xj4014:
+        fields:
+        - id: contact
+          type: has_one_dossier
+          label: Kontakt
+          parameter:
+            type: person
+          validations: {}
+        - id: email_address
+          type: string
+          label: E-Mail-Adresse
+          parameter:
+          validations:
+            regex: "\\A[\\w+\\-.]+@[a-z\\d\\-]+(\\.[a-z\\d\\-]+)*\\.[a-z]+\\z"
+        - id: post_url
+          type: string
+          label: URL der Anzeige
+          parameter:
+          validations:
+            regex: "\\A(http|https):\\/\\/[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?\\z"
+        - id: booking_request
+          type: text
+          label: Text der Buchungsanfrage
+          parameter:
+          validations: {}
+    model_class: PremiumPost
+  description: In dieser Maßnahme wird die Buchung einer Premiumanzeige durchgeführt.
+workflow_process_definitions_007:
+  id: 7
+  key: external_event
+  name: Teilnahme externe Veranstaltung
+  created_at: 2020-11-20 14:24:08.914495000 Z
+  updated_at: 2020-11-20 14:24:19.112552000 Z
+  label_prefix: EV
+  model:
+    tasks:
+      organize_attendence:
+        fields:
+        - id: travel_documents
+          type: has_many_files
+          label: Ablage für Buchungsunterlagen, Fahrpläne etc.
+          parameter:
+          validations: {}
+        - id: travel_further_information
+          type: string
+          label: Weitere organisatorische Informationen
+          parameter:
+          validations: {}
+      save_attendence_report:
+        fields:
+        - id: leads
+          type: has_many_dossiers
+          label: Gespräche mit
+          parameter:
+            type: person
+          validations: {}
+        - id: results
+          type: text
+          label: Was haben wir auf der Veranstaltung getan und erreicht?
+          parameter:
+          validations: {}
+        - id: follow_up_documents
+          type: has_many_files
+          label: Unterlagen, die im Rahmen der Veranstaltung entstanden sind oder
+            erhalten wurden (bspw. Teilnehmerlisten)?
+          parameter:
+          validations: {}
+        - id: info_goals
+          type: info
+          label:
+          parameter:
+            attribute: goals
+          validations: {}
+      set_target_for_nucleus:
+        fields:
+        - id: goals
+          type: text
+          label: Welche Ziele verfolgt das NUCLEUS-Team mit der Teilnahme?
+          parameter:
+          validations: {}
+        - id: own_contribution
+          type: string
+          label: Welche inhaltlichen Beiträge plant das NUCLEUS-Team?
+          parameter:
+          validations: {}
+        - id: own_contribution_files
+          type: has_many_files
+          label: " Eigene Unterlagen (Präsentationen etc.) "
+          parameter:
+          validations: {}
+        - id: info_decision_explanation
+          type: info
+          label:
+          parameter:
+            attribute: decision_explanation
+          validations: {}
+      decide_if_nucleus_attends_event:
+        fields:
+        - id: decision_attendence
+          type: boolean
+          label: Soll ein Mitglied des NUCLEUS-Teams an der Veranstaltung teilnehmen?
+          parameter:
+          validations:
+            required: true
+        - id: decision_explanation
+          type: text
+          label: Begründung der Entscheidung
+          parameter:
+          validations: {}
+        - id: event_participants
+          type: has_many_dossiers
+          label: 'Teammitglieder, die die Veranstaltung besuchen '
+          parameter:
+            type: person
+          validations: {}
+        - id: info_event_website
+          type: info
+          label:
+          parameter:
+            attribute: event_website
+          validations: {}
+        result_key: attendence
+        result_value: decision_attendence
+      save_information_about_external_event:
+        fields:
+        - id: event_title
+          type: string
+          label: Titel der externen Veranstaltung
+          parameter:
+          validations: {}
+        - id: event_location
+          type: string
+          label: Ort der Veranstaltung
+          parameter:
+          validations: {}
+        - id: event_start_date
+          type: date
+          label: Startdatum der Veranstaltung
+          parameter:
+          validations: {}
+        - id: event_end_date
+          type: date
+          label: Enddatum der Veranstaltung (bei mehrtägigen Veranstaltungen)
+          parameter:
+          validations: {}
+        - id: event_website
+          type: string
+          label: Webseite der Veranstaltung
+          parameter:
+          validations:
+            regex: "\\A(http|https):\\/\\/[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?\\z"
+        - id: event_documents
+          type: has_many_files
+          label: " Weitere Informationen zu der Veranstaltung "
+          parameter:
+          validations: {}
+    model_class: ExternalEvent
+  description: |-
+    <p>Wenn wir als NUCLEUS-Team auf eine externe Veranstaltung aufmerksam werden, dann entscheiden wir, ob wir daran teilnehmen, wer daran teilnehmen wird und was unsere Zielstellung ist. Im Vorfeld der Veranstaltung bereiten wir die Teilnahme inhaltlich und organisatorisch vor. Nach der Veranstaltung dokumentieren wir wichtige Ergebnisse und starten Follow-Up-Maßnahmen. </p><p><strong>Deine ersten Schritte:</strong> </p><ul>
+    <li><p>Füge Thomas Wartner als Teilnehmer der Maßnahme hinzu, damit er als Projektkoordinator informiert ist. </p></li>
+    <li><p>Wenn Du nicht die Verantwortung für diese Maßnahme übernehmen willst, dann weise Thomas Wartner als Verantwortlichen zu.</p></li>
+    <li><p>Beginne mit der Aufgabe "Externe Veranstaltung erfassen".</p></li>
+    </ul>

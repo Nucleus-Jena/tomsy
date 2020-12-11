@@ -1,0 +1,108 @@
+---
+ambitions_001:
+  id: 1
+  title: Algenmarmelade
+  created_at: 2019-05-09 12:43:11.962280000 Z
+  updated_at: 2019-11-06 15:01:25.634557000 Z
+  closed: false
+  description: ''
+  private: false
+  assignee_id: 
+  deleted: false
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+ambitions_002:
+  id: 2
+  title: Blockchain basierte Nutella
+  created_at: 2019-05-10 08:24:59.675404000 Z
+  updated_at: 2019-05-16 12:41:11.485909000 Z
+  closed: false
+  description: 
+  private: false
+  assignee_id: 
+  deleted: false
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+ambitions_003:
+  id: 3
+  title: Calamondinorangenbonbons
+  created_at: 2019-05-16 12:42:58.521137000 Z
+  updated_at: 2019-05-16 12:42:58.521137000 Z
+  closed: false
+  description: 
+  private: false
+  assignee_id: 
+  deleted: false
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+ambitions_004:
+  id: 5
+  title: Ein geschafftes James Ziel
+  created_at: 2019-11-06 14:38:36.881250000 Z
+  updated_at: 2019-11-06 15:00:31.483025000 Z
+  closed: true
+  description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+    duo dolores et ea rebum. Stet clita kasd gubergren, james no sea takimata sanctus
+    est Lorem ipsum dolor sit amet.
+  private: false
+  assignee_id: 
+  deleted: false
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+ambitions_005:
+  id: 6
+  title: James in noch laufendem Ziel
+  created_at: 2019-11-06 14:43:33.032891000 Z
+  updated_at: 2019-11-06 14:43:33.032891000 Z
+  closed: false
+  description: 
+  private: false
+  assignee_id: 
+  deleted: false
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+ambitions_006:
+  id: 7
+  title: Ein neues Ziel mit sehr, sehr langem Titel - 80 um genau zu sein also ganz
+    genau
+  created_at: 2019-11-07 14:12:22.073429000 Z
+  updated_at: 2019-11-07 14:13:41.590979000 Z
+  closed: false
+  description: 
+  private: false
+  assignee_id: 
+  deleted: false
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+ambitions_007:
+  id: 9
+  title: public-ambition
+  created_at: 2020-01-29 12:33:49.144431000 Z
+  updated_at: 2020-01-29 12:33:59.965107000 Z
+  closed: false
+  description: 
+  private: false
+  assignee_id: 133235
+  deleted: false
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+ambitions_008:
+  id: 10
+  title: private-ambition
+  created_at: 2020-01-29 12:34:03.866966000 Z
+  updated_at: 2020-01-29 12:34:15.093281000 Z
+  closed: false
+  description: 
+  private: true
+  assignee_id: 133235
+  deleted: false
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+ambitions_009:
+  id: 11
+  title: Keine offenen Missbrauchsmeldungen
+  created_at: 2020-11-02 10:43:35.369012000 Z
+  updated_at: 2020-11-02 10:43:35.381141000 Z
+  closed: false
+  description: 
+  private: false
+  assignee_id: 133238
+  deleted: false
+  state_updated_at: 2020-11-02 10:43:35.369756000 Z

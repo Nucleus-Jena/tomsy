@@ -1,0 +1,109 @@
+---
+dossier_definition_fields_001:
+  id: 1
+  definition_id: 1
+  identifier: email
+  label: E-Mail
+  position: 1
+  content_type: 0
+  created_at: 2020-10-30 11:14:32.634457000 Z
+  updated_at: 2020-10-30 11:14:32.634457000 Z
+  required: true
+  recommended: false
+  unique: true
+dossier_definition_fields_002:
+  id: 2
+  definition_id: 1
+  identifier: name
+  label: Name
+  position: 2
+  content_type: 0
+  created_at: 2020-10-30 11:14:32.649508000 Z
+  updated_at: 2020-10-30 11:14:32.649508000 Z
+  required: true
+  recommended: false
+  unique: false
+dossier_definition_fields_003:
+  id: 3
+  definition_id: 1
+  identifier: phone
+  label: Telefon
+  position: 3
+  content_type: 0
+  created_at: 2020-10-30 11:14:32.659932000 Z
+  updated_at: 2020-10-30 11:14:32.659932000 Z
+  required: false
+  recommended: false
+  unique: false
+dossier_definition_fields_004:
+  id: 4
+  definition_id: 1
+  identifier: address
+  label: Adresse
+  position: 4
+  content_type: 0
+  created_at: 2020-10-30 11:14:32.668005000 Z
+  updated_at: 2020-10-30 11:14:32.668005000 Z
+  required: false
+  recommended: false
+  unique: false
+dossier_definition_fields_005:
+  id: 5
+  definition_id: 1
+  identifier: organization
+  label: Organisation
+  position: 5
+  content_type: 0
+  created_at: 2020-10-30 11:14:32.674897000 Z
+  updated_at: 2020-10-30 11:14:32.674897000 Z
+  required: false
+  recommended: true
+  unique: false
+dossier_definition_fields_006:
+  id: 6
+  definition_id: 1
+  identifier: newsletter
+  label: Newsletter
+  position: 6
+  content_type: 3
+  created_at: 2020-10-30 11:14:32.691788000 Z
+  updated_at: 2020-10-30 11:14:32.691788000 Z
+  required: false
+  recommended: false
+  unique: false
+dossier_definition_fields_007:
+  id: 7
+  definition_id: 1
+  identifier: rating
+  label: Bewertung
+  position: 7
+  content_type: 2
+  created_at: 2020-10-30 11:14:32.702868000 Z
+  updated_at: 2020-10-30 11:14:32.702868000 Z
+  required: false
+  recommended: false
+  unique: false
+dossier_definition_fields_008:
+  id: 8
+  definition_id: 1
+  identifier: birthday
+  label: Geburtstag
+  position: 8
+  content_type: 4
+  created_at: 2020-10-30 11:14:32.710333000 Z
+  updated_at: 2020-10-30 11:14:32.710333000 Z
+  required: false
+  recommended: false
+  unique: false
+dossier_definition_fields_009:
+  id: 9
+  definition_id: 1
+  identifier: notes
+  label: Notizen
+  position: 9
+  content_type: 1
+  created_at: 2020-10-30 11:14:32.716664000 Z
+  updated_at: 2020-10-30 11:14:32.716664000 Z
+  required: false
+  recommended: false
+  unique: false

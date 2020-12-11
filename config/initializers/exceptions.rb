@@ -1,0 +1,1 @@
+class WorkflowSupportException < StandardError; end

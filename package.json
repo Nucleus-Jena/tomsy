@@ -1,0 +1,71 @@
+{
+  "name": "workos",
+  "private": true,
+  "dependencies": {
+    "@mdi/font": "^4.9.95",
+    "@rails/ujs": "^6.0.3",
+    "@rails/webpacker": "5.2.1",
+    "actioncable-vue": "^1.5.1",
+    "axios": "^0.19.2",
+    "date-fns": "^2.13.0",
+    "lodash": "^4.17.15",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.1",
+    "tiptap-vuetify": "^2.24.0",
+    "typeface-roboto": "^0.0.75",
+    "v-runtime-template": "^1.10.0",
+    "vue": "^2.6.11",
+    "vue-i18n": "^8.16.0",
+    "vue-loader": "^15.9.3",
+    "vue-router": "^3.1.6",
+    "vuetify": "^2.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@vue/test-utils": "^1.0.0-beta.31",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.3.0",
+    "deepmerge": "^4.2.2",
+    "eslint": "^7.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "fibers": "^5.0.0",
+    "jest": "25.5.4",
+    "vue-jest": "^3.0.5",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "roots": [
+      "test/javascript"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "app/javascript"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
+    },
+    "collectCoverageFrom": [
+      "app/javascript/**/*.{js,vue}"
+    ]
+  },
+  "resolutions": {
+    "prosemirror-model": "1.10.0"
+  }
+}

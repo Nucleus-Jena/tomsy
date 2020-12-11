@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_0jmxn4q" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.3.5">
+  <bpmn:process id="external_requirements" name="Bestimmung Externer Bedarfe" isExecutable="true">
+    <bpmn:documentation>&lt;p&gt;Gemeinsam werden mit externen Kontakten (aus Wirtschaft, Forschung oder Verwaltung) deren Bedarfe besprochen und die Möglichkeit der Zusammenarbeit mit Nucleus eruiert. Ziel der Maßnahme ist es, konkrete Transfermaßnahmen zu identifizieren und zu initialisieren.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine ersten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise dieser Maßnahme einen Verantwortlichen zu.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Finde einen passenden Titel für diese Maßnahme.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Beginne mit der Planung eines Kennenlerngesprächs in der Aufgabe "Kennenlerngespräch durchführen".&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+    <bpmn:extensionElements>
+      <camunda:properties>
+        <camunda:property name="label_prefix" value="EB" />
+        <camunda:property name="model_class" value="ExternalRequirement" />
+      </camunda:properties>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_1ntlpkp</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:parallelGateway id="ExclusiveGateway_0irz89h">
+      <bpmn:incoming>SequenceFlow_161cqea</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1naul01</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1d48g9p</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_1naul01" sourceRef="ExclusiveGateway_0irz89h" targetRef="chose_or_define_partners" />
+    <bpmn:sequenceFlow id="SequenceFlow_1d48g9p" sourceRef="ExclusiveGateway_0irz89h" targetRef="define_detailed_needs" />
+    <bpmn:sequenceFlow id="SequenceFlow_1vz5c3v" sourceRef="chose_or_define_partners" targetRef="ExclusiveGateway_1azry05" />
+    <bpmn:parallelGateway id="ExclusiveGateway_1azry05">
+      <bpmn:incoming>SequenceFlow_1vz5c3v</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_03wqux2</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1wo5inw</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_03wqux2" sourceRef="define_detailed_needs" targetRef="ExclusiveGateway_1azry05" />
+    <bpmn:sequenceFlow id="SequenceFlow_1wo5inw" sourceRef="ExclusiveGateway_1azry05" targetRef="ExclusiveGateway_1oak01x" />
+    <bpmn:endEvent id="EndEvent_0l3mcbg">
+      <bpmn:incoming>SequenceFlow_1p47e99</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="arrange_meeting_nuc" name="Kennenlerngespräch durchführen" camunda:formKey="Form1">
+      <bpmn:documentation>&lt;p&gt;In einem Kennenlerngespräch sollen die Bedarfe der externen Kontakte besprochen werden.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Übernimm die Verantwortung für diese Aufgabe und die Aufgabe "Details zu Kooperationsidee sammeln".&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Vereinbare mit deinem Ansprechpartner einen Gesprächstermin, an dem alle notwendigen Personen (sowohl extern als auch aus dem SFT) teilnehmen können.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Setze das Fälligkeitsdatum der Aufgabe auf den Tag des Kennenlerngesprächs.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Falls du im Vorfeld des Kennenlerngesprächs erste Unterlagen oder sonstige Informationen vom Ansprechpartner erhältst, dokumentiere sie in der Aufgabe "Details zu Kooperationsidee sammeln" .&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sammle in den Gesprächsnotizen alles wichtige, das du aus dem Gespräch mitgenommen hast.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Überlege, welche interne Teilnehmer des Kennenlerngesprächs Teilnehmer der Maßnahmen werden sollen, damit sie über das weitere Vorgehen informiert bleiben.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe die Aufgabe erst ab, wenn das Kennenlergespräch dokumentiert ist.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="10" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="first_meeting_participants" label="Teilnehmer Kennenlerngespräch (extern)" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_dossiers" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="first_meeting_internal_participants" label="Teilnehmer Kennenlerngespräch (SFT)" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_dossiers" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="first_meeting_date" label="Datum des Kennenlerngesprächs" type="date" />
+          <camunda:formField id="first_meeting_notes" label="Gesprächsnotizen" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="firs_meeting_notes_documents" label="Gesprächsnotizen" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0ni4tk2</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_161cqea</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="ask_for_sketch_of_idea" name="Details zu Kooperationsidee sammeln">
+      <bpmn:documentation>&lt;p&gt;Sammle hier während der gesamten Maßnahme Unterlagen und alle Informationen, die du von den externen Partnern zu der Kooperationsidee erhälst.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Insbesondere im Vorfeld des Erstgesprächs solltest du Informationen des Projekts anfragen und hier hinterlegen.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Die Verantwortung für die Aufgabe sollte die Person übernehmen, die auch für die Maßnahme verantwortlich ist.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Tipp: &lt;/strong&gt;Die Maßnahme kann erst dann enden, wenn diese Aufgabe abgeschlossen ist.&lt;/p&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="20" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="sketch_plan_files" label="Unterlagen zur Kooperationsidee" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_files" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="inhalte_text" label="Weitere Informationen zur Kooperationsidee" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_003gei8</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_16j6voe</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="chose_or_define_partners" name="Projektteam und Ansprechpartner festlegen">
+      <bpmn:documentation>&lt;p&gt;Im Rahmen des Kennenlerngesprächs und dessen Nachbereitung ermittelst du das Projektteam, das von Nucleus betreut werden soll. Eventuell benennen die externen Kontakte auch einen oder mehrere Ansprechpartner aus ihren Reihen.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Lege einen Verantwortlichen für die Aufgabe fest.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Erfasse die bisher bekannten Teammitglieder des Projekts.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Stimme mit den externen Partnern ab, ob sie einen oder mehrere Ansprechpartner für die weitere Kommunikation benennen wollen.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe die Aufgabe ab, wenn das Team der externen Partner weitestgehend feststeht.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Tipp:&lt;/strong&gt; Die Daten dieser Aufgabe werden in späteren Maßnahmen oft referenziert und eventuell auch geändert.&lt;/p&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="40" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="persons" label="Welche (extern) Personen sind an der Kooperation beteiligt?" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_dossiers" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="ansprechpartner" label="Wer sind die konkreten Ansprechpartner?" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="has_many_dossiers" />
+              <camunda:property id="parameter" value="{type: &#34;person&#34;}" />
+            </camunda:properties>
+          </camunda:formField>
+          <camunda:formField id="further_information" label="Weitere Informationen zum Projektteam" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1naul01</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1vz5c3v</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="define_detailed_needs" name="Bedarfe festlegen, Maßnahmen initiieren">
+      <bpmn:documentation>&lt;p&gt;Im Rahmen der Nachbereitung des Kennenlerngesprächs werden im Nucleus-Team die Bedarfe der externen Kontakte festgelegt und konkrete Nucleus-Maßnahmen initiiert.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Deine nächsten Schritte:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Weise einem Verantwortlichen die Aufgabe zu und setze ein realistisches Fälligkeitsdatum.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Lege die Bedarfe mit den externen Kontakten und in Abstimmung mit dem SFT-Team fest.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Erstelle ausgehend von den ermittelten Bedarfen Folgemaßnahmen und deligiere diese an die verantwortlichen Teammitglieder.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Kommuniziere den externen Kontakten, welche nächsten Schritte in die Wege geleitet wurden.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Schließe diese Aufgabe ab, wenn alle Folgemaßnahmen erstellt sind.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Tipp:&lt;/strong&gt; Selbstverständlich können auch keine Folgemaßnahmen identifiziert werden. In diesem Fall ist es wichtig, dies den externen Kontakten zu kommunizieren.&lt;/p&gt;</bpmn:documentation>
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="order" value="50" />
+        </camunda:properties>
+        <camunda:formData>
+          <camunda:formField id="detailed_needs" label="Identifizierter Bedarf und initiierte Maßnahmen" type="string">
+            <camunda:properties>
+              <camunda:property id="type" value="text" />
+            </camunda:properties>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1d48g9p</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_03wqux2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:parallelGateway id="ExclusiveGateway_1b55qo1">
+      <bpmn:incoming>SequenceFlow_1ntlpkp</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0ni4tk2</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_003gei8</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0ni4tk2" sourceRef="ExclusiveGateway_1b55qo1" targetRef="arrange_meeting_nuc" />
+    <bpmn:sequenceFlow id="SequenceFlow_003gei8" sourceRef="ExclusiveGateway_1b55qo1" targetRef="ask_for_sketch_of_idea" />
+    <bpmn:sequenceFlow id="SequenceFlow_1ntlpkp" sourceRef="StartEvent_1" targetRef="ExclusiveGateway_1b55qo1" />
+    <bpmn:sequenceFlow id="SequenceFlow_161cqea" sourceRef="arrange_meeting_nuc" targetRef="ExclusiveGateway_0irz89h" />
+    <bpmn:sequenceFlow id="SequenceFlow_1p47e99" sourceRef="ExclusiveGateway_1oak01x" targetRef="EndEvent_0l3mcbg" />
+    <bpmn:parallelGateway id="ExclusiveGateway_1oak01x">
+      <bpmn:incoming>SequenceFlow_1wo5inw</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_16j6voe</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1p47e99</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_16j6voe" sourceRef="ask_for_sketch_of_idea" targetRef="ExclusiveGateway_1oak01x" />
+    <bpmn:textAnnotation id="TextAnnotation_08jgufu">
+      <bpmn:text>Projektmitglieder (has_many_dossiers of type person), Ansprechpartner (has_many_dossiers of type person)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0gh5o5q" sourceRef="chose_or_define_partners" targetRef="TextAnnotation_08jgufu" />
+    <bpmn:textAnnotation id="TextAnnotation_0mh5vx8">
+      <bpmn:text>Externe Bedarfe (textfield)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1h3jzcm" sourceRef="define_detailed_needs" targetRef="TextAnnotation_0mh5vx8" />
+    <bpmn:textAnnotation id="TextAnnotation_1qn80ih">
+      <bpmn:text>Teilnehmer intern (has_many_dossiers of type person), Teilnehmer extern (has_many_dossiers of type person), Datum (date), Gesprächsnotizen (textfield)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_0ywk30x" sourceRef="arrange_meeting_nuc" targetRef="TextAnnotation_1qn80ih" />
+    <bpmn:textAnnotation id="TextAnnotation_16xftz8">
+      <bpmn:text>Inhalte des Vorhabens (has_many_files), Inhalte des Vorhabens (textfield)</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="Association_1ycsub7" sourceRef="ask_for_sketch_of_idea" targetRef="TextAnnotation_16xftz8" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="external_requirements">
+      <bpmndi:BPMNEdge id="SequenceFlow_16j6voe_di" bpmnElement="SequenceFlow_16j6voe">
+        <di:waypoint x="464" y="465" />
+        <di:waypoint x="611" y="465" />
+        <di:waypoint x="611" y="669" />
+        <di:waypoint x="1117" y="669" />
+        <di:waypoint x="1117" y="365" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1p47e99_di" bpmnElement="SequenceFlow_1p47e99">
+        <di:waypoint x="1142" y="340" />
+        <di:waypoint x="1220" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_161cqea_di" bpmnElement="SequenceFlow_161cqea">
+        <di:waypoint x="464" y="340" />
+        <di:waypoint x="700" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1ntlpkp_di" bpmnElement="SequenceFlow_1ntlpkp">
+        <di:waypoint x="150" y="409" />
+        <di:waypoint x="218" y="409" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_003gei8_di" bpmnElement="SequenceFlow_003gei8">
+        <di:waypoint x="243" y="434" />
+        <di:waypoint x="243" y="465" />
+        <di:waypoint x="364" y="465" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ni4tk2_di" bpmnElement="SequenceFlow_0ni4tk2">
+        <di:waypoint x="243" y="384" />
+        <di:waypoint x="243" y="340" />
+        <di:waypoint x="364" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1wo5inw_di" bpmnElement="SequenceFlow_1wo5inw">
+        <di:waypoint x="1019" y="340" />
+        <di:waypoint x="1092" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_03wqux2_di" bpmnElement="SequenceFlow_03wqux2">
+        <di:waypoint x="925" y="450" />
+        <di:waypoint x="994" y="450" />
+        <di:waypoint x="994" y="365" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1vz5c3v_di" bpmnElement="SequenceFlow_1vz5c3v">
+        <di:waypoint x="926" y="340" />
+        <di:waypoint x="969" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1d48g9p_di" bpmnElement="SequenceFlow_1d48g9p">
+        <di:waypoint x="725" y="365" />
+        <di:waypoint x="725" y="450" />
+        <di:waypoint x="825" y="450" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1naul01_di" bpmnElement="SequenceFlow_1naul01">
+        <di:waypoint x="750" y="340" />
+        <di:waypoint x="826" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="114" y="391" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_1uh68qq_di" bpmnElement="ExclusiveGateway_0irz89h">
+        <dc:Bounds x="700" y="315" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_19ys85l_di" bpmnElement="ExclusiveGateway_1azry05">
+        <dc:Bounds x="969" y="315" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0l3mcbg_di" bpmnElement="EndEvent_0l3mcbg">
+        <dc:Bounds x="1220" y="322" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0s8e4n7_di" bpmnElement="arrange_meeting_nuc">
+        <dc:Bounds x="364" y="300" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1rjeuga_di" bpmnElement="ask_for_sketch_of_idea">
+        <dc:Bounds x="364" y="425" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0pljxok_di" bpmnElement="chose_or_define_partners">
+        <dc:Bounds x="826" y="300" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1m336xc_di" bpmnElement="define_detailed_needs">
+        <dc:Bounds x="825" y="410" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_0b20o19_di" bpmnElement="ExclusiveGateway_1b55qo1">
+        <dc:Bounds x="218" y="384" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_1fw0acf_di" bpmnElement="ExclusiveGateway_1oak01x">
+        <dc:Bounds x="1092" y="315" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_08jgufu_di" bpmnElement="TextAnnotation_08jgufu">
+        <dc:Bounds x="906" y="132" width="100" height="124" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_0mh5vx8_di" bpmnElement="TextAnnotation_0mh5vx8">
+        <dc:Bounds x="826" y="549" width="100" height="54" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_1qn80ih_di" bpmnElement="TextAnnotation_1qn80ih">
+        <dc:Bounds x="417" y="77" width="100" height="166" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TextAnnotation_16xftz8_di" bpmnElement="TextAnnotation_16xftz8">
+        <dc:Bounds x="347" y="562" width="100" height="96" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Association_0gh5o5q_di" bpmnElement="Association_0gh5o5q">
+        <di:waypoint x="898" y="300" />
+        <di:waypoint x="922" y="256" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1h3jzcm_di" bpmnElement="Association_1h3jzcm">
+        <di:waypoint x="875" y="490" />
+        <di:waypoint x="876" y="549" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_0ywk30x_di" bpmnElement="Association_0ywk30x">
+        <di:waypoint x="426" y="300" />
+        <di:waypoint x="443" y="243" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Association_1ycsub7_di" bpmnElement="Association_1ycsub7">
+        <di:waypoint x="409" y="505" />
+        <di:waypoint x="403" y="562" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,71 @@
+.custom-control {
+  &.v-card {
+    background-color: transparent !important;
+  }
+
+  & > &__divider {
+    color: rgba(0,0,0,.42);
+    border-color: currentColor !important;
+  }
+}
+
+
+
+.custom-skeleton-loader {
+  .v-skeleton-loader__avatar {
+    height: 36px;
+    width: 36px;
+  }
+
+  .v-skeleton-loader__list-item,
+  .v-skeleton-loader__list-item-two-line,
+  .v-skeleton-loader__list-item-avatar-two-line,
+  .v-skeleton-loader__list-item-three-line,
+  .v-skeleton-loader__list-item-avatar-three-line {
+    background-color: transparent !important;
+  }
+
+  .v-skeleton-loader__list-item-avatar-two-line {
+    height: 62px;
+
+    .v-skeleton-loader__avatar {
+      height: 36px;
+      width: 36px;
+      margin-right: 8px !important;
+    }
+  }
+
+  &.custom-skeleton-loader--no-indent {
+    .v-skeleton-loader__list-item,
+    .v-skeleton-loader__list-item-two-line,
+    .v-skeleton-loader__list-item-avatar-two-line,
+    .v-skeleton-loader__list-item-three-line,
+    .v-skeleton-loader__list-item-avatar-three-line {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+
+.custom-meta-list {
+  display: flex !important;
+
+  & > span, & > div {
+    &:first-child {
+      flex-grow: 0;
+      flex-shrink: 1;
+
+      white-space: nowrap!important;
+      //Disable this because it hides id of very long task list items
+      //overflow: hidden!important;
+      text-overflow: ellipsis!important;
+    }
+
+    &:not(:first-child):before {
+      content: "•";
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+  }
+}

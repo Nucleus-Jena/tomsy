@@ -1,0 +1,52 @@
+---
+comments_001:
+  id: 1
+  message: Hallo dies ist ein Testkommentar, welcher eine Benachrichtigung für den
+    Admin User erzeugen sollte.
+  author_id: 133235
+  created_at: 2020-02-19 14:02:26.543755000 Z
+  updated_at: 2020-02-19 14:02:26.543755000 Z
+  object_type: Workflow::Task
+  object_id: 59
+comments_002:
+  id: 2
+  message: 'Dies ist ein Kommentar mit Referenz zu @133235 '
+  author_id: 1
+  created_at: 2020-02-20 12:29:30.829752000 Z
+  updated_at: 2020-02-20 12:29:30.829752000 Z
+  object_type: Workflow::Task
+  object_id: 59
+comments_003:
+  id: 3
+  message: "<p>Hallo dies ist ein neuer Kommentar suchTestKommentare</p>"
+  author_id: 1
+  created_at: 2020-02-20 12:37:31.549435000 Z
+  updated_at: 2020-02-20 12:37:31.549435000 Z
+  object_type: Workflow::Task
+  object_id: 59
+comments_004:
+  id: 4
+  message: "<p>Auch hier, für das Nutella Ziel, können wir jetzt Kommentare hinterlassen.
+    suchTestKommentare</p>"
+  author_id: 133235
+  created_at: 2020-10-14 08:15:22.092599000 Z
+  updated_at: 2020-10-14 08:15:22.092599000 Z
+  object_type: Ambition
+  object_id: 2
+comments_005:
+  id: 5
+  message: "<p>Wir können jetzt auch <strong>Prozesse</strong> kommentieren! suchTestKommentare</p>"
+  author_id: 133235
+  created_at: 2020-10-14 12:41:15.451507000 Z
+  updated_at: 2020-10-14 12:41:15.451507000 Z
+  object_type: Workflow::Process
+  object_id: 13
+comments_006:
+  id: 6
+  message: <p><mention m-id="1" m-type="user"></mention> ich bin nicht sicher ob wir
+    hierfür schon eine angelegt haben. Was meinst du?</p>
+  author_id: 133235
+  created_at: 2020-10-19 10:02:33.879775000 Z
+  updated_at: 2020-10-19 10:02:33.879775000 Z
+  object_type: Workflow::Task
+  object_id: 74

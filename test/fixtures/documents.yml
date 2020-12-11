@@ -1,0 +1,60 @@
+---
+documents_001:
+  id: 4
+  title: Umlaute Test
+  type: file
+  data_entity_id: 4
+  data_entity_field: description_files
+  link_url: 
+  file_as_text: |2+
+
+    Test Umläute!
+
+
+  created_at: 2020-02-28 16:18:44.758040000 Z
+  updated_at: 2020-02-28 16:18:50.587268000 Z
+  data_entity_type: ProcessDataEntity
+documents_002:
+  id: 5
+  title: Image Test
+  type: file
+  data_entity_id: 5
+  data_entity_field: description_files
+  link_url: 
+  file_as_text: "Beschreibung\nBasis Projekt\n\n \n\n \n\nKick-Off, Zwischenergebnisse
+    und Endprasentation als jeweils 2 stiindiges Treffen\n\\Vor-Ort im Fraunhofer
+    IMW oder falls gewinscht in den Rumen des InfAl\nTellnahme von mindestens zwei
+    Personen des Auftragnehmers.\n\n\\Vorbereitung, Durchfuhrung, Nachbereitung der
+    Treffen.\n\nAbstimmung zwischen den Treffen\n\n \n\n \n\n \n\n"
+  created_at: 2020-02-28 16:20:46.610507000 Z
+  updated_at: 2020-02-28 16:20:52.484062000 Z
+  data_entity_type: ProcessDataEntity
+documents_003:
+  id: 6
+  title: Umlaute Protokoll Test
+  type: file
+  data_entity_id: 6
+  data_entity_field: protocol_files
+  link_url: 
+  file_as_text: |2+
+
+    Test Umläute!
+
+
+  created_at: 2020-03-03 15:45:11.559268000 Z
+  updated_at: 2020-03-03 15:45:17.225470000 Z
+  data_entity_type: ProcessDataEntity
+documents_004:
+  id: 7
+  title: Protokoll Test
+  type: file
+  data_entity_id: 8
+  data_entity_field: protocol_files
+  link_url: 
+  file_as_text: |+
+    [bookmark: _GoBack]The quick brown fox jumped over the lazy cat.
+    ‘Tree brona oxbmped overheat
+
+  created_at: 2020-03-04 10:51:02.018394000 Z
+  updated_at: 2020-03-04 10:51:07.961436000 Z
+  data_entity_type: ProcessDataEntity

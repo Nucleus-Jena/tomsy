@@ -1,0 +1,163 @@
+---
+workflow_processes_001:
+  id: 7
+  camunda_id: 755845d6-0167-11ea-b4e9-0242ac150003
+  created_at: 2019-11-07 14:04:04.969361000 Z
+  updated_at: 2019-12-10 09:02:14.697733000 Z
+  data_entity_type: ProcessDataEntity
+  data_entity_id: 1
+  workflow_process_definition_id: 2
+  state: running
+  cancel_info: 
+  ended_at: 
+  cancel_user_id: 
+  title: EB-7
+  assignee_id: 
+  private: false
+  predecessor_process_id: 
+  description: 
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+workflow_processes_002:
+  id: 10
+  camunda_id: f8c8b3c1-5a44-11ea-b8c1-0242ac170004
+  created_at: 2020-02-28 16:11:26.649663000 Z
+  updated_at: 2020-02-28 16:15:13.493413000 Z
+  data_entity_type: ProcessDataEntity
+  data_entity_id: 2
+  workflow_process_definition_id: 4
+  state: completed
+  cancel_info: 
+  ended_at: 2020-02-28 16:15:13.476652000 Z
+  cancel_user_id: 
+  title: PA-1
+  assignee_id: 133235
+  private: false
+  predecessor_process_id: 
+  description: 
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+workflow_processes_003:
+  id: 11
+  camunda_id: 1c12f935-5a45-11ea-b8c1-0242ac170004
+  created_at: 2020-02-28 16:12:25.858636000 Z
+  updated_at: 2020-02-28 16:15:58.404695000 Z
+  data_entity_type: ProcessDataEntity
+  data_entity_id: 3
+  workflow_process_definition_id: 4
+  state: running
+  cancel_info: 
+  ended_at: 
+  cancel_user_id: 
+  title: PA-3
+  assignee_id: 133235
+  private: false
+  predecessor_process_id: 
+  description: 
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+workflow_processes_004:
+  id: 12
+  camunda_id: c4bd8765-5a45-11ea-b8c1-0242ac170004
+  created_at: 2020-02-28 16:17:08.833521000 Z
+  updated_at: 2020-02-28 16:17:28.420440000 Z
+  data_entity_type: ProcessDataEntity
+  data_entity_id: 4
+  workflow_process_definition_id: 4
+  state: canceled
+  cancel_info: sdfdf
+  ended_at: 2020-02-28 16:17:28.410756000 Z
+  cancel_user_id: 133235
+  title: PA-5
+  assignee_id: 133235
+  private: false
+  predecessor_process_id: 
+  description: 
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+workflow_processes_005:
+  id: 13
+  camunda_id: d8d2d356-5a45-11ea-b8c1-0242ac170004
+  created_at: 2020-02-28 16:17:42.523334000 Z
+  updated_at: 2020-10-02 14:28:46.747107000 Z
+  data_entity_type: ProcessDataEntity
+  data_entity_id: 5
+  workflow_process_definition_id: 4
+  state: running
+  cancel_info: 
+  ended_at: 
+  cancel_user_id: 
+  title: srs-process
+  assignee_id: 133235
+  private: false
+  predecessor_process_id: 
+  description: 
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+workflow_processes_006:
+  id: 14
+  camunda_id: 5a7d3661-5d7a-11ea-a1f8-0242ac1b0005
+  created_at: 2020-03-03 18:11:07.389872000 Z
+  updated_at: 2020-03-03 18:11:08.106419000 Z
+  data_entity_type: ProcessDataEntity
+  data_entity_id: 6
+  workflow_process_definition_id: 1
+  state: running
+  cancel_info: 
+  ended_at: 
+  cancel_user_id: 
+  title: EV-14
+  assignee_id: 133235
+  private: false
+  predecessor_process_id: 
+  description: 
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+workflow_processes_007:
+  id: 15
+  camunda_id: 7009b8fd-5d7a-11ea-a1f8-0242ac1b0005
+  created_at: 2020-03-03 18:11:43.539572000 Z
+  updated_at: 2020-03-03 18:13:43.808639000 Z
+  data_entity_type: ProcessDataEntity
+  data_entity_id: 7
+  workflow_process_definition_id: 1
+  state: canceled
+  cancel_info: Test Maßnahme Abbruch
+  ended_at: 2020-03-03 18:13:43.800138000 Z
+  cancel_user_id: 1
+  title: EV-15
+  assignee_id: 133235
+  private: false
+  predecessor_process_id: 
+  description: 
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+workflow_processes_008:
+  id: 16
+  camunda_id: ecaf2559-5e05-11ea-b8e1-0242ac110e04
+  created_at: 2020-03-04 10:50:12.716285000 Z
+  updated_at: 2020-03-04 10:50:31.834315000 Z
+  data_entity_type: ProcessDataEntity
+  data_entity_id: 8
+  workflow_process_definition_id: 3
+  state: running
+  cancel_info: 
+  ended_at: 
+  cancel_user_id: 
+  title: Erstgespräch Erfindung für eine Test-Erfindung
+  assignee_id: 1
+  private: false
+  predecessor_process_id: 
+  description: 
+  state_updated_at: 2020-10-02 14:25:35.152404000 Z
+workflow_processes_009:
+  id: 17
+  camunda_id: e9af386d-0d3e-11eb-bb8e-0242ac140004
+  created_at: 2020-10-13 10:29:02.468377000 Z
+  updated_at: 2020-10-13 10:29:37.133538000 Z
+  data_entity_type: ProcessDataEntity
+  data_entity_id: 9
+  workflow_process_definition_id: 1
+  state: running
+  cancel_info: 
+  ended_at: 
+  cancel_user_id: 
+  title: Mein Geburtstag
+  assignee_id: 133235
+  private: true
+  predecessor_process_id: 
+  description: "<p>Ich will meinen Geburtstag in mittelgroßer Runde organisieren.</p>"
+  state_updated_at: 2020-10-13 10:29:02.468881000 Z

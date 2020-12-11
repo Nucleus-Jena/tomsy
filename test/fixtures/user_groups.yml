@@ -1,0 +1,17 @@
+---
+user_groups_001:
+  id: 1
+  user_id: 1
+  group_id: 1
+user_groups_002:
+  id: 11
+  user_id: 133235
+  group_id: 6
+user_groups_003:
+  id: 12
+  user_id: 133237
+  group_id: 8
+user_groups_004:
+  id: 13
+  user_id: 133238
+  group_id: 8

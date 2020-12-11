@@ -1,0 +1,530 @@
+---
+versions_207:
+  id: 208
+  item_type: Document
+  item_id: 1
+  event: create
+  whodunnit: '1'
+  object:
+  created_at: 2019-05-09 12:44:44.988513000 Z
+  object_changes: "---\nid:\n- \n- 1\ncreated_at:\n- \n- &1 2019-05-09 12:44:44.985040322
+    Z\nupdated_at:\n- \n- *1\ndata_entity_type:\n- \n- PatentApplication\ndata_entity_id:\n-
+    \n- 1\ndata_entity_field:\n- \n- publication\n"
+  transaction_id:
+versions_208:
+  id: 209
+  item_type: Document
+  item_id: 1
+  event: update
+  whodunnit: '1'
+  object: "---\nid: 1\ntitle: \ncreated_at: 2019-05-09 12:44:44.985040322 Z\nupdated_at:
+    2019-05-09 12:44:44.988513702 Z\ndata_entity_type: PatentApplication\ndata_entity_id:
+    1\ndata_entity_field: publication\n"
+  created_at: 2019-05-09 12:44:44.988513000 Z
+  object_changes:
+  transaction_id:
+versions_209:
+  id: 220
+  item_type: Document
+  item_id: 4
+  event: create
+  whodunnit: '1'
+  object:
+  created_at: 2019-05-16 12:57:10.304324000 Z
+  object_changes: "---\nid:\n- \n- 4\ncreated_at:\n- \n- &1 2019-05-16 12:57:10.298528318
+    Z\nupdated_at:\n- \n- *1\ndata_entity_type:\n- \n- PatentApplication\ndata_entity_id:\n-
+    \n- 1\ndata_entity_field:\n- \n- patent_claim\n"
+  transaction_id:
+versions_210:
+  id: 221
+  item_type: Document
+  item_id: 4
+  event: update
+  whodunnit: '1'
+  object: "---\nid: 4\ntitle: \ncreated_at: 2019-05-16 12:57:10.298528318 Z\nupdated_at:
+    2019-05-16 12:57:10.304324716 Z\ndata_entity_type: PatentApplication\ndata_entity_id:
+    1\ndata_entity_field: patent_claim\n"
+  created_at: 2019-05-16 12:57:10.304324000 Z
+  object_changes:
+  transaction_id:
+versions_211:
+  id: 222
+  item_type: Document
+  item_id: 1
+  event: destroy
+  whodunnit: '1'
+  object: "---\nid: 1\ntitle: \ncreated_at: 2019-05-09 12:44:44.985040000 Z\nupdated_at:
+    2019-05-09 12:44:44.988513000 Z\ndata_entity_type: PatentApplication\ndata_entity_id:
+    1\ndata_entity_field: publication\n"
+  created_at: 2019-05-16 12:57:13.031737000 Z
+  object_changes: "---\nid:\n- 1\n- \ntitle:\n- \n- \ncreated_at:\n- 2019-05-09 12:44:44.985040000
+    Z\n- \nupdated_at:\n- 2019-05-09 12:44:44.988513000 Z\n- \ndata_entity_type:\n-
+    PatentApplication\n- \ndata_entity_id:\n- 1\n- \ndata_entity_field:\n- publication\n-
+    \n"
+  transaction_id:
+versions_212:
+  id: 224
+  item_type: Document
+  item_id: 5
+  event: create
+  whodunnit: '1'
+  object:
+  created_at: 2019-05-16 12:57:18.554740000 Z
+  object_changes: "---\nid:\n- \n- 5\ncreated_at:\n- \n- &1 2019-05-16 12:57:18.551190244
+    Z\nupdated_at:\n- \n- *1\ndata_entity_type:\n- \n- PatentApplication\ndata_entity_id:\n-
+    \n- 1\ndata_entity_field:\n- \n- publication\n"
+  transaction_id:
+versions_213:
+  id: 225
+  item_type: Document
+  item_id: 5
+  event: update
+  whodunnit: '1'
+  object: "---\nid: 5\ntitle: \ncreated_at: 2019-05-16 12:57:18.551190244 Z\nupdated_at:
+    2019-05-16 12:57:18.554740822 Z\ndata_entity_type: PatentApplication\ndata_entity_id:
+    1\ndata_entity_field: publication\n"
+  created_at: 2019-05-16 12:57:18.554740000 Z
+  object_changes:
+  transaction_id:
+versions_214:
+  id: 231
+  item_type: Document
+  item_id: 4
+  event: destroy
+  whodunnit: '1'
+  object: "---\nid: 4\ntitle: \ncreated_at: 2019-05-16 12:57:10.298528000 Z\nupdated_at:
+    2019-05-16 12:57:10.304324000 Z\ndata_entity_type: PatentApplication\ndata_entity_id:
+    1\ndata_entity_field: patent_claim\n"
+  created_at: 2019-05-16 13:01:07.099005000 Z
+  object_changes: "---\nid:\n- 4\n- \ntitle:\n- \n- \ncreated_at:\n- 2019-05-16 12:57:10.298528000
+    Z\n- \nupdated_at:\n- 2019-05-16 12:57:10.304324000 Z\n- \ndata_entity_type:\n-
+    PatentApplication\n- \ndata_entity_id:\n- 1\n- \ndata_entity_field:\n- patent_claim\n-
+    \n"
+  transaction_id:
+versions_215:
+  id: 232
+  item_type: Document
+  item_id: 5
+  event: destroy
+  whodunnit: '1'
+  object: "---\nid: 5\ntitle: \ncreated_at: 2019-05-16 12:57:18.551190000 Z\nupdated_at:
+    2019-05-16 12:57:18.554740000 Z\ndata_entity_type: PatentApplication\ndata_entity_id:
+    1\ndata_entity_field: publication\n"
+  created_at: 2019-05-16 13:01:08.836898000 Z
+  object_changes: "---\nid:\n- 5\n- \ntitle:\n- \n- \ncreated_at:\n- 2019-05-16 12:57:18.551190000
+    Z\n- \nupdated_at:\n- 2019-05-16 12:57:18.554740000 Z\n- \ndata_entity_type:\n-
+    PatentApplication\n- \ndata_entity_id:\n- 1\n- \ndata_entity_field:\n- publication\n-
+    \n"
+  transaction_id:
+versions_216:
+  id: 256
+  item_type: ProcessDataEntity
+  item_id: 2
+  event: create
+  whodunnit: '133235'
+  object:
+  created_at: 2020-02-28 16:11:26.546777000 Z
+  object_changes: "---\nid:\n- \n- 2\ncreated_at:\n- \n- &1 2020-02-28 16:11:26.546777005
+    Z\nupdated_at:\n- \n- *1\ntype:\n- \n- PatentApplication\n"
+  transaction_id:
+versions_217:
+  id: 257
+  item_type: ProcessDataEntity
+  item_id: 3
+  event: create
+  whodunnit: '133235'
+  object:
+  created_at: 2020-02-28 16:12:25.824544000 Z
+  object_changes: "---\nid:\n- \n- 3\ncreated_at:\n- \n- &1 2020-02-28 16:12:25.824544779
+    Z\nupdated_at:\n- \n- *1\ntype:\n- \n- PatentApplication\n"
+  transaction_id:
+versions_218:
+  id: 258
+  item_type: ProcessDataEntity
+  item_id: 2
+  event: update
+  whodunnit: '133235'
+  object: |
+    ---
+    id: 2
+    data: "{}"
+    type: PatentApplication
+    created_at: 2020-02-28 16:11:26.546777000 Z
+    updated_at: 2020-02-28 16:11:26.546777000 Z
+  created_at: 2020-02-28 16:14:03.134918000 Z
+  object_changes: |
+    ---
+    data:
+    - "{}"
+    - '{"reference":"GENESE-0233"}'
+    updated_at:
+    - 2020-02-28 16:11:26.546777000 Z
+    - 2020-02-28 16:14:03.134918781 Z
+  transaction_id:
+versions_219:
+  id: 259
+  item_type: ProcessDataEntity
+  item_id: 3
+  event: update
+  whodunnit: '133235'
+  object: |
+    ---
+    id: 3
+    data: "{}"
+    type: PatentApplication
+    created_at: 2020-02-28 16:12:25.824544000 Z
+    updated_at: 2020-02-28 16:12:25.824544000 Z
+  created_at: 2020-02-28 16:16:36.516913000 Z
+  object_changes: |
+    ---
+    data:
+    - "{}"
+    - '{"reference":"GENESE-0037"}'
+    updated_at:
+    - 2020-02-28 16:12:25.824544000 Z
+    - 2020-02-28 16:16:36.516913896 Z
+  transaction_id:
+versions_220:
+  id: 260
+  item_type: ProcessDataEntity
+  item_id: 4
+  event: create
+  whodunnit: '133235'
+  object:
+  created_at: 2020-02-28 16:17:08.805774000 Z
+  object_changes: "---\nid:\n- \n- 4\ncreated_at:\n- \n- &1 2020-02-28 16:17:08.805774551
+    Z\nupdated_at:\n- \n- *1\ntype:\n- \n- PatentApplication\n"
+  transaction_id:
+versions_221:
+  id: 261
+  item_type: ProcessDataEntity
+  item_id: 5
+  event: create
+  whodunnit: '133235'
+  object:
+  created_at: 2020-02-28 16:17:42.495902000 Z
+  object_changes: "---\nid:\n- \n- 5\ncreated_at:\n- \n- &1 2020-02-28 16:17:42.495902906
+    Z\nupdated_at:\n- \n- *1\ntype:\n- \n- PatentApplication\n"
+  transaction_id:
+versions_222:
+  id: 262
+  item_type: Document
+  item_id: 4
+  event: create
+  whodunnit: '133235'
+  object:
+  created_at: 2020-02-28 16:18:44.758040000 Z
+  object_changes: "---\nid:\n- \n- 4\ncreated_at:\n- \n- &1 2020-02-28 16:18:44.758040361
+    Z\nupdated_at:\n- \n- *1\ndata_entity_type:\n- \n- ProcessDataEntity\ndata_entity_id:\n-
+    \n- 4\ndata_entity_field:\n- \n- description_files\n"
+  transaction_id:
+versions_223:
+  id: 263
+  item_type: Document
+  item_id: 4
+  event: update
+  whodunnit: '133235'
+  object: "---\nid: 4\ntitle: \ncreated_at: 2020-02-28 16:18:44.758040361 Z\nupdated_at:
+    2020-02-28 16:18:44.888034186 Z\ndata_entity_type: ProcessDataEntity\ndata_entity_id:
+    4\ndata_entity_field: description_files\nfile_as_text: \n"
+  created_at: 2020-02-28 16:18:44.888034000 Z
+  object_changes:
+  transaction_id:
+versions_224:
+  id: 264
+  item_type: Document
+  item_id: 4
+  event: update
+  whodunnit:
+  object: "---\ndata_entity_id: 4\nid: 4\nfile_as_text: \ndata_entity_type: ProcessDataEntity\ntitle:
+    \ncreated_at: 2020-02-28 16:18:44.758040000 Z\nupdated_at: 2020-02-28 16:18:44.888034000
+    Z\ndata_entity_field: description_files\n"
+  created_at: 2020-02-28 16:18:50.587268000 Z
+  object_changes: "---\nfile_as_text:\n- \n- |2+\n\n  Test Umläute!\n\n\nupdated_at:\n-
+    2020-02-28 16:18:44.888034000 Z\n- 2020-02-28 16:18:50.587268604 Z\n"
+  transaction_id:
+versions_225:
+  id: 265
+  item_type: ProcessDataEntity
+  item_id: 4
+  event: update
+  whodunnit: '133235'
+  object: |
+    ---
+    id: 4
+    data: "{}"
+    type: PatentApplication
+    created_at: 2020-02-28 16:17:08.805774000 Z
+    updated_at: 2020-02-28 16:17:08.805774000 Z
+  created_at: 2020-02-28 16:19:57.706558000 Z
+  object_changes: |
+    ---
+    data:
+    - "{}"
+    - '{"reference":"JAMES"}'
+    updated_at:
+    - 2020-02-28 16:17:08.805774000 Z
+    - 2020-02-28 16:19:57.706558060 Z
+  transaction_id:
+versions_226:
+  id: 266
+  item_type: Document
+  item_id: 5
+  event: create
+  whodunnit: '133235'
+  object:
+  created_at: 2020-02-28 16:20:46.610507000 Z
+  object_changes: "---\nid:\n- \n- 5\ncreated_at:\n- \n- &1 2020-02-28 16:20:46.610507352
+    Z\nupdated_at:\n- \n- *1\ndata_entity_type:\n- \n- ProcessDataEntity\ndata_entity_id:\n-
+    \n- 5\ndata_entity_field:\n- \n- description_files\n"
+  transaction_id:
+versions_227:
+  id: 267
+  item_type: Document
+  item_id: 5
+  event: update
+  whodunnit: '133235'
+  object: "---\nid: 5\ntitle: \ncreated_at: 2020-02-28 16:20:46.610507352 Z\nupdated_at:
+    2020-02-28 16:20:46.631573179 Z\ndata_entity_type: ProcessDataEntity\ndata_entity_id:
+    5\ndata_entity_field: description_files\nfile_as_text: \n"
+  created_at: 2020-02-28 16:20:46.631573000 Z
+  object_changes:
+  transaction_id:
+versions_228:
+  id: 268
+  item_type: Document
+  item_id: 5
+  event: update
+  whodunnit:
+  object: "---\ndata_entity_id: 5\nid: 5\nfile_as_text: \ndata_entity_type: ProcessDataEntity\ntitle:
+    \ncreated_at: 2020-02-28 16:20:46.610507000 Z\nupdated_at: 2020-02-28 16:20:46.631573000
+    Z\ndata_entity_field: description_files\n"
+  created_at: 2020-02-28 16:20:52.484062000 Z
+  object_changes: "---\nfile_as_text:\n- \n- \"Beschreibung\\nBasis Projekt\\n\\n
+    \\n\\n \\n\\nKick-Off, Zwischenergebnisse und Endprasentation\n  als jeweils 2
+    stiindiges Treffen\\n\\\\Vor-Ort im Fraunhofer IMW oder falls gewinscht\n  in
+    den Rumen des InfAl\\nTellnahme von mindestens zwei Personen des Auftragnehmers.\\n\\n\\\\Vorbereitung,\n
+    \ Durchfuhrung, Nachbereitung der Treffen.\\n\\nAbstimmung zwischen den Treffen\\n\\n\n
+    \ \\n\\n \\n\\n \\n\\n\"\nupdated_at:\n- 2020-02-28 16:20:46.631573000 Z\n- 2020-02-28
+    16:20:52.484062914 Z\n"
+  transaction_id:
+versions_229:
+  id: 269
+  item_type: ProcessDataEntity
+  item_id: 6
+  event: create
+  whodunnit: '133235'
+  object:
+  created_at: 2020-03-03 18:11:07.249779000 Z
+  object_changes: "---\nid:\n- \n- 6\ncreated_at:\n- \n- &1 2020-03-03 18:11:07.249779572
+    Z\nupdated_at:\n- \n- *1\ntype:\n- \n- EventPlanning\n"
+  transaction_id:
+versions_230:
+  id: 270
+  item_type: ProcessDataEntity
+  item_id: 6
+  event: update
+  whodunnit: '133235'
+  object: |
+    ---
+    id: 6
+    data: "{}"
+    type: EventPlanning
+    created_at: 2020-03-03 18:11:07.249779000 Z
+    updated_at: 2020-03-03 18:11:07.249779000 Z
+  created_at: 2020-03-03 18:11:22.373845000 Z
+  object_changes: |
+    ---
+    data:
+    - "{}"
+    - '{"event_type":"Workshop"}'
+    updated_at:
+    - 2020-03-03 18:11:07.249779000 Z
+    - 2020-03-03 18:11:22.373845264 Z
+  transaction_id:
+versions_231:
+  id: 271
+  item_type: ProcessDataEntity
+  item_id: 6
+  event: update
+  whodunnit: '133235'
+  object: |
+    ---
+    id: 6
+    data: '{"event_type":"Workshop"}'
+    type: EventPlanning
+    created_at: 2020-03-03 18:11:07.249779000 Z
+    updated_at: 2020-03-03 18:11:22.373845000 Z
+  created_at: 2020-03-03 18:11:31.608218000 Z
+  object_changes: |
+    ---
+    data:
+    - '{"event_type":"Workshop"}'
+    - '{"event_type":"Workshop","working_title":"James die Veranstaltung!"}'
+    updated_at:
+    - 2020-03-03 18:11:22.373845000 Z
+    - 2020-03-03 18:11:31.608218770 Z
+  transaction_id:
+versions_232:
+  id: 272
+  item_type: ProcessDataEntity
+  item_id: 7
+  event: create
+  whodunnit: '133235'
+  object:
+  created_at: 2020-03-03 18:11:43.510234000 Z
+  object_changes: "---\nid:\n- \n- 7\ncreated_at:\n- \n- &1 2020-03-03 18:11:43.510234351
+    Z\nupdated_at:\n- \n- *1\ntype:\n- \n- EventPlanning\n"
+  transaction_id:
+versions_233:
+  id: 273
+  item_type: ProcessDataEntity
+  item_id: 7
+  event: update
+  whodunnit: '133235'
+  object: |
+    ---
+    id: 7
+    data: "{}"
+    type: EventPlanning
+    created_at: 2020-03-03 18:11:43.510234000 Z
+    updated_at: 2020-03-03 18:11:43.510234000 Z
+  created_at: 2020-03-03 18:12:17.463090000 Z
+  object_changes: |
+    ---
+    data:
+    - "{}"
+    - '{"working_title":"Findet wohl nicht statt"}'
+    updated_at:
+    - 2020-03-03 18:11:43.510234000 Z
+    - 2020-03-03 18:12:17.463090046 Z
+  transaction_id:
+versions_234:
+  id: 274
+  item_type: ProcessDataEntity
+  item_id: 8
+  event: create
+  whodunnit: '1'
+  object:
+  created_at: 2020-03-04 10:50:12.562438000 Z
+  object_changes: "---\nid:\n- \n- 8\ncreated_at:\n- \n- &1 2020-03-04 10:50:12.562438751
+    Z\nupdated_at:\n- \n- *1\ntype:\n- \n- InitialMeetingInvention\n"
+  transaction_id:
+versions_235:
+  id: 275
+  item_type: ProcessDataEntity
+  item_id: 8
+  event: update
+  whodunnit: '1'
+  object: |
+    ---
+    id: 8
+    data: "{}"
+    type: InitialMeetingInvention
+    created_at: 2020-03-04 10:50:12.562438000 Z
+    updated_at: 2020-03-04 10:50:12.562438000 Z
+  created_at: 2020-03-04 10:50:38.922483000 Z
+  object_changes: |
+    ---
+    data:
+    - "{}"
+    - '{"first_meeting_at":"01.04.2020, 11:50 Uhr"}'
+    updated_at:
+    - 2020-03-04 10:50:12.562438000 Z
+    - 2020-03-04 10:50:38.922483297 Z
+  transaction_id:
+versions_236:
+  id: 276
+  item_type: Document
+  item_id: 7
+  event: create
+  whodunnit: '1'
+  object:
+  created_at: 2020-03-04 10:51:02.018394000 Z
+  object_changes: "---\nid:\n- \n- 7\ncreated_at:\n- \n- &1 2020-03-04 10:51:02.018394792
+    Z\nupdated_at:\n- \n- *1\ndata_entity_type:\n- \n- ProcessDataEntity\ndata_entity_id:\n-
+    \n- 8\ndata_entity_field:\n- \n- protocol_files\n"
+  transaction_id:
+versions_237:
+  id: 277
+  item_type: Document
+  item_id: 7
+  event: update
+  whodunnit: '1'
+  object: "---\nid: 7\ntitle: \ncreated_at: 2020-03-04 10:51:02.018394792 Z\nupdated_at:
+    2020-03-04 10:51:02.084525227 Z\ndata_entity_type: ProcessDataEntity\ndata_entity_id:
+    8\ndata_entity_field: protocol_files\nfile_as_text: \n"
+  created_at: 2020-03-04 10:51:02.084525000 Z
+  object_changes:
+  transaction_id:
+versions_238:
+  id: 278
+  item_type: Document
+  item_id: 7
+  event: update
+  whodunnit:
+  object: "---\ndata_entity_id: 8\nid: 7\nfile_as_text: \ndata_entity_type: ProcessDataEntity\ntitle:
+    \ncreated_at: 2020-03-04 10:51:02.018394000 Z\nupdated_at: 2020-03-04 10:51:02.084525000
+    Z\ndata_entity_field: protocol_files\n"
+  created_at: 2020-03-04 10:51:07.961436000 Z
+  object_changes: "---\nfile_as_text:\n- \n- |+\n  [bookmark: _GoBack]The quick brown
+    fox jumped over the lazy cat.\n  ‘Tree brona oxbmped overheat\n\nupdated_at:\n-
+    2020-03-04 10:51:02.084525000 Z\n- 2020-03-04 10:51:07.961436427 Z\n"
+  transaction_id:
+versions_239:
+  id: 279
+  item_type: ProcessDataEntity
+  item_id: 9
+  event: create
+  whodunnit: '133235'
+  object:
+  created_at: 2020-10-13 10:29:02.434747000 Z
+  object_changes: "---\nid:\n- \n- 9\ncreated_at:\n- \n- &1 2020-10-13 10:29:02.434747562
+    Z\nupdated_at:\n- \n- *1\ntype:\n- \n- EventPlanning\n"
+  transaction_id:
+versions_240:
+  id: 280
+  item_type: ProcessDataEntity
+  item_id: 9
+  event: update
+  whodunnit: '133235'
+  object: |
+    ---
+    id: 9
+    data: "{}"
+    type: EventPlanning
+    created_at: 2020-10-13 10:29:02.434747000 Z
+    updated_at: 2020-10-13 10:29:02.434747000 Z
+  created_at: 2020-10-13 10:29:52.169428000 Z
+  object_changes: |
+    ---
+    data:
+    - "{}"
+    - '{"working_title":"Geburtstagsparty 2020"}'
+    updated_at:
+    - 2020-10-13 10:29:02.434747000 Z
+    - 2020-10-13 10:29:52.169428078 Z
+  transaction_id:
+versions_241:
+  id: 281
+  item_type: ProcessDataEntity
+  item_id: 9
+  event: update
+  whodunnit: '133235'
+  object: |
+    ---
+    id: 9
+    data: '{"working_title":"Geburtstagsparty 2020"}'
+    type: EventPlanning
+    created_at: 2020-10-13 10:29:02.434747000 Z
+    updated_at: 2020-10-13 10:29:52.169428000 Z
+  created_at: 2020-10-13 10:29:58.702108000 Z
+  object_changes: |
+    ---
+    data:
+    - '{"working_title":"Geburtstagsparty 2020"}'
+    - '{"working_title":"Geburtstagsparty 2020","event_type":"Geburtstag"}'
+    updated_at:
+    - 2020-10-13 10:29:52.169428000 Z
+    - 2020-10-13 10:29:58.702108230 Z
+  transaction_id:

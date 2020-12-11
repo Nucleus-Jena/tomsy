@@ -1,0 +1,37 @@
+---
+users_workflow_processes_001:
+  user_id: 1
+  workflow_process_id: 8
+users_workflow_processes_002:
+  user_id: 1
+  workflow_process_id: 13
+users_workflow_processes_003:
+  user_id: 1
+  workflow_process_id: 15
+users_workflow_processes_004:
+  user_id: 1
+  workflow_process_id: 16
+users_workflow_processes_005:
+  user_id: 133235
+  workflow_process_id: 8
+users_workflow_processes_006:
+  user_id: 133235
+  workflow_process_id: 10
+users_workflow_processes_007:
+  user_id: 133235
+  workflow_process_id: 11
+users_workflow_processes_008:
+  user_id: 133235
+  workflow_process_id: 12
+users_workflow_processes_009:
+  user_id: 133235
+  workflow_process_id: 13
+users_workflow_processes_010:
+  user_id: 133235
+  workflow_process_id: 14
+users_workflow_processes_011:
+  user_id: 133235
+  workflow_process_id: 15
+users_workflow_processes_012:
+  user_id: 133235
+  workflow_process_id: 17

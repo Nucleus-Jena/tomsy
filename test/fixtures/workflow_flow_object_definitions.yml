@@ -1,0 +1,1152 @@
+---
+workflow_flow_object_definitions_001:
+  id: 876
+  key: develop_marketing_concept
+  name: Marketingkonzept entwickeln
+  description: |-
+    Eine mögliche Aufgabe während der Planung der Veranstaltung ist die Entwicklung eines Marketingkonzepts.
+
+    Felder: Freitext, Dokumentenablage
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.022093000 Z
+  updated_at: 2019-11-07 16:21:17.022093000 Z
+  order: 40
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_002:
+  id: 877
+  key: acquire_sponsors
+  name: Sponsoren akquirieren
+  description: |-
+    Eine mögliche Aufgabe während der Planung der Veranstaltung ist die Sponsorenakquise.
+
+    Felder: Vorerst Personenauswahl, Sponsor anlegen
+
+    Später: Auswahlliste pot. Sponsoren, hinterlegen von Reaktionen, Speichern von festgelegten Sponsoren als Liste
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.026422000 Z
+  updated_at: 2019-11-07 16:21:17.026422000 Z
+  order: 50
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_003:
+  id: 878
+  key: define_scheduling
+  name: Zeitplanung vornehmen
+  description: |-
+    Sobald die Deadline für die Zeitplanung steht, kann die Zeitplanung für die Veranstaltung vorgenommen werden.
+
+    Felder: Freitext, Dokumentenablage
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.031108000 Z
+  updated_at: 2019-11-07 16:21:17.031108000 Z
+  order: 60
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_004:
+  id: 879
+  key: create_agenda
+  name: Agenda erstellen
+  description: |-
+    Eine mögliche Aufgabe während der Planung der Veranstaltung ist die Erstellung einer groben Agenda.
+
+    Felder: Freitext, Dokumentenablage
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.035356000 Z
+  updated_at: 2019-11-07 16:21:17.035356000 Z
+  order: 70
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_005:
+  id: 880
+  key: create_financial_planning
+  name: Finanzplanung
+  description: Eine mögliche Aufgabe während der Planung der Veranstaltung ist die
+    Finanzplanung.
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.039560000 Z
+  updated_at: 2019-11-07 16:21:17.039560000 Z
+  order: 100
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_006:
+  id: 881
+  key: create_spatial_planning
+  name: Raumplanung
+  description: Eine mögliche Aufgabe während der Planung der Veranstaltung ist die
+    Raumplanung.
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.043244000 Z
+  updated_at: 2019-11-07 16:21:17.043244000 Z
+  order: 110
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_007:
+  id: 882
+  key: define_other_points
+  name: Sonstige Punkte
+  description: Diese Aufgabe umfasst alle Planungsaufgaben, die nicht durch die anderen
+    Aufgaben abgedeckt werden.
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.047021000 Z
+  updated_at: 2019-11-07 16:21:17.047021000 Z
+  order: 120
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_008:
+  id: 883
+  key: create_content_planning
+  name: Inhaltliche Planung vornehmen
+  description: Sobald eine grobe Agenda für die Veranstaltung steht, kann die inhaltliche
+    Planung der Veranstaltung vorgenommen werden.
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.050677000 Z
+  updated_at: 2019-11-07 16:21:17.050677000 Z
+  order: 90
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_009:
+  id: 884
+  key: initiate_process_of_participant_acquisition
+  name: Prozess der Teilnehmerakquise anstoßen
+  description: Sobald die Zeitplanung abgeschlossen ist und eine grobe Agenda für
+    die Veranstaltung vorhanden ist, kann die Teilnehmerakquise gestartet werden.
+    Dies stößt einen neuen Prozess an.
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.054407000 Z
+  updated_at: 2019-11-07 16:21:17.054407000 Z
+  order: 80
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_010:
+  id: 885
+  key: define_event_type
+  name: Art der Veranstaltung angeben
+  description: In dieser Aufgabe wird angegeben, um welchen Typ Veranstaltung es sich
+    im vorliegenden Fall handelt.
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.057898000 Z
+  updated_at: 2019-11-07 16:21:17.057898000 Z
+  order: 10
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_011:
+  id: 886
+  key: define_event_host
+  name: Veranstalter angeben
+  description: In diesem Schritt wird der Veranstalter angegeben. Dieser wird in den
+    vorhandenen Kontakten gesucht oder neu angelegt.
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.064792000 Z
+  updated_at: 2019-11-07 16:21:17.064792000 Z
+  order: 20
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_012:
+  id: 887
+  key: define_event_organizer
+  name: Organisatoren angeben
+  description: In diesem Schritt werden die Organisatoren angegeben. Diese werden
+    in den vorhandenen Kontakten gesucht oder neu angelegt.
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.071116000 Z
+  updated_at: 2019-11-07 16:21:17.071116000 Z
+  order: 30
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_013:
+  id: 888
+  key: define_responsibilities
+  name: Verantwortlichkeiten festlegen
+  description: In dieser Aufgabe sollen für die restlichen, parallel ablaufenden Aufgaben,
+    die Verantwortlichkeiten geklärt werden.
+  workflow_process_definition_id: 1
+  created_at: 2019-11-07 16:21:17.076191000 Z
+  updated_at: 2019-11-07 16:21:17.076191000 Z
+  order: 130
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_014:
+  id: 889
+  key: arrange_meeting_nuc
+  name: Kennlerngespräch durchführen
+  description: "In einem Kennenlerngespräch sollen die Bedarfe der externen Kontakte
+    besrprochen werden. \n\nDeine nächsten Schritte:\n\nÜbernimm die Verantwortung
+    für diese Aufgabe und die Aufgabe \"Inhalte des Vorhabens erfassens\".\n\n \nVereinbare
+    mit deinem Ansprechpartner einen Gesprächstermin, an dem alle notwendigen Personen
+    (sowohl extern als auch aus dem NUCLEUS-Team) teilnehmen können.\n\nSetze das
+    Fälligkeitsdatum auf den Tag des Gesprächs\n\nFalls du im Vorfeld des Gesprächs
+    erste Unterlagen oder sonstige Informationen vom Ansprechpartner erhältst, dokumentiere
+    sie in der Aufgabe \"Details zu Kooperationsidee sammeln\" .\n\nSammle in den
+    Gesprächsnotizen alles wichtige, das du aus dem Gespräch mitgenommen hast.\n\nSchließe
+    die Aufgabe ab, wenn das Kennenlergespräch dokumentiert ist."
+  workflow_process_definition_id: 2
+  created_at: 2019-11-07 16:21:17.094148000 Z
+  updated_at: 2020-11-20 14:24:09.395396000 Z
+  order: 10
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_015:
+  id: 890
+  key: ask_for_sketch_of_idea
+  name: Details zu Kooperationsidee sammeln
+  description: |
+    Sammle hier während der gesamten Maßnahme Unterlagen und alle Informationen, die du vom externen Partner zu der Kooperationsidee erhälst.
+
+    Deine nächsten Schritte:
+
+    Insbesondere im Vorfeld des Erstgesprächs solltest du Informationen des Projekts anfragen und hier hinterlegen.
+
+    Die Verantwortung für die Aufgabe sollte die Person übernehmen, die auch für die Maßnahme verantwortlich ist.
+
+    Tipp: Die Maßnahme kann erst dann enden, wenn diese Aufgabe abgeschlossen ist.
+  workflow_process_definition_id: 2
+  created_at: 2019-11-07 16:21:17.097929000 Z
+  updated_at: 2020-11-20 14:24:09.430093000 Z
+  order: 20
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_016:
+  id: 891
+  key: invite_other_neccessary_people_to_meeting
+  name: Ggf. weitere notwendige Personen zum Gespräch einladen
+  description: In vielen Fällen ist es sinnvoll, Personen aus anderen Bereichen des
+    SFT zum Erstgespräch dazuzuholen. Falls die Notwendigkeit dazu ermittelt wurde,
+    werden jene Personen in dieser Aufgabe ebenfalls zum Gespräch eingeladen.
+  workflow_process_definition_id: 2
+  created_at: 2019-11-07 16:21:17.101518000 Z
+  updated_at: 2019-11-07 16:21:17.101518000 Z
+  order: 30
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_017:
+  id: 892
+  key: define_formalities
+  name: Formalia aufnehmen
+  description: Während des Erstgesprächs werden neben den exakten Bedarfen der anfragenden
+    Person oder Organisation auch diverse Formalia aufgenommen.
+  workflow_process_definition_id: 2
+  created_at: 2019-11-07 16:21:17.105216000 Z
+  updated_at: 2019-11-07 16:21:17.105216000 Z
+  order: 40
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_018:
+  id: 893
+  key: define_detailed_needs
+  name: Transfermaßnahmen initieren
+  description: "Im Rahmen der Nachbereitung des Kennenlerngesprächs werden im NUCLEUS-Team
+    die Bedarfe der externen Kontakte eruiert und konkrete NUCLEUS-Transfermaßnahmen
+    initiiert. \n\nDeine nächsten Schritte:\n\nWeise einem Verantwortlichen die Aufgabe
+    zu und setze ein realistisches Fälligkeitsdatum.\n\nTrage die bereits aus der
+    bisherigen Kommunikation bekannten Bedarfe zusammen. \n\nKläre weitere Bedarfe
+    mit den externen Partnern ab, bis sowohl die Partner als auch das NUCLEUS-Team
+    zufrieden sind.\n\nErstelle ausgehend von den ermittelten Bedarfen Folgemaßnahmen
+    und deligiere diese an die verantwortlichen Teammitglieder.\n\nKommuniziere den
+    externen Partnern, welche nächsten Schritte in die Wege geleitet wurden.\n\nSchließe
+    diese Aufgabe ab.\n\nTipp: Selbstverständlich können auch keine umsetzbaren Transfermaßnahmen
+    identifiziert werden. In diesem Fall ist es wichtig, dies den externen Partnern
+    zu kommunizieren.\n"
+  workflow_process_definition_id: 2
+  created_at: 2019-11-07 16:21:17.108931000 Z
+  updated_at: 2020-11-20 14:24:09.492228000 Z
+  order: 50
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_019:
+  id: 894
+  key: define_further_projects
+  name: Folgeprojekte wählen aus P-Matching, Teammatching und anderen Bereichen
+  description: Anhand der Ergebnisse des Erstgesprächs werden in diesem Schritt die
+    Folgeprozesse aus den Bereichen des SFT ausgewählt.
+  workflow_process_definition_id: 2
+  created_at: 2019-11-07 16:21:17.113207000 Z
+  updated_at: 2019-11-07 16:21:17.113207000 Z
+  order: 60
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_020:
+  id: 895
+  key: arrange_first_meeting
+  name: Gespräch vereinbaren
+  description: |-
+    Dieser Arbeitsschritt beinhaltet die Einigung zwischen SRS Experte
+    und  Erfinderteam auf einen Termin zur Durchführung des Erstgesprächs, welcher in dem System hinterlegt wird.
+  workflow_process_definition_id: 3
+  created_at: 2019-11-07 16:21:17.130530000 Z
+  updated_at: 2020-01-27 14:10:41.584790000 Z
+  order: 10
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_021:
+  id: 896
+  key: specifiy_inventors
+  name: Klärung Erfinder
+  description: |-
+    In diesem Schritt sollen (im Rahmen des Erstgesprächs
+     oder Nachfragen) vom SRS Experten alle Rahmeninformationen über die an der Erfindung
+    beteiligten Personen ermittelt werden. Hierzu gehören neben Stammdaten
+    auch Informationen über das Arbeitsverhältnis der als Erfinder infrage
+    kommenden Personen zum Zeitpunkt der Erfindung, die jeweilige
+    Involvierung und die Erfindung und die Beantwortung der Frage, ob eine
+    Person oder Organisation als Inhaber und/ oder Anmelder eines möglichen
+    Patents auftreten wird.
+  workflow_process_definition_id: 3
+  created_at: 2019-11-07 16:21:17.134141000 Z
+  updated_at: 2020-01-27 14:10:41.597922000 Z
+  order: 30
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_022:
+  id: 897
+  key: initial_rating_patentability
+  name: Erstbeurteilung Patentfähigkeit
+  description: |-
+    In
+     diesem Arbeitsschritt gibt der SRS Experte sein Feedback zu den bisher
+    übermittelten Informationen. Hierbei kann noch keine genaue Bewertung
+    erfolgen, aber eine vorläufige Einschätzung gegeben werden. In den
+    Folgeprozessen können jederzeit Informationen zutage kommen, die eine
+    mögliche Patentierbarkeit vereiteln, daher ist diese Ersteinschätzung
+    nur als grobe Marschroute zu verstehen. Bei einem Großteil der Anfragen
+    im Schutzrechtsservice handelt es sich um Erfindungen, also
+    patentierfähige Entdeckungen.
+  workflow_process_definition_id: 3
+  created_at: 2019-11-07 16:21:17.137932000 Z
+  updated_at: 2020-01-27 14:10:41.603498000 Z
+  order: 40
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_023:
+  id: 898
+  key: specify_service_invention
+  name: Klärung Diensterfindung
+  description: |-
+    Dieser
+     Arbeitsschritt ergibt sich meist unmittelbar aus der Klärung der
+    Beteiligten bzw. dem Arbeitsverhältnis der Erfinder zum Zeitpunkt der
+    Erfindung, es können aber noch andere Aspekte relevant sein, wie die
+    Umstände, die zu der Erfindung geführt haben. Dieser Punkt entscheidet
+    in weiten Teilen über die weitere Arbeit des Schutzrechtsservice, da der
+     SRS nur für Erfindungen zuständig
+     ist, deren Inhaber die Universität Jena ist, und daher die
+    Zusammenarbeit bei einer freien Erfindung entweder endet, oder andere
+    Anforderungen hat.
+  workflow_process_definition_id: 3
+  created_at: 2019-11-07 16:21:17.141669000 Z
+  updated_at: 2020-01-27 14:10:41.608911000 Z
+  order: 50
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_024:
+  id: 899
+  key: specifiy_rough_description
+  name: Grobbeschreibung erstellen
+  description: |-
+    Um
+     zu beurteilen, ob es sich tatsächlich um eine Erfindung handelt, muss
+    der SRS Experte zunächst eine Beschreibung der vermeintlichen Erfindung
+    erhalten. Diese muss vom Erfinderteam geliefert werden und wird für
+    viele spätere Aufgaben wie die Erstellung einer Erfindungsbeschreibung
+    oder eine Recherche zu der Neuheit benötigt.
+  workflow_process_definition_id: 3
+  created_at: 2019-11-07 16:21:17.145555000 Z
+  updated_at: 2020-01-27 14:10:41.614367000 Z
+  order: 90
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_025:
+  id: 900
+  key: set_reference_from_genese
+  name: Erfindungsakte in Genese anlegen
+  description: Sofern es sich bei der untersuchten Entdeckung um eine Diensterfindung
+    handelt, wird eine Akte in Genese angelegt. In dieser Aufgabe wird das dort generierte
+    Aktenzeichen hinterlegt.
+  workflow_process_definition_id: 3
+  created_at: 2019-11-07 16:21:17.149487000 Z
+  updated_at: 2019-11-07 16:21:17.149487000 Z
+  order: 80
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_026:
+  id: 901
+  key: specify_if_served_by_university
+  name: Entscheiden, ob die Universität die Erfindung weiter betreuen soll
+  description: Falls es sich im vorliegenden Fall nicht um eine Diensterfindung handelt,
+    können Erfinder und der SRS gemeinsam beschließen, ob der SRS die potentielle
+    Erfindung dennoch betreuen soll. Wenn beide Parteien dem zustimmen, wird im Folgenden
+    ein Vertrag geschlossen. Wenn sich dagegen entschieden wird, endet der Prozess,
+    da der SRS nur für uniinterne Erfindungen zuständig ist.
+  workflow_process_definition_id: 3
+  created_at: 2019-11-07 16:21:17.153218000 Z
+  updated_at: 2019-11-07 16:21:17.153218000 Z
+  order: 60
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_027:
+  id: 902
+  key: add_contract_between_srs_and_inventor
+  name: Vertrag zwischen SRS und Erfindern erstellen und hinterlegen
+  description: Wenn im Falle einer freien Erfindung der SRS und die Erfinder sich
+    dazu entscheiden, dass der SRS die Erfindung betreuen soll, wird in dieser Aufgabe
+    ein Vertrag darüber geschlossen und hinterlegt. Anschließend wird der Prozess
+    und das Projekt fortgesetzt, als wenn es sich um eine Diensterfindung handeln
+    würde.
+  workflow_process_definition_id: 3
+  created_at: 2019-11-07 16:21:17.157582000 Z
+  updated_at: 2019-11-07 16:21:17.157582000 Z
+  order: 70
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_028:
+  id: 903
+  key: add_protocol
+  name: Protokoll hinterlegen
+  description: In diesem Schritt soll das Protokoll des Erstgepsrächs hinterlegt werden.
+  workflow_process_definition_id: 3
+  created_at: 2019-11-07 16:21:17.161292000 Z
+  updated_at: 2019-11-07 16:21:17.161292000 Z
+  order: 20
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_029:
+  id: 904
+  key: description
+  name: Beschreibung erstellen
+  description: In dieser Aufgabe soll gemeinsam mit den Erfindern ausgehend von der
+    Kurzbeschreibung aus der Erfindungsmeldung die vollständige Erfindungsbeschreibung
+    erstellt werden, die dann in der Patentanmeldung hinterlegt wird.
+  workflow_process_definition_id: 4
+  created_at: 2019-11-07 16:21:17.178464000 Z
+  updated_at: 2019-11-07 16:21:17.178464000 Z
+  order: 20
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_030:
+  id: 905
+  key: prior_art
+  name: Stand der Technik ermitteln
+  description: In dieser Aufgabe soll der Stand der Technik, aus welchem die Erfindung
+    ausgegangen ist, recherchiert und hinterlegt werden. Auch können Patente und sonstige
+    Unterlagen hinterlegt werden. Ansatzpunkte hierfür sind Angaben der Erfinder und
+    die Rechercheergebnisse zur Neuheit der Erfindung. Erstellt werden soll ein Textblock,
+    welcher einleitend in die Patentanmeldeschrift eingebracht wird.
+  workflow_process_definition_id: 4
+  created_at: 2019-11-07 16:21:17.181994000 Z
+  updated_at: 2019-11-07 16:21:17.181994000 Z
+  order: 30
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_031:
+  id: 906
+  key: object_of_invention
+  name: Aufgabe der Erfindung festlegen
+  description: In dieser Aufgabe soll eine Problemstellung formuliert werden, die
+    durch die Erfindung gelöst werden soll. Diese Aufgabe der Erfindung wird als Textblock
+    formuliert und in die Anmeldeschrift übernommen.
+  workflow_process_definition_id: 4
+  created_at: 2019-11-07 16:21:17.185490000 Z
+  updated_at: 2019-11-07 16:21:17.185490000 Z
+  order: 40
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_032:
+  id: 907
+  key: patent_claim
+  name: Patentansprüche formulieren
+  description: In dieser Aufgabe werden ausgehend von der Beschreibung, der Aufgabe
+    und der technischen Ausgangssituation der Erfindung die Patentansprüche formuliert,
+    die für die Erfindung angemeldet werden sollen. Hier soll ein Textblock erstellt
+    werden, der direkt in die Patentanmeldung übernommen wird. Die Ansprüche sind
+    mit den Erfindern abzustimmen.
+  workflow_process_definition_id: 4
+  created_at: 2019-11-07 16:21:17.189409000 Z
+  updated_at: 2019-11-07 16:21:17.189409000 Z
+  order: 50
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_033:
+  id: 908
+  key: create_patent_application
+  name: Patentanmeldung vornehmen
+  description: In dieser Aufgabe soll die Anmeldeschrift für die Patentanmeldung vorgenommen
+    werden.
+  workflow_process_definition_id: 4
+  created_at: 2019-11-07 16:21:17.192882000 Z
+  updated_at: 2019-11-07 16:21:17.192882000 Z
+  order: 70
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_034:
+  id: 909
+  key: publication
+  name: Patentanmeldeschrift verfassen
+  description: In dieser Aufgabe soll die Anmeldeschrift für die Patentierung angefertigt
+    werden. Hierzu wird eine Vorlage angeboten, in welche die zuvor erstellten Textbausteine
+    eingepflegt werden. Das Dokument muss dann ausgedruckt und an das DPMA gesendet
+    werden.
+  workflow_process_definition_id: 4
+  created_at: 2019-11-07 16:21:17.196390000 Z
+  updated_at: 2019-11-07 16:21:17.196390000 Z
+  order: 60
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_035:
+  id: 910
+  key: set_reference_from_genese
+  name: Patentakte in Genese anlegen
+  description: Sofern eine Patentanmeldung gestartet wird, wird zuerst eine Akte in
+    Genese angelegt. Das dazugehörige Aktenzeichen wird in dieser Aufgabe hinterlegt
+    und setzt sich aus dem für die Erfindung bereits vorhandenen Aktenzeichen und
+    dem Kürzel der angestrebten Anmeldeform zusammen.
+  workflow_process_definition_id: 4
+  created_at: 2019-11-07 16:21:17.200060000 Z
+  updated_at: 2019-11-07 16:21:17.200060000 Z
+  order: 10
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_036:
+  id: 911
+  key: capture_abuse_report
+  name: Missbrauchshinweis aufnehmen
+  description: Wenn uns eine Missbrauchsmeldung per Mail erreicht, dann werden hier
+    alle relevanten Infos zu dieser Missbrauchsmeldung aufgenommen.
+  workflow_process_definition_id: 5
+  created_at: 2020-02-19 12:59:33.270454000 Z
+  updated_at: 2020-10-02 14:25:58.150819000 Z
+  order: 10
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_037:
+  id: 912
+  key: decide_if_abuse
+  name: Entscheidung Löschung
+  description: Es muss entschieden werden, ob die gemeldete Anzeige unseren <a href="https://www.dsble.de/spielregeln"
+    target="_blank">Spielregeln</a> entspricht. Bitte gib auch eine kurze Begründung
+    für deine Entscheidung ein.
+  workflow_process_definition_id: 5
+  created_at: 2020-02-19 12:59:33.275839000 Z
+  updated_at: 2020-10-02 14:25:58.185148000 Z
+  order: 20
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_038:
+  id: 913
+  key: delete_ad
+  name: Anzeige löschen
+  description: "Bitte lösche die Anzeige. Schließe diese Aufgabe ab, wenn Du die Anzeige
+    gelöscht hast.\n\n"
+  workflow_process_definition_id: 5
+  created_at: 2020-02-19 12:59:33.281023000 Z
+  updated_at: 2020-10-13 10:27:30.179974000 Z
+  order: 30
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_039:
+  id: 914
+  key: send_decision_email
+  name: Versendung der E-Mail mit Entscheidung
+  description: 'Schreibe dem Nutzer eine Mail mit der Begründung, warum wir die Anzeige
+    nicht gelöscht haben. Wenn Du die Mail geschrieben hast, dann schließe bitte diese
+    Aufgabe.
+
+'
+  workflow_process_definition_id: 5
+  created_at: 2020-02-19 12:59:33.285629000 Z
+  updated_at: 2020-10-13 10:27:30.219951000 Z
+  order: 50
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_040:
+  id: 915
+  key: send_thank_you_email
+  name: Versendung Standard-Dankes-E-Mail
+  description: 'Schreibe dem Nutzer eine Mail mit der Begründung, dass wir die Anzeige
+    gelöscht haben. Wenn Du die Mail geschrieben hast, dann schließe bitte diese Aufgabe.
+
+'
+  workflow_process_definition_id: 5
+  created_at: 2020-02-19 12:59:33.290281000 Z
+  updated_at: 2020-10-13 10:27:30.274964000 Z
+  order: 40
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_041:
+  id: 916
+  key: Task_0u25ig1
+  name: Rechnung versenden
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-02-24 13:55:13.179369000 Z
+  updated_at: 2020-02-24 13:55:13.179369000 Z
+  order: 50
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_042:
+  id: 917
+  key: Task_1sywewf
+  name: Zahlungseingang herbeiführen
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-02-24 13:55:13.195722000 Z
+  updated_at: 2020-02-24 13:55:13.195722000 Z
+  order: 60
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_043:
+  id: 918
+  key: Task_1eo4mms
+  name: Verlängerung anfragen
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-02-24 13:55:13.210265000 Z
+  updated_at: 2020-02-24 13:55:13.210265000 Z
+  order: 70
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_044:
+  id: 919
+  key: Task_0373fxm
+  name: |-
+    Reporting
+    senden
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-02-24 13:55:13.226271000 Z
+  updated_at: 2020-02-24 13:55:13.226271000 Z
+  order: 80
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_045:
+  id: 920
+  key: Task_1dnq4r5
+  name: |-
+    Buchung
+    erhalten
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-02-24 13:55:13.240518000 Z
+  updated_at: 2020-02-24 13:55:13.240518000 Z
+  order: 30
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_046:
+  id: 921
+  key: Task_19s8ck5
+  name: Angebot erstellen
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-02-24 13:55:13.257444000 Z
+  updated_at: 2020-02-24 13:55:13.257444000 Z
+  order: 20
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_047:
+  id: 922
+  key: Task_1xj4014
+  name: Premiumbuchung aufnehmen
+  description: Wenn ein Kunde eine Premiumanzeige wünscht, dann gib bitte als erstes
+    die Rahmendaten für diesen Buchungswunsch ein.
+  workflow_process_definition_id: 6
+  created_at: 2020-02-24 13:55:13.273332000 Z
+  updated_at: 2020-02-28 14:11:59.565031000 Z
+  order: 10
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_048:
+  id: 923
+  key: Task_05wcqck
+  name: Premiumanzeige online stellen
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-02-24 13:55:13.288277000 Z
+  updated_at: 2020-02-24 13:55:13.288277000 Z
+  order: 40
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_049:
+  id: 924
+  key: ExclusiveGateway_0z5agqe
+  name: exclusiveGateway_Buchung bestätigt
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-07-28 14:54:07.735960000 Z
+  updated_at: 2020-07-28 14:54:07.735960000 Z
+  order: 
+  type: Workflow::ExclusiveGatewayDefinition
+workflow_flow_object_definitions_050:
+  id: 925
+  key: EndEvent_1gqfctm
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-07-28 14:54:07.756213000 Z
+  updated_at: 2020-07-28 14:54:07.756213000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_051:
+  id: 926
+  key: StartEvent_008yybs
+  name: startEvent_
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-07-28 14:54:07.779451000 Z
+  updated_at: 2020-07-28 14:54:07.779451000 Z
+  order: 
+  type: Workflow::StartEventDefinition
+workflow_flow_object_definitions_052:
+  id: 927
+  key: ExclusiveGateway_113a1qb
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-07-28 14:54:07.796940000 Z
+  updated_at: 2020-07-28 14:54:07.796940000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_053:
+  id: 928
+  key: ExclusiveGateway_1jperfc
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-07-28 14:54:07.826990000 Z
+  updated_at: 2020-07-28 14:54:07.826990000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_054:
+  id: 929
+  key: EndEvent_1tt6j9e
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 6
+  created_at: 2020-07-28 14:54:07.855011000 Z
+  updated_at: 2020-07-28 14:54:07.855011000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_055:
+  id: 930
+  key: StartEvent_1
+  name: startEvent_
+  description: 
+  workflow_process_definition_id: 1
+  created_at: 2020-07-28 14:54:08.065803000 Z
+  updated_at: 2020-07-28 14:54:08.065803000 Z
+  order: 
+  type: Workflow::StartEventDefinition
+workflow_flow_object_definitions_056:
+  id: 931
+  key: InclusiveGateway_1rfm09f
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 1
+  created_at: 2020-07-28 14:54:08.087943000 Z
+  updated_at: 2020-07-28 14:54:08.087943000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_057:
+  id: 932
+  key: InclusiveGateway_1sb6ika
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 1
+  created_at: 2020-07-28 14:54:08.137643000 Z
+  updated_at: 2020-07-28 14:54:08.137643000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_058:
+  id: 933
+  key: ParallelGateway_1pmm7wk
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 1
+  created_at: 2020-07-28 14:54:08.150401000 Z
+  updated_at: 2020-07-28 14:54:08.150401000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_059:
+  id: 934
+  key: ParallelGateway_09r21o3
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 1
+  created_at: 2020-07-28 14:54:08.159234000 Z
+  updated_at: 2020-07-28 14:54:08.159234000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_060:
+  id: 935
+  key: EndEvent_0z79qth
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 1
+  created_at: 2020-07-28 14:54:08.257002000 Z
+  updated_at: 2020-07-28 14:54:08.257002000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_061:
+  id: 936
+  key: StartEvent_1
+  name: startEvent_
+  description: 
+  workflow_process_definition_id: 2
+  created_at: 2020-07-28 14:54:08.447962000 Z
+  updated_at: 2020-07-28 14:54:08.447962000 Z
+  order: 
+  type: Workflow::StartEventDefinition
+workflow_flow_object_definitions_062:
+  id: 937
+  key: ExclusiveGateway_0rlq9z6
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 2
+  created_at: 2020-07-28 14:54:08.460085000 Z
+  updated_at: 2020-07-28 14:54:08.460085000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_063:
+  id: 938
+  key: ExclusiveGateway_0896o5b
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 2
+  created_at: 2020-07-28 14:54:08.481005000 Z
+  updated_at: 2020-07-28 14:54:08.481005000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_064:
+  id: 939
+  key: ExclusiveGateway_0irz89h
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 2
+  created_at: 2020-07-28 14:54:08.497180000 Z
+  updated_at: 2020-07-28 14:54:08.497180000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_065:
+  id: 940
+  key: ExclusiveGateway_1azry05
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 2
+  created_at: 2020-07-28 14:54:08.518527000 Z
+  updated_at: 2020-07-28 14:54:08.518527000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_066:
+  id: 941
+  key: EndEvent_0l3mcbg
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 2
+  created_at: 2020-07-28 14:54:08.539807000 Z
+  updated_at: 2020-07-28 14:54:08.539807000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_067:
+  id: 942
+  key: ExclusiveGateway_11r52dm
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 3
+  created_at: 2020-07-28 14:54:08.661794000 Z
+  updated_at: 2020-07-28 14:54:08.661794000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_068:
+  id: 943
+  key: EndEvent_0u2fyyg
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 3
+  created_at: 2020-07-28 14:54:08.665848000 Z
+  updated_at: 2020-07-28 14:54:08.665848000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_069:
+  id: 944
+  key: ExclusiveGateway_09wh5xh
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 3
+  created_at: 2020-07-28 14:54:08.679257000 Z
+  updated_at: 2020-07-28 14:54:08.679257000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_070:
+  id: 945
+  key: StartEvent_1
+  name: startEvent_
+  description: 
+  workflow_process_definition_id: 3
+  created_at: 2020-07-28 14:54:08.718878000 Z
+  updated_at: 2020-07-28 14:54:08.718878000 Z
+  order: 
+  type: Workflow::StartEventDefinition
+workflow_flow_object_definitions_071:
+  id: 946
+  key: ExclusiveGateway_00d94np
+  name: exclusiveGateway_
+  description: 
+  workflow_process_definition_id: 3
+  created_at: 2020-07-28 14:54:08.774798000 Z
+  updated_at: 2020-07-28 14:54:08.774798000 Z
+  order: 
+  type: Workflow::ExclusiveGatewayDefinition
+workflow_flow_object_definitions_072:
+  id: 947
+  key: ExclusiveGateway_1sbm6zo
+  name: exclusiveGateway_
+  description: 
+  workflow_process_definition_id: 3
+  created_at: 2020-07-28 14:54:08.791741000 Z
+  updated_at: 2020-07-28 14:54:08.791741000 Z
+  order: 
+  type: Workflow::ExclusiveGatewayDefinition
+workflow_flow_object_definitions_073:
+  id: 948
+  key: EndEvent_1kwmgub
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 3
+  created_at: 2020-07-28 14:54:08.818633000 Z
+  updated_at: 2020-07-28 14:54:08.818633000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_074:
+  id: 949
+  key: ExclusiveGateway_1q6nq4m
+  name: exclusiveGateway_
+  description: 
+  workflow_process_definition_id: 3
+  created_at: 2020-07-28 14:54:08.847798000 Z
+  updated_at: 2020-07-28 14:54:08.847798000 Z
+  order: 
+  type: Workflow::ExclusiveGatewayDefinition
+workflow_flow_object_definitions_075:
+  id: 950
+  key: ParallelGateway_0m5qjit
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 4
+  created_at: 2020-07-28 14:54:08.981507000 Z
+  updated_at: 2020-07-28 14:54:08.981507000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_076:
+  id: 951
+  key: StartEvent_1
+  name: startEvent_
+  description: 
+  workflow_process_definition_id: 4
+  created_at: 2020-07-28 14:54:09.012152000 Z
+  updated_at: 2020-07-28 14:54:09.012152000 Z
+  order: 
+  type: Workflow::StartEventDefinition
+workflow_flow_object_definitions_077:
+  id: 952
+  key: ParallelGateway_0uth7i4
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 4
+  created_at: 2020-07-28 14:54:09.029035000 Z
+  updated_at: 2020-07-28 14:54:09.029035000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_078:
+  id: 953
+  key: EndEvent_0dv6qz1
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 4
+  created_at: 2020-07-28 14:54:09.054011000 Z
+  updated_at: 2020-07-28 14:54:09.054011000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_079:
+  id: 954
+  key: EndEvent_04x4g6h
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 4
+  created_at: 2020-07-28 14:54:09.063101000 Z
+  updated_at: 2020-07-28 14:54:09.063101000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_080:
+  id: 955
+  key: StartEvent_1
+  name: startEvent_
+  description: 
+  workflow_process_definition_id: 5
+  created_at: 2020-07-28 14:54:09.139029000 Z
+  updated_at: 2020-07-28 14:54:09.139029000 Z
+  order: 
+  type: Workflow::StartEventDefinition
+workflow_flow_object_definitions_081:
+  id: 956
+  key: ExclusiveGateway_0rrd39l
+  name: exclusiveGateway_
+  description: 
+  workflow_process_definition_id: 5
+  created_at: 2020-07-28 14:54:09.156459000 Z
+  updated_at: 2020-07-28 14:54:09.156459000 Z
+  order: 
+  type: Workflow::ExclusiveGatewayDefinition
+workflow_flow_object_definitions_082:
+  id: 957
+  key: ExclusiveGateway_0tavct5
+  name: exclusiveGateway_
+  description: 
+  workflow_process_definition_id: 5
+  created_at: 2020-07-28 14:54:09.181904000 Z
+  updated_at: 2020-07-28 14:54:09.181904000 Z
+  order: 
+  type: Workflow::ExclusiveGatewayDefinition
+workflow_flow_object_definitions_083:
+  id: 958
+  key: EndEvent_0u76j3h
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 5
+  created_at: 2020-07-28 14:54:09.196148000 Z
+  updated_at: 2020-07-28 14:54:09.196148000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_084:
+  id: 959
+  key: save_information_about_external_event
+  name: Externe Veranstaltung erfassen
+  description: |-
+    <p>Wir - das NUCLEUS Team - werden auf eine neue Veranstaltung aufmerksam gemacht. Bitte gib hier die wichtigen Infos zu dieser Veranstaltung ein.</p><p></p><p><strong>Deine nächsten Schritte:</strong></p><ul>
+    <li><p>Übernimm die Verantwortung für diese Aufgabe und die Aufgabe "Teilnahme entscheiden".</p></li>
+    <li><p>Alternativ weise beiden Aufgaben Projektkoordinator Thomas Wartner als Verantwortlichen zu.</p></li>
+    <li><p>Erfasse die Infos, die Du zu der Veranstaltung hast.</p></li>
+    <li>
+    <p>Schließe dann die Aufgabe ab.</p>
+    <p></p>
+    </li>
+    </ul><p><strong>Tipp:</strong> Der Titel der Veranstaltung ist auch ein guter Kandidat für den Maßnahmentitel.</p>
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.027247000 Z
+  updated_at: 2020-11-20 14:24:09.027247000 Z
+  order: 10
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_085:
+  id: 960
+  key: set_target_for_nucleus
+  name: Inhaltliche Vorbereitung
+  description: |-
+    <p>Welche Ziele möchten wir als NUCLEUS-Team mit der Teilnahme an der Veranstaltung erreichen? Was müssen wir dafür inhaltlich vorbereiten? Unsere inhaltliche Vorbereitung für die Veranstaltung findet hier statt.</p><p><strong>Deine nächsten Schritte:</strong> </p><ul>
+    <li><p>Setze ein realistisches Fälligkeitsdatum. </p></li>
+    <li><p>Hole alle Teammitglieder als Teilnehmer in diese Aufgabe, die an der inhaltlichen Vorbereitung beteiligt sind. </p></li>
+    <li><p>Legt gemeinsam die Ziele fest, die sich das NUCLEUS-Team für die Teilnahme an dieser Veranstaltung setzt. </p></li>
+    <li><p>Bereitet alle inhatlichen Beiträge des NUCLEUS-Teams für diese Veranstaltung vor.</p></li>
+    <li><p>Schließt diese Aufgabe ab, wenn die inhaltliche Vorbereitung erledigt ist.</p></li>
+    </ul>
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.059703000 Z
+  updated_at: 2020-11-20 14:24:09.059703000 Z
+  order: 30
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_086:
+  id: 961
+  key: save_attendence_report
+  name: Ergebnisse dokumentieren
+  description: |-
+    <p>Während und nach der Teilnahme an der Veranstaltung sollen die Ergebnisse dokumentiert werden. Für uns besonders wichtig: Welche Follow-Up-Maßnahmen (Erstgespräche, Antragsanbahnungen) können gestartet werden?</p><p><strong>Deine nächsten Schritte:</strong></p><ul>
+    <li><p>Findet jemanden aus der Delegation, der die Verantwortung für diese Aufgabe übernimmt. Nehmt alle anderen Delegationsmitglieder als Teilnehmer in diese Aufgabe auf.</p></li>
+    <li><p>Setze ein realistisches Fälligkeitsdatum.</p></li>
+    <li><p>Dokumentiert Eure Ergebnisse aus den Gesprächen bei der Veranstaltung.</p></li>
+    <li><p>Ladet alle wichtigen Unterlagen hoch, die Ihr im Rahmen der Veranstaltung erhalten habt (Teilnehmerlisten etc.).</p></li>
+    <li><p>Besonders wichtig: überlegt, welche Folgemaßnahmen als Follow-Ups sinnvoll sind und startet diese.</p></li>
+    <li><p>Schließ diese Aufgabe ab, wenn alle mit der Dokumentation der Ergebnisse zufrieden sind und die Folgemaßnahmen gestartet sind.</p></li>
+    </ul>
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.121754000 Z
+  updated_at: 2020-11-20 14:24:09.121754000 Z
+  order: 50
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_087:
+  id: 962
+  key: organize_attendence
+  name: Organisatorische Vorbereitung
+  description: |-
+    <p>Für alle Mitglieder der NUCLEUS-Teams, die an der Veranstaltung teilnehmen, muss die Buchung der Veranstaltung und die zugehörige Dienstreise (Hin-&amp;Rückfahrt, Übernachtung) organisiert werden.</p><p><strong>Deine nächsten Schritte:</strong></p><ul>
+    <li><p>Setze ein realistisches Fälligkeitsdatum.</p></li>
+    <li><p>Hole alle Teammitglieder als Teilnehmer in diese Aufgabe, die zu der Veranstaltung fahren sollen.</p></li>
+    <li><p>Entscheidet, wer für diese Aufgabe verantwortlich sein soll.</p></li>
+    <li><p>Bucht alle notwendigen Unterlagen, die alle für die Teilnahme an der Veranstaltung nötig sind und legt diese in der Ablage für Buchungsunterlagen ab.</p></li>
+    <li><p>Schließ diese Aufgabe ab, wenn die organisatorische Vorbereitung erledigt ist.</p></li>
+    </ul>
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.163576000 Z
+  updated_at: 2020-11-20 14:24:09.163576000 Z
+  order: 40
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_088:
+  id: 963
+  key: decide_if_nucleus_attends_event
+  name: Teilnahme entscheiden
+  description: |-
+    <p>Wir entscheiden, ob das NUCLEUS-Team an der Veranstaltung teilnehmen soll.</p><p><strong>Deine nächsten Schritte:</strong></p><ul>
+    <li><p>Setze als Fälligkeitsdatum idealerweise das Datum der nächsten NUCLEUS-Teamsitzung.</p></li>
+    <li><p>Führe eine Entscheidung herbei, ob und welche Mitglieder des NUCLEUS-Teams an der Veranstaltung teilnehmen.</p></li>
+    <li><p>Wenn möglich, dann dokumentiere eine kurze Begründung für die Entscheidung.</p></li>
+    <li><p>Schließe dann die Aufgabe ab.</p></li>
+    </ul>
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.204302000 Z
+  updated_at: 2020-11-20 14:24:09.204302000 Z
+  order: 20
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_089:
+  id: 964
+  key: StartEvent_1
+  name: startEvent_
+  description: 
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.230948000 Z
+  updated_at: 2020-11-20 14:24:09.230948000 Z
+  order: 
+  type: Workflow::StartEventDefinition
+workflow_flow_object_definitions_090:
+  id: 965
+  key: ExclusiveGateway_0cwidac
+  name: exclusiveGateway_
+  description: 
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.249806000 Z
+  updated_at: 2020-11-20 14:24:09.249806000 Z
+  order: 
+  type: Workflow::ExclusiveGatewayDefinition
+workflow_flow_object_definitions_091:
+  id: 966
+  key: ExclusiveGateway_03ima83
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.256171000 Z
+  updated_at: 2020-11-20 14:24:09.256171000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_092:
+  id: 967
+  key: EndEvent_05cm47e
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.274425000 Z
+  updated_at: 2020-11-20 14:24:09.274425000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_093:
+  id: 968
+  key: ExclusiveGateway_0a0blzp
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.309287000 Z
+  updated_at: 2020-11-20 14:24:09.309287000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_094:
+  id: 969
+  key: EndEvent_0dlk8yf
+  name: endEvent_
+  description: 
+  workflow_process_definition_id: 7
+  created_at: 2020-11-20 14:24:09.334290000 Z
+  updated_at: 2020-11-20 14:24:09.334290000 Z
+  order: 
+  type: Workflow::EndEventDefinition
+workflow_flow_object_definitions_095:
+  id: 970
+  key: chose_or_define_partners
+  name: Projektteam und Ansprechpartner festlegen
+  description: "Im Rahmen des Kennenlerngesprächs und dessen Nachbereitung ermittelst
+    du das Projektteam, das von Nucleus betreut werden soll. Eventuell bennen die
+    externen Kontakte auch einen oder mehrere Ansprechpartner aus ihren Reihen. \n\nDeine
+    nächsten Schritte:\n\nErfasse die bisher bekannten Teammitglieder des Projekts.\n\nStimme
+    mit den externen Partnern ab, ob sie einen oder mehrere Absprechpartner für die
+    weitere Kommunikation benennen wollen. \n\nSchließe diese Aufgabe dann ab.\n\nTipp:
+    Die Daten dieser Aufgabe werden in späteren Maßnahmen oft referenziert und eventuell
+    auch geändert. \n"
+  workflow_process_definition_id: 2
+  created_at: 2020-11-20 14:24:09.456782000 Z
+  updated_at: 2020-11-20 14:24:09.456782000 Z
+  order: 40
+  type: Workflow::TaskDefinition
+workflow_flow_object_definitions_096:
+  id: 971
+  key: ExclusiveGateway_1oak01x
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 2
+  created_at: 2020-11-20 14:24:09.538927000 Z
+  updated_at: 2020-11-20 14:24:09.538927000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition
+workflow_flow_object_definitions_097:
+  id: 972
+  key: ExclusiveGateway_1b55qo1
+  name: parallelGateway_
+  description: 
+  workflow_process_definition_id: 2
+  created_at: 2020-11-20 14:24:09.549006000 Z
+  updated_at: 2020-11-20 14:24:09.549006000 Z
+  order: 
+  type: Workflow::ParallelGatewayDefinition

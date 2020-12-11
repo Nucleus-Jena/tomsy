@@ -1,0 +1,820 @@
+---
+dossiers_001:
+  id: 1
+  definition_id: 1
+  created_by_id: 1
+  created_at: 2020-10-30 11:14:32.768197000 Z
+  updated_at: 2020-10-30 11:14:32.768197000 Z
+  deleted: false
+  data:
+    name: Admin User
+    email: admin@uni-jena.example.org
+    notes: "<p>Coniecto cupiditas magnam. Tabula ultra vinculum. Attero celebrer verbera.</p><p>Tot
+      cui capio. Temporibus tibi talus. Asper ago ante.</p>"
+    phone: "+49 3641 9-300"
+    rating: 7
+    address: Fürstengraben 1, 07743 Jena, Germany
+    birthday: '1962-04-05'
+    newsletter: true
+    organization: Friedrich-Schiller-Universität Jena
+dossiers_002:
+  id: 2
+  definition_id: 1
+  created_by_id: 1
+  created_at: 2020-10-30 11:14:32.768197000 Z
+  updated_at: 2020-10-30 11:14:32.768197000 Z
+  deleted: false
+  data:
+    name: Some Other User
+    email: other@uni-jena.example.org
+    notes: A short note on James
+    phone: "+49 3641 9-301"
+    rating: 3
+    address: Fürstengraben 1, 07743 Jena, Germany
+    birthday: '2000-04-05'
+    newsletter: false
+    organization: EA Jena
+dossiers_003:
+  id: 3
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:28:47.527012000 Z
+  updated_at: 2020-11-20 14:28:47.527012000 Z
+  deleted: true
+  data:
+    name: Deleted User
+    email: dr.nino.prof.schwarzkopf@cruickshank.biz
+    notes: Minima aut corporis doloribus.
+    rating: 6
+    newsletter: true
+    organization: Universität Schön Josefin
+dossiers_004:
+  id: 4
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:28:47.550563000 Z
+  updated_at: 2020-11-20 14:28:47.550563000 Z
+  deleted: false
+  data:
+    name: Said Milde
+    email: said.milde@runolfsdottirarmstrong.net
+    notes: Incidunt quia facilis ducimus.
+    rating: 2
+    newsletter: false
+    organization: Technische Hochschule Süd Cosimaberg
+dossiers_005:
+  id: 5
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:28:47.568825000 Z
+  updated_at: 2020-11-20 14:28:47.568825000 Z
+  deleted: false
+  data:
+    name: Matis Elbe
+    email: elbe.matis@olson.io
+    notes: Voluptatem voluptas magnam tenetur.
+    rating: 10
+    newsletter: false
+    organization: Knies Universität
+dossiers_006:
+  id: 6
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:28:47.586799000 Z
+  updated_at: 2020-11-20 14:28:47.586799000 Z
+  deleted: false
+  data:
+    name: Freiherr Jona zu Ahlke
+    email: zu.ahlke.jona@hamillmosciski.org
+    notes: Quisquam perferendis hic natus.
+    rating: 9
+    newsletter: false
+    organization: Fassbender Hochschule
+dossiers_007:
+  id: 7
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:28:47.603924000 Z
+  updated_at: 2020-11-20 14:28:47.603924000 Z
+  deleted: false
+  data:
+    name: Baron Finley Buss
+    email: finley.baron.buss@conn.io
+    notes: Fugiat tempora sequi consectetur.
+    rating: 6
+    newsletter: false
+    organization: Technische Universität Klein Lianastadt
+dossiers_008:
+  id: 8
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:28:47.621691000 Z
+  updated_at: 2020-11-20 14:28:47.621691000 Z
+  deleted: false
+  data:
+    name: Anastasia Raubuch
+    email: anastasia.raubuch@raynor.co
+    notes: Possimus explicabo ducimus culpa.
+    rating: 4
+    newsletter: true
+    organization: Technische Universität Jasonscheid
+dossiers_009:
+  id: 9
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.484910000 Z
+  updated_at: 2020-11-20 14:33:41.484910000 Z
+  deleted: false
+  data:
+    name: Lorenzo Semisch
+    email: lorenzo_semisch@murazik.info
+    notes: Enim est itaque iste.
+    rating: 3
+    newsletter: true
+    organization: Fust Hochschule
+dossiers_010:
+  id: 10
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.499801000 Z
+  updated_at: 2020-11-20 14:33:41.499801000 Z
+  deleted: false
+  data:
+    name: Freiherr Joshua Seiders
+    email: seiders_joshua@crist.co
+    notes: Voluptatum voluptas delectus aut.
+    rating: 2
+    newsletter: false
+    organization: Hochschule Niclasdorf
+dossiers_011:
+  id: 11
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.509157000 Z
+  updated_at: 2020-11-20 14:33:41.509157000 Z
+  deleted: false
+  data:
+    name: Juna Ochs
+    email: juna_ochs@morarullrich.info
+    notes: Excepturi adipisci qui impedit.
+    rating: 1
+    newsletter: false
+    organization: Universität Janastadt
+dossiers_012:
+  id: 12
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.520371000 Z
+  updated_at: 2020-11-20 14:33:41.520371000 Z
+  deleted: false
+  data:
+    name: Luka Haupt
+    email: luka.haupt@keeblerhansen.net
+    notes: Voluptates possimus consequatur modi.
+    rating: 1
+    newsletter: true
+    organization: Malucha Hochschule
+dossiers_013:
+  id: 13
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.531595000 Z
+  updated_at: 2020-11-20 14:33:41.531595000 Z
+  deleted: false
+  data:
+    name: Mira Battke
+    email: battke_mira@hintz.info
+    notes: Repellendus inventore tempora sequi.
+    rating: 1
+    newsletter: false
+    organization: Ringer Hochschule
+dossiers_014:
+  id: 14
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.541941000 Z
+  updated_at: 2020-11-20 14:33:41.541941000 Z
+  deleted: false
+  data:
+    name: Baronin Martha Scharf
+    email: baronin_martha_scharf@walshdoyle.biz
+    notes: Odio fugit fuga alias.
+    rating: 7
+    newsletter: false
+    organization: Technische Universität Leescheid
+dossiers_015:
+  id: 15
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.551020000 Z
+  updated_at: 2020-11-20 14:33:41.551020000 Z
+  deleted: false
+  data:
+    name: Baronin Fynn Dix
+    email: fynn_baronin_dix@ortiz.org
+    notes: Voluptas id assumenda non.
+    rating: 5
+    newsletter: true
+    organization: Technische Hochschule Leyladorf
+dossiers_016:
+  id: 16
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.562885000 Z
+  updated_at: 2020-11-20 14:33:41.562885000 Z
+  deleted: false
+  data:
+    name: Freiherr Aliyah Klapper
+    email: klapper.aliyah@blockgrimes.info
+    notes: Modi quo delectus temporibus.
+    rating: 5
+    newsletter: true
+    organization: Technische Universität Lunadorf
+dossiers_017:
+  id: 17
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.574711000 Z
+  updated_at: 2020-11-20 14:33:41.574711000 Z
+  deleted: false
+  data:
+    name: Freiherr Jasmina Kinadeter
+    email: freiherr.jasmina.kinadeter@tremblay.co
+    notes: Quo reiciendis autem eius.
+    rating: 7
+    newsletter: false
+    organization: Hochschule Bad Milanhagen
+dossiers_018:
+  id: 18
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.584219000 Z
+  updated_at: 2020-11-20 14:33:41.584219000 Z
+  deleted: false
+  data:
+    name: Jannik Tafelmeier
+    email: jannik_tafelmeier@swaniawskischoen.co
+    notes: Quae animi eius aliquam.
+    rating: 6
+    newsletter: false
+    organization: Universität Janinedorf
+dossiers_019:
+  id: 19
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.596417000 Z
+  updated_at: 2020-11-20 14:33:41.596417000 Z
+  deleted: false
+  data:
+    name: Freiherr  Ellen Roloff
+    email: ellen.roloff@mills.name
+    notes: Alias ipsum quos laborum.
+    rating: 8
+    newsletter: true
+    organization: Universität Connorgrün
+dossiers_020:
+  id: 20
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.607047000 Z
+  updated_at: 2020-11-20 14:33:41.607047000 Z
+  deleted: false
+  data:
+    name: Marika Fuchs
+    email: fuchs.marika@watsica.info
+    notes: Accusamus eos quo tempora.
+    rating: 8
+    newsletter: false
+    organization: Technische Universität Mayerfeld
+dossiers_021:
+  id: 21
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.617235000 Z
+  updated_at: 2020-11-20 14:33:41.617235000 Z
+  deleted: false
+  data:
+    name: Gräfin Tristan von der Bormann
+    email: gräfin.bormann.der.tristan.von@effertzmetz.biz
+    notes: Laudantium est quia natus.
+    rating: 9
+    newsletter: true
+    organization: Güldemeister Universität
+dossiers_022:
+  id: 22
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.629180000 Z
+  updated_at: 2020-11-20 14:33:41.629180000 Z
+  deleted: false
+  data:
+    name: Freiherr Mads Göckeritz
+    email: mads_göckeritz@considine.org
+    notes: Id sint ratione deleniti.
+    rating: 6
+    newsletter: false
+    organization: Brunner Universität
+dossiers_023:
+  id: 23
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.639359000 Z
+  updated_at: 2020-11-20 14:33:41.639359000 Z
+  deleted: false
+  data:
+    name: Pepe zu Stoutjesdijk
+    email: zu_stoutjesdijk_pepe@mosciski.org
+    notes: Autem nesciunt aut rerum.
+    rating: 3
+    newsletter: false
+    organization: Technische Universität Ost Melissa
+dossiers_024:
+  id: 24
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.648731000 Z
+  updated_at: 2020-11-20 14:33:41.648731000 Z
+  deleted: false
+  data:
+    name: Hannah Roth
+    email: hannah_roth@balistreri.io
+    notes: Est eum aspernatur fuga.
+    rating: 4
+    newsletter: false
+    organization: Technische Hochschule Carladorf
+dossiers_025:
+  id: 25
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.659814000 Z
+  updated_at: 2020-11-20 14:33:41.659814000 Z
+  deleted: false
+  data:
+    name: Freiherr Silja Vona
+    email: vona_silja@harvey.co
+    notes: Pariatur sit voluptas quia.
+    rating: 8
+    newsletter: true
+    organization: Technische Universität Svenjastadt
+dossiers_026:
+  id: 26
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.670601000 Z
+  updated_at: 2020-11-20 14:33:41.670601000 Z
+  deleted: false
+  data:
+    name: Baronin Hussein Haverney
+    email: haverney_baronin_hussein@ortiz.info
+    notes: Aliquam vitae inventore et.
+    rating: 9
+    newsletter: true
+    organization: Technische Universität Alt Konradbrunn
+dossiers_027:
+  id: 27
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.679817000 Z
+  updated_at: 2020-11-20 14:33:41.679817000 Z
+  deleted: false
+  data:
+    name: Stina von der Willwacher
+    email: stina.von.willwacher.der@aufderhar.co
+    notes: Dolorum deleniti qui asperiores.
+    rating: 0
+    newsletter: false
+    organization: Hochschule Süd Linus
+dossiers_028:
+  id: 28
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.690449000 Z
+  updated_at: 2020-11-20 14:33:41.690449000 Z
+  deleted: false
+  data:
+    name: Freiherr Laureen Sischka
+    email: laureen.sischka@cruickshank.biz
+    notes: Cupiditate nobis tempora excepturi.
+    rating: 9
+    newsletter: true
+    organization: Universität Bad Marieburg
+dossiers_029:
+  id: 29
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.701916000 Z
+  updated_at: 2020-11-20 14:33:41.701916000 Z
+  deleted: false
+  data:
+    name: Baron Luc von der Schnelting
+    email: von_luc_baron_der_schnelting@cruickshank.io
+    notes: Quia quia minus fuga.
+    rating: 7
+    newsletter: true
+    organization: Verniest Hochschule
+dossiers_030:
+  id: 30
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.784254000 Z
+  updated_at: 2020-11-20 14:33:41.784254000 Z
+  deleted: false
+  data:
+    name: Jennifer Tepper
+    email: tepper.jennifer@anderson.org
+    notes: Adipisci aut assumenda ea.
+    rating: 8
+    newsletter: true
+    organization: Technische Hochschule Schniedergrün
+dossiers_031:
+  id: 31
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.799369000 Z
+  updated_at: 2020-11-20 14:33:41.799369000 Z
+  deleted: false
+  data:
+    name: Bilal Renk
+    email: renk_bilal@jaskolski.name
+    notes: Aliquid animi voluptatum sequi.
+    rating: 0
+    newsletter: true
+    organization: Arndt Hochschule
+dossiers_032:
+  id: 32
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.810803000 Z
+  updated_at: 2020-11-20 14:33:41.810803000 Z
+  deleted: false
+  data:
+    name: Graf Bianka von Richards
+    email: richards.bianka.von.graf@herman.info
+    notes: Eum voluptas enim odit.
+    rating: 3
+    newsletter: false
+    organization: Technische Universität Klossberg
+dossiers_033:
+  id: 33
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.822176000 Z
+  updated_at: 2020-11-20 14:33:41.822176000 Z
+  deleted: false
+  data:
+    name: Freiherr Josef Betz
+    email: josef.betz@bradtke.net
+    notes: Accusantium sapiente qui facere.
+    rating: 2
+    newsletter: true
+    organization: Universität Biancagrün
+dossiers_034:
+  id: 34
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.832098000 Z
+  updated_at: 2020-11-20 14:33:41.832098000 Z
+  deleted: false
+  data:
+    name: Ecrin vom Mögenburg
+    email: mögenburg_ecrin_vom@rowe.biz
+    notes: Eveniet asperiores voluptate rem.
+    rating: 1
+    newsletter: false
+    organization: Hochschule Süd Josua
+dossiers_035:
+  id: 35
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.843836000 Z
+  updated_at: 2020-11-20 14:33:41.843836000 Z
+  deleted: false
+  data:
+    name: Freiherr Karim Ahrenberg
+    email: ahrenberg_karim@murphy.io
+    notes: Perspiciatis at voluptatem sunt.
+    rating: 5
+    newsletter: true
+    organization: Cors Universität
+dossiers_036:
+  id: 36
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.855755000 Z
+  updated_at: 2020-11-20 14:33:41.855755000 Z
+  deleted: false
+  data:
+    name: Jim zu Metzner
+    email: zu.metzner.jim@braun.org
+    notes: Perspiciatis ut vero rerum.
+    rating: 10
+    newsletter: false
+    organization: Klaus Universität
+dossiers_037:
+  id: 37
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.864822000 Z
+  updated_at: 2020-11-20 14:33:41.864822000 Z
+  deleted: false
+  data:
+    name: Freiherr Vitus Stang
+    email: stang_vitus@hegmanngleason.com
+    notes: Id consectetur sequi minus.
+    rating: 10
+    newsletter: true
+    organization: Technische Universität Schön Letiziahagen
+dossiers_038:
+  id: 38
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.874831000 Z
+  updated_at: 2020-11-20 14:33:41.874831000 Z
+  deleted: false
+  data:
+    name: Collien Krippner
+    email: collien_krippner@cronin.com
+    notes: Quia sequi facere sit.
+    rating: 6
+    newsletter: true
+    organization: Technische Hochschule Süd Jenna
+dossiers_039:
+  id: 39
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.886716000 Z
+  updated_at: 2020-11-20 14:33:41.886716000 Z
+  deleted: false
+  data:
+    name: Jasper Orthmann
+    email: jasper_orthmann@purdy.org
+    notes: Fuga sed nihil impedit.
+    rating: 10
+    newsletter: false
+    organization: Technische Hochschule Ost Sinan
+dossiers_040:
+  id: 40
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.895951000 Z
+  updated_at: 2020-11-20 14:33:41.895951000 Z
+  deleted: false
+  data:
+    name: Johanna Osenberg
+    email: johanna.osenberg@frami.name
+    notes: Impedit necessitatibus earum omnis.
+    rating: 3
+    newsletter: true
+    organization: Universität Janekland
+dossiers_041:
+  id: 41
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.905733000 Z
+  updated_at: 2020-11-20 14:33:41.905733000 Z
+  deleted: false
+  data:
+    name: Freiherr Carlo von der Sprenger
+    email: der.sprenger.von.carlo.freiherr@ruelwehner.biz
+    notes: Quae ipsum aperiam in.
+    rating: 0
+    newsletter: false
+    organization: Technische Universität Thränhardtburg
+dossiers_042:
+  id: 42
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.917491000 Z
+  updated_at: 2020-11-20 14:33:41.917491000 Z
+  deleted: false
+  data:
+    name: Prof. Dr. Hanno Barr
+    email: prof_barr_dr_hanno@steubergrant.com
+    notes: Odio ut quaerat magni.
+    rating: 0
+    newsletter: false
+    organization: Technische Hochschule West Nataliascheid
+dossiers_043:
+  id: 43
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.926780000 Z
+  updated_at: 2020-11-20 14:33:41.926780000 Z
+  deleted: false
+  data:
+    name: Oskar Koleiski
+    email: oskar_koleiski@morar.name
+    notes: Ullam sit deleniti aut.
+    rating: 1
+    newsletter: true
+    organization: Balck Universität
+dossiers_044:
+  id: 44
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.936961000 Z
+  updated_at: 2020-11-20 14:33:41.936961000 Z
+  deleted: false
+  data:
+    name: Linnea Tuch
+    email: tuch_linnea@price.io
+    notes: Molestiae saepe iste odio.
+    rating: 0
+    newsletter: true
+    organization: Universität Nord Dylanburg
+dossiers_045:
+  id: 45
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.948888000 Z
+  updated_at: 2020-11-20 14:33:41.948888000 Z
+  deleted: false
+  data:
+    name: Tomke Büngener
+    email: tomke_büngener@schowalterpagac.io
+    notes: Quos iusto quis repudiandae.
+    rating: 4
+    newsletter: true
+    organization: Universität Groß Friedafeld
+dossiers_046:
+  id: 46
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.958591000 Z
+  updated_at: 2020-11-20 14:33:41.958591000 Z
+  deleted: false
+  data:
+    name: Matthias Streit
+    email: streit.matthias@schaden.biz
+    notes: Qui laudantium eos consequatur.
+    rating: 3
+    newsletter: true
+    organization: Hochschule Nord Loreen
+dossiers_047:
+  id: 47
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.967218000 Z
+  updated_at: 2020-11-20 14:33:41.967218000 Z
+  deleted: false
+  data:
+    name: Freiherr Rasmus zu Pippig
+    email: pippig_zu_rasmus@borerbashirian.co
+    notes: Eligendi asperiores ab excepturi.
+    rating: 3
+    newsletter: false
+    organization: Hochschule Schön Sönkehagen
+dossiers_048:
+  id: 48
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.978211000 Z
+  updated_at: 2020-11-20 14:33:41.978211000 Z
+  deleted: false
+  data:
+    name: Graf Amy Isekenmeier
+    email: amy.graf.isekenmeier@wolffcrist.io
+    notes: Et quia itaque aut.
+    rating: 1
+    newsletter: false
+    organization: Technische Universität Miragrün
+dossiers_049:
+  id: 49
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.988472000 Z
+  updated_at: 2020-11-20 14:33:41.988472000 Z
+  deleted: false
+  data:
+    name: Freiherr Christiano Sonnabend
+    email: freiherr_christiano_sonnabend@windler.name
+    notes: Id officia maxime eveniet.
+    rating: 10
+    newsletter: true
+    organization: Universität Zümsandebrunn
+dossiers_050:
+  id: 50
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:41.997677000 Z
+  updated_at: 2020-11-20 14:33:41.997677000 Z
+  deleted: false
+  data:
+    name: Freiherr Joscha zu Strohschank
+    email: strohschank.zu.freiherr.joscha@pacocha.org
+    notes: Aut voluptatem ut a.
+    rating: 9
+    newsletter: true
+    organization: Technische Universität Lutjebrunn
+dossiers_051:
+  id: 51
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:42.008918000 Z
+  updated_at: 2020-11-20 14:33:42.008918000 Z
+  deleted: false
+  data:
+    name: Dr. Julie Schreiter
+    email: schreiter.julie.dr@feilward.co
+    notes: Nulla a reiciendis nesciunt.
+    rating: 3
+    newsletter: false
+    organization: Dreher Universität
+dossiers_052:
+  id: 52
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:42.019917000 Z
+  updated_at: 2020-11-20 14:33:42.019917000 Z
+  deleted: false
+  data:
+    name: Freiherr Gianluca Radtke
+    email: radtke_gianluca@grantsatterfield.com
+    notes: Sit numquam vel nihil.
+    rating: 2
+    newsletter: false
+    organization: Hochschule Klein Leanaland
+dossiers_053:
+  id: 53
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:42.029348000 Z
+  updated_at: 2020-11-20 14:33:42.029348000 Z
+  deleted: false
+  data:
+    name: Freiherr Lucie von Stöckert
+    email: lucie_stöckert_von@schroederkozey.biz
+    notes: Deleniti incidunt nulla explicabo.
+    rating: 4
+    newsletter: true
+    organization: Hochschule Kettenisbrunn
+dossiers_054:
+  id: 54
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:42.041247000 Z
+  updated_at: 2020-11-20 14:33:42.041247000 Z
+  deleted: false
+  data:
+    name: Freiherr Fabio Briesenick
+    email: briesenick.fabio@medhurstwilderman.biz
+    notes: Facilis error quia corrupti.
+    rating: 7
+    newsletter: false
+    organization: Dahmen Hochschule
+dossiers_055:
+  id: 55
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:42.052455000 Z
+  updated_at: 2020-11-20 14:33:42.052455000 Z
+  deleted: false
+  data:
+    name: Maya Flottmann
+    email: flottmann.maya@willmshermann.co
+    notes: Quia et dicta debitis.
+    rating: 1
+    newsletter: false
+    organization: Hochschule Mollhagen
+dossiers_056:
+  id: 56
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:42.061703000 Z
+  updated_at: 2020-11-20 14:33:42.061703000 Z
+  deleted: false
+  data:
+    name: Leoni Köhrbrück
+    email: leoni.baronin.köhrbrück@west.net
+    notes: Consectetur ut ut ipsam.
+    rating: 1
+    newsletter: false
+    organization: Hochschule Diesdorf
+dossiers_057:
+  id: 57
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:42.073436000 Z
+  updated_at: 2020-11-20 14:33:42.073436000 Z
+  deleted: false
+  data:
+    name: Freiherr Elena Schreiner
+    email: elena.schreiner.freiherr@mitchell.com
+    notes: Et quia officiis commodi.
+    rating: 6
+    newsletter: false
+    organization: Hochschule Thomashagen
+dossiers_058:
+  id: 58
+  definition_id: 1
+  created_by_id:
+  created_at: 2020-11-20 14:33:42.091686000 Z
+  updated_at: 2020-11-20 14:33:42.091686000 Z
+  deleted: false
+  data:
+    name: Freiherr Alana Dombrowski
+    email: dombrowski_alana@hettingerhowe.com
+    notes: Impedit sed reprehenderit ut.
+    rating: 8
+    newsletter: true
+    organization: Kosenkow Universität

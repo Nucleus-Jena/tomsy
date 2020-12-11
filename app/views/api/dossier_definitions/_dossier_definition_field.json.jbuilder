@@ -1,0 +1,6 @@
+json.identifier dossier_definition_field.identifier
+json.label dossier_definition_field.label
+json.type dossier_definition_field.content_type
+json.required dossier_definition_field.required?
+json.recommended dossier_definition_field.recommended?
+json.unique dossier_definition_field.unique?

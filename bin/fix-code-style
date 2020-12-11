@@ -1,0 +1,9 @@
+#!/bin/bash
+
+printf "Running RUBY code linting with autofix..."
+bundle exec standardrb --fix
+echo "DONE."
+echo
+printf "Running JS and VUE code linting with autofix..."
+yarn run eslint 'app/**/*.{js,vue}' --fix
+echo "DONE."

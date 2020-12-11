@@ -1,0 +1,46 @@
+---
+active_storage_blobs_001:
+  id: 1
+  key: XdVzRvgB4DLJUnYxrMHeBubA
+  filename: cairo-multiline.pdf
+  content_type: application/pdf
+  metadata: '{"identified":true,"analyzed":true}'
+  byte_size: 6199
+  checksum: pMxDRGEGTdhKDDzMT0c/wA==
+  created_at: 2019-11-06 11:06:20.523561000 Z
+active_storage_blobs_002:
+  id: 4
+  key: fslurf6yj3ubwn2oxz5u0fwwes92
+  filename: test-umlaute.pdf
+  content_type: application/pdf
+  metadata: '{"identified":true,"analyzed":true}'
+  byte_size: 8417
+  checksum: 1T8XDsD3rFS6wH2lvwieCw==
+  created_at: 2020-02-28 16:18:44.881341000 Z
+active_storage_blobs_003:
+  id: 5
+  key: wctdjf3l1uzoknxos9b98tquczb5
+  filename: table-screenshot.png
+  content_type: image/png
+  metadata: '{"identified":true,"analyzed":true}'
+  byte_size: 17167
+  checksum: SeKPFE4s99fxt25kSRmlaQ==
+  created_at: 2020-02-28 16:20:46.626541000 Z
+active_storage_blobs_004:
+  id: 6
+  key: nl8axbhjxm8iln6yfudcxjo3moyh
+  filename: test-umlaute.pdf
+  content_type: application/pdf
+  metadata: '{"identified":true,"analyzed":true}'
+  byte_size: 8417
+  checksum: 1T8XDsD3rFS6wH2lvwieCw==
+  created_at: 2020-03-03 15:45:11.661084000 Z
+active_storage_blobs_005:
+  id: 7
+  key: loikt0zluv8b6in4ugcfr6t082wo
+  filename: sample.docx
+  content_type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+  metadata: '{"identified":true,"analyzed":true}'
+  byte_size: 23079
+  checksum: "+V01EgNkPNRdsVanfZzStQ=="
+  created_at: 2020-03-04 10:51:02.080216000 Z

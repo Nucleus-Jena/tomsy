@@ -1,0 +1,3 @@
+Beschreibung,ACTION,RESOURCE,Bemerkung,NO_ACCESS_USER,Contributor Extern (for documentation until implemented)
+User Liste anzeigen,index,user_klass,,yes,
+User Details anzeigen,read,user,,yes,

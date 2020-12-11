@@ -1,0 +1,135 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+de:
+  datetime:
+    last_changed_before_in_words:
+      about_x_hours:
+        one: etwa einer Stunde
+        other: etwa %{count} Stunden
+      about_x_months:
+        one: etwa einem Monat
+        other: etwa %{count} Monaten
+      about_x_years:
+        one: etwa einem Jahr
+        other: etwa %{count} Jahren
+      almost_x_years:
+        one: fast einem Jahr
+        other: fast %{count} Jahren
+      half_a_minute: einer halben Minute
+      less_than_x_minutes:
+        one: weniger als einer Minute
+        other: weniger als %{count} Minuten
+      less_than_x_seconds:
+        one: weniger als einer Sekunde
+        other: weniger als %{count} Sekunden
+      over_x_years:
+        one: mehr als einem Jahr
+        other: mehr als %{count} Jahren
+      x_days:
+        one: einem Tag
+        other: "%{count} Tagen"
+      x_minutes:
+        one: einer Minute
+        other: "%{count} Minuten"
+      x_months:
+        one: einem Monat
+        other: "%{count} Monaten"
+      x_years:
+        one: einem Jahr
+        other: "%{count} Jahren"
+      x_seconds:
+        one: einer Sekunde
+        other: "%{count} Sekunden"
+  time:
+    formats:
+      created: "Erstellt am %d. %B %Y %H:%M Uhr"
+      edited: "Bearbeitet am %d. %B %Y %H:%M Uhr"
+      simple: "%d.%m.%Y, %H:%M Uhr"
+  boolean:
+    values:
+      "true": Ja
+      "false": Nein
+  activerecord:
+    models:
+      ambition: Ziel
+      person: Person
+      document: Dateianhang
+      workflow/task: Aufgabe
+      workflow/process_definition: Maßnahmenvorlage
+      workflow/process: Maßnahme
+      workflow/ambition: Ziel
+    attributes:
+      ambition:
+        title: Titel
+        description: Beschreibung
+        comments: Kommentar
+        processes_to_start_ids: zu startende Prozesse
+      person:
+        name: Name
+        email: E-Mail
+        phone: Telefon
+        address: Adresse
+        organization: Organisation
+      document:
+        title: Titel
+        file: Datei
+        link: Url
+        file_content: Inhalt
+      workflow/process:
+        title: Titel
+        ambitions: Ziele
+        cancel_info: Grund für den Abbruch
+        comments: Kommentar
+        description: Beschreibung
+      workflow/task:
+        title: Titel
+        comments: Kommentar
+        description: Beschreibung
+  ambition_tab_categories:
+    OPEN: Offen
+    SOME_PROCESSES_RUNNING: Mit offenen Maßnahmen
+    CLOSED: Abgeschlossen
+    PRIVATE: Privat
+    ALL: Alle
+  process_tab_categories:
+    RUNNING: Gestartet
+    WITH_DUE_TASKS: Mit fälligen Aufgaben
+    COMPLETED: Abgeschlossen
+    PRIVATE: Privat
+    ALL: Alle
+  task_tab_categories:
+    STARTED: Gestarted
+    MARKED: Markiert
+    COMPLETED: Abgeschlossen
+    DUE: Fällig
+    PRIVATE: Privat
+    ALL: Alle

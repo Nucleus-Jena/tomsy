@@ -1,0 +1,176 @@
+---
+notifications_001:
+  id: 5
+  user_id: 1
+  event_id: 7
+  marked_at: 
+  created_at: 2020-02-19 14:02:26.584156000 Z
+  updated_at: 2020-02-19 14:02:26.584156000 Z
+notifications_002:
+  id: 6
+  user_id: 133235
+  event_id: 9
+  marked_at: 
+  created_at: 2020-02-20 12:29:30.905429000 Z
+  updated_at: 2020-02-20 12:29:30.905429000 Z
+notifications_003:
+  id: 7
+  user_id: 133235
+  event_id: 10
+  marked_at: 
+  created_at: 2020-02-20 12:37:31.599100000 Z
+  updated_at: 2020-02-20 12:37:31.599100000 Z
+notifications_004:
+  id: 44
+  user_id: 133235
+  event_id: 47
+  marked_at: 
+  created_at: 2020-02-28 16:14:37.529963000 Z
+  updated_at: 2020-02-28 16:14:37.529963000 Z
+notifications_005:
+  id: 45
+  user_id: 133235
+  event_id: 48
+  marked_at: 2020-10-13 13:48:01.100652000 Z
+  created_at: 2020-02-28 16:14:37.576108000 Z
+  updated_at: 2020-10-13 13:48:01.113212000 Z
+notifications_006:
+  id: 46
+  user_id: 133235
+  event_id: 49
+  marked_at: 2020-10-13 13:48:05.406237000 Z
+  created_at: 2020-02-28 16:14:37.604886000 Z
+  updated_at: 2020-10-13 13:48:05.419365000 Z
+notifications_007:
+  id: 47
+  user_id: 133235
+  event_id: 50
+  marked_at: 
+  created_at: 2020-02-28 16:14:37.632279000 Z
+  updated_at: 2020-02-28 16:14:37.632279000 Z
+notifications_008:
+  id: 48
+  user_id: 133235
+  event_id: 51
+  marked_at: 
+  created_at: 2020-02-28 16:14:37.658297000 Z
+  updated_at: 2020-02-28 16:14:37.658297000 Z
+notifications_009:
+  id: 49
+  user_id: 133235
+  event_id: 57
+  marked_at: 
+  created_at: 2020-02-28 16:15:10.263768000 Z
+  updated_at: 2020-02-28 16:15:10.263768000 Z
+notifications_010:
+  id: 50
+  user_id: 133235
+  event_id: 59
+  marked_at: 
+  created_at: 2020-02-28 16:15:13.694088000 Z
+  updated_at: 2020-02-28 16:15:13.694088000 Z
+notifications_011:
+  id: 51
+  user_id: 133235
+  event_id: 62
+  marked_at: 
+  created_at: 2020-02-28 16:16:37.913786000 Z
+  updated_at: 2020-02-28 16:16:37.913786000 Z
+notifications_012:
+  id: 52
+  user_id: 133235
+  event_id: 63
+  marked_at: 
+  created_at: 2020-02-28 16:16:37.970845000 Z
+  updated_at: 2020-02-28 16:16:37.970845000 Z
+notifications_013:
+  id: 53
+  user_id: 133235
+  event_id: 64
+  marked_at: 
+  created_at: 2020-02-28 16:16:38.000096000 Z
+  updated_at: 2020-02-28 16:16:38.000096000 Z
+notifications_014:
+  id: 54
+  user_id: 133235
+  event_id: 65
+  marked_at: 
+  created_at: 2020-02-28 16:16:38.028065000 Z
+  updated_at: 2020-02-28 16:16:38.028065000 Z
+notifications_015:
+  id: 55
+  user_id: 133235
+  event_id: 66
+  marked_at: 
+  created_at: 2020-02-28 16:16:38.054061000 Z
+  updated_at: 2020-02-28 16:16:38.054061000 Z
+notifications_016:
+  id: 56
+  user_id: 133235
+  event_id: 74
+  marked_at: 
+  created_at: 2020-03-03 18:11:33.652442000 Z
+  updated_at: 2020-03-03 18:11:33.652442000 Z
+notifications_017:
+  id: 57
+  user_id: 133235
+  event_id: 76
+  marked_at: 
+  created_at: 2020-03-03 18:13:44.033139000 Z
+  updated_at: 2020-03-03 18:13:44.033139000 Z
+notifications_018:
+  id: 58
+  user_id: 133235
+  event_id: 77
+  marked_at: 
+  created_at: 2020-03-03 18:13:44.087830000 Z
+  updated_at: 2020-03-03 18:13:44.087830000 Z
+notifications_019:
+  id: 59
+  user_id: 133235
+  event_id: 95
+  marked_at: 
+  created_at: 2020-10-13 10:29:03.562248000 Z
+  updated_at: 2020-10-13 10:29:03.562248000 Z
+notifications_020:
+  id: 60
+  user_id: 133235
+  event_id: 99
+  marked_at: 
+  created_at: 2020-10-13 10:30:08.524501000 Z
+  updated_at: 2020-10-13 10:30:08.524501000 Z
+notifications_021:
+  id: 61
+  user_id: 1
+  event_id: 100
+  marked_at: 
+  created_at: 2020-10-14 08:15:22.126877000 Z
+  updated_at: 2020-10-14 08:15:22.126877000 Z
+notifications_022:
+  id: 62
+  user_id: 1
+  event_id: 109
+  marked_at: 
+  created_at: 2020-10-14 10:32:25.504884000 Z
+  updated_at: 2020-10-14 10:32:25.504884000 Z
+notifications_023:
+  id: 63
+  user_id: 1
+  event_id: 110
+  marked_at: 
+  created_at: 2020-10-14 10:32:37.826805000 Z
+  updated_at: 2020-10-14 10:32:37.826805000 Z
+notifications_024:
+  id: 64
+  user_id: 1
+  event_id: 113
+  marked_at: 
+  created_at: 2020-10-14 12:41:15.533100000 Z
+  updated_at: 2020-10-14 12:41:15.533100000 Z
+notifications_025:
+  id: 65
+  user_id: 1
+  event_id: 116
+  marked_at: 
+  created_at: 2020-10-19 10:02:33.941999000 Z
+  updated_at: 2020-10-19 10:02:33.941999000 Z

@@ -1,0 +1,22 @@
+---
+ambitions_workflow_processes_001:
+  ambition_id: 1
+  workflow_process_id: 10
+ambitions_workflow_processes_002:
+  ambition_id: 2
+  workflow_process_id: 10
+ambitions_workflow_processes_003:
+  ambition_id: 2
+  workflow_process_id: 11
+ambitions_workflow_processes_004:
+  ambition_id: 2
+  workflow_process_id: 14
+ambitions_workflow_processes_005:
+  ambition_id: 2
+  workflow_process_id: 16
+ambitions_workflow_processes_006:
+  ambition_id: 3
+  workflow_process_id: 10
+ambitions_workflow_processes_007:
+  ambition_id: 7
+  workflow_process_id: 7

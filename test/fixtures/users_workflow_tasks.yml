@@ -1,0 +1,55 @@
+---
+users_workflow_tasks_001:
+  user_id: 1
+  workflow_task_id: 10
+users_workflow_tasks_002:
+  user_id: 1
+  workflow_task_id: 11
+users_workflow_tasks_003:
+  user_id: 1
+  workflow_task_id: 12
+users_workflow_tasks_004:
+  user_id: 1
+  workflow_task_id: 74
+users_workflow_tasks_005:
+  user_id: 1
+  workflow_task_id: 101
+users_workflow_tasks_006:
+  user_id: 1
+  workflow_task_id: 109
+users_workflow_tasks_007:
+  user_id: 133235
+  workflow_task_id: 11
+users_workflow_tasks_008:
+  user_id: 133235
+  workflow_task_id: 12
+users_workflow_tasks_009:
+  user_id: 133235
+  workflow_task_id: 27
+users_workflow_tasks_010:
+  user_id: 133235
+  workflow_task_id: 53
+users_workflow_tasks_011:
+  user_id: 133235
+  workflow_task_id: 60
+users_workflow_tasks_012:
+  user_id: 133235
+  workflow_task_id: 61
+users_workflow_tasks_013:
+  user_id: 133235
+  workflow_task_id: 67
+users_workflow_tasks_014:
+  user_id: 133235
+  workflow_task_id: 68
+users_workflow_tasks_015:
+  user_id: 133235
+  workflow_task_id: 74
+users_workflow_tasks_016:
+  user_id: 133235
+  workflow_task_id: 84
+users_workflow_tasks_017:
+  user_id: 133235
+  workflow_task_id: 97
+users_workflow_tasks_018:
+  user_id: 133235
+  workflow_task_id: 121

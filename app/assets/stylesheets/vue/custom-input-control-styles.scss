@@ -1,0 +1,52 @@
+.custom-input-control {
+  position: relative;
+
+  & > .v-input__control > .v-input__slot {
+    flex-direction: column;
+    align-items: start;
+
+    & > .v-label {
+      height: 28px;
+      line-height: 28px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &--sidebar {
+    & > .v-input__control {
+      & > .v-input__slot {
+        margin-bottom: 0;
+        position: static;
+
+        & > .v-label {
+          margin-bottom: 4px;
+          font-size: 0.875rem;
+        }
+
+        & > .custom-input-control__content {
+          color: initial;
+        }
+      }
+
+      & > .v-messages {
+        margin: 0 8px 8px 0;
+      }
+    }
+
+    &:not(.v-input--has-state) {
+      & > .v-input__control > .v-messages {
+        display: none;
+      }
+    }
+  }
+}
+
+.custom-checkbox-control {
+  & > .v-input__control > .v-input__slot > .v-label {
+    margin-bottom: 0;
+  }
+  .v-list-item.v-item--active:before {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,3 @@
+json.count_new_notifications @count_new_notifications
+json.count_open_user_assigned_tasks @count_open_user_assigned_tasks
+json.has_due_open_user_assigned_tasks @has_due_open_user_assigned_tasks

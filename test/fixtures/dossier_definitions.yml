@@ -1,0 +1,13 @@
+---
+dossier_definitions_001:
+  id: 1
+  identifier: person
+  label: Person
+  description: Person welche in Maßnahmen referenziert werden kann.
+  created_at: 2020-10-30 11:14:32.616873000 Z
+  updated_at: 2020-10-30 11:14:32.724317000 Z
+  title_fields:
+  - name
+  subtitle_fields:
+  - email
+  - organization
