@@ -11,3 +11,9 @@ TOMSY is a collaborative cloud tool for the  process and information management 
 TOMSY is open source (MIT licence) and can be used free of charge. TOMSY is under active development. So please stay tuned. Currently only a German localisation of TOMSY is available. If you are interested in using TOMSY in your technology transfer office or agency, please contact: lutz.maicher@uni-jena.de   
 
 TOMSY is developed within the project NUCLEUS Jena. Please refer to https://www.nucleus-jena.de/ for further information.
+
+---
+
+A short tour of TOMSY:
+
+![tomsy screencast gif](doc/tomsy-v0.6-tour.gif)
