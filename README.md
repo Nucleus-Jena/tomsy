@@ -14,4 +14,6 @@ TOMSY is developed within the project NUCLEUS Jena. Please refer to https://www.
 
 ---
 
-![tomsy screencast gif](https://github.com/Nucleus-Jena/tomsy/releases/download/v0.6/tomsy-v0.6-tour.gif)
+A short tour of TOMSY:
+
+![tomsy screencast gif](doc/tomsy-v0.6-tour.gif)
